@@ -18,43 +18,6 @@ export default function HomePage() {
         and collaborative spirit.
       </p>
 
-      {/* Contact Section */}
-      <section className="mx-auto mb-8 max-w-4xl rounded-lg bg-gray-800 p-6 text-gray-200 shadow-md">
-        <h2 className="mb-4 text-2xl font-semibold">Contact</h2>
-        <p>Location: Mt. Pleasant, South Carolina, 29464</p>
-        <p>
-          Email:{" "}
-          <a
-            href="mailto:decheverri123@gmail.com"
-            className="text-blue-400 underline"
-          >
-            decheverri123@gmail.com
-          </a>
-        </p>
-        <p>
-          GitHub:{" "}
-          <a
-            href="https://github.com/decheverri123"
-            className="text-blue-400 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/decheverri123
-          </a>
-        </p>
-        <p>
-          LinkedIn:{" "}
-          <a
-            href="https://www.linkedin.com/in/danny-echeverri/"
-            className="text-blue-400 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin.com/in/danny-echeverri/
-          </a>
-        </p>
-      </section>
-
       {/* Work History Section */}
       <section className="mx-auto mb-8 max-w-4xl rounded-lg bg-gray-800 p-6 shadow-md">
         <h2 className="mb-4 text-2xl font-semibold">Work History</h2>
