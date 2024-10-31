@@ -4,21 +4,20 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1 className="text-4xl font-bold text-center   sm:text-left">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full max-w-7xl">
+        <h1 className="text-4xl font-bold text-center sm:text-left">
           Danny Echeverri
         </h1>
         <p className="text-lg text-center sm:text-left">
-          Full Stack Software Engineer with expertise across
-          front-end,back-end,and mobile technologies. Specialized in crafting
+          Full Stack Software Engineer with expertise across front-end,
+          back-end, and mobile technologies. Specialized in crafting
           high-performance software solutions, I bring a track record of driving
           projects from concept to completion through agile methodologies and
-          cross-functional team collaboration. With a passion for continuous
-          learning and innovation, I excel in environments that challenge my
-          technical prowess and collaborative spirit.
+          cross-functional team collaboration.
         </p>
 
-        <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl">
+        {/* Contact and Work History sections */}
+        <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl mt-6">
           <h2 className="text-2xl font-semibold mb-4">Contact</h2>
           <p>Location: Mt. Pleasant, South Carolina, 29464</p>
           <p>
@@ -99,36 +98,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl mt-6">
-          <h2 className="text-2xl font-semibold mb-4">Skills & Tech</h2>
-          <p>
-            Programming Languages: C#, Python, Java, JavaScript/TypeScript,
-            Visual Basic, Dart
-          </p>
-          <p>Web Technologies: HTML/CSS, Angular, React/Next.js, Tailwind</p>
-          <p>Mobile App Development: Flutter</p>
-          <p>Cloud Technologies: AWS, Docker, Kubernetes</p>
-          <p>Frameworks: .NET Development</p>
-          <p>CI/CD: Jenkins, Azure DevOps</p>
-        </section>
-
-        <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl mt-6">
-          <h2 className="text-2xl font-semibold mb-4">Languages</h2>
-          <p>Spanish - Native</p>
-          <p>English - Native</p>
-        </section>
-
-        <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl mt-6">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <p>
-            2015 – 2019 Bachelor of Arts: Computer Science, Amherst College -
-            Amherst, MA
-          </p>
-          <p>
-            2015 – 2019 Bachelor of Arts: Neuroscience, Amherst College -
-            Amherst, MA
-          </p>
-        </section>
         {/* Apps Section */}
         <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl mt-6">
           <h2 className="text-2xl font-semibold mb-4 text-center">Apps</h2>
@@ -143,7 +112,7 @@ export default function Home() {
             >
               Sparking Teams
             </a>
-            <div className="grid grid-cols-5">
+            <div className="grid grid-cols-5 gap-0">
               {[1, 2, 3, 4, 5].map((num) => (
                 <div key={num} className="relative w-full h-96">
                   <Image
@@ -162,7 +131,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-4 text-center">
               Meditatio
             </h3>
-            <div className="grid grid-cols-5">
+            <div className="grid grid-cols-5 gap-0">
               {[1, 2, 3, 4, 5].map((num) => (
                 <div key={num} className="relative w-full h-96">
                   <Image
