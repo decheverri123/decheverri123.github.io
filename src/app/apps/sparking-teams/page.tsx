@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function SparkingTeams() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-gray-600 to-gray-900 p-8 px-12 text-gray-300">
-      <h1 className="mb-8 text-center text-4xl font-semibold text-yellow-400">
+      <h1 className="mb-8 text-center text-4xl font-semibold">
         Sparking Teams
       </h1>
 
@@ -12,9 +12,11 @@ export default function SparkingTeams() {
       <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
         {/* Left Column: Feature Description */}
         <div className="space-y-6 text-gray-300">
-          <h2 className="text-2xl font-semibold text-yellow-400">
-            Key Features
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-100">Key Features</h2>
+          <p>
+            <strong>Companion app</strong> for the new Dragon Ball Sparking Zero
+            game.
+          </p>
           <p>
             <strong>Complete Character Database:</strong> View the complete
             roster and every character&#39;s complete moveset, including Skills,
@@ -31,8 +33,8 @@ export default function SparkingTeams() {
         </div>
 
         {/* Right Column: Technical Overview */}
-        <div className="text-gray-400">
-          <h2 className="mb-4 text-2xl font-semibold text-yellow-400">
+        <div>
+          <h2 className="mb-4 text-2xl font-semibold text-gray-100">
             Technical Overview
           </h2>
 
@@ -116,6 +118,16 @@ export default function SparkingTeams() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto mb-8 max-w-4xl text-center">
+        <a
+          href="ipa/Sparking Teams-v1.0.ipa"
+          download
+          className="inline-block rounded bg-blue-500 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-600 hover:shadow-lg"
+        >
+          Download Sparking Teams v1.0
+        </a>
       </div>
 
       {/* Responsive Image Gallery Section */}
