@@ -2,10 +2,10 @@
 
 export default function Resume() {
   return (
-    <div className="flex flex-col gap-6 w-full max-w-4xl mt-6">
+    <div className="mt-6 flex w-full max-w-6xl flex-col gap-6">
       {/* Contact Section */}
-      <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+      <section className="w-full rounded-lg bg-gray-800 p-6 shadow-md">
+        <h2 className="mb-4 text-2xl font-semibold">Contact</h2>
         <p>Location: Mt. Pleasant, South Carolina, 29464</p>
         <p>
           Email:{" "}
@@ -41,14 +41,14 @@ export default function Resume() {
       </section>
 
       {/* Work History Section */}
-      <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full">
-        <h2 className="text-2xl font-semibold mb-4">Work History</h2>
+      <section className="w-full rounded-lg bg-gray-800 p-6 shadow-md">
+        <h2 className="mb-4 text-2xl font-semibold">Work History</h2>
         <div className="mb-6">
           <h3 className="text-xl font-semibold">Software Engineer II</h3>
           <p className="text-gray-400">
             2022 - Current | Data Innovations, Charleston, SC
           </p>
-          <ul className="list-disc list-inside space-y-2 mt-2">
+          <ul className="mt-2 list-inside list-disc space-y-2">
             <li>
               Revitalized Data Innovation’s flagship product, transitioning the
               UI to Angular and the backend to a cloud-native architecture.
@@ -66,7 +66,7 @@ export default function Resume() {
         <div>
           <h3 className="text-xl font-semibold">Software Engineer</h3>
           <p className="text-gray-400">2020 – 2022 | Microsoft, Seattle, WA</p>
-          <ul className="list-disc list-inside space-y-2 mt-2">
+          <ul className="mt-2 list-inside list-disc space-y-2">
             <li>
               Developed high-performance solutions in C# and .NET based on
               project requirements.
