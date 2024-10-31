@@ -94,6 +94,11 @@ export default function HomePage() {
           MA
         </p>
       </section>
+      <div className="mx-auto mb-12 max-w-2xl text-center text-lg">
+        <strong className="text-red-300">
+          This website is a work in progress and still under construction.
+        </strong>
+      </div>
     </Layout>
   );
 }
