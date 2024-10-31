@@ -12,7 +12,7 @@ export default function Apps() {
           href="https://github.com/decheverri123/Sparking-Teams/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl font-semibold mb-4 text-center block hover:text-blue-400"
+          className="text-xl font-semibold mb-4 text-center block hover:text-blue-600 text-blue-400"
         >
           Sparking Teams
         </a>
