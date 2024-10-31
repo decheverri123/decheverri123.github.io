@@ -5,7 +5,7 @@ import Projects from "./projects";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-900 p-8 text-gray-300">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-gray-600 to-gray-900 p-8 text-gray-300">
       {/* Main Welcome Section */}
       <header className="mb-16 flex max-w-3xl flex-col items-center text-center">
         <h1 className="mb-4 text-6xl font-thin tracking-wide text-gray-100">

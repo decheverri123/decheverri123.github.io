@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function SparkingTeams() {
   return (
-    <div className="min-h-screen bg-gray-900 p-8 text-gray-300">
+    <div className="to-gray-9000 min-h-screen w-full bg-gradient-to-br from-gray-600 p-8 px-12 text-gray-300">
       <h1 className="mb-8 text-4xl font-semibold text-yellow-400">
         Sparking Teams
       </h1>
-      <p className="mb-6">Description of Sparking Teams project goes here...</p>
+      {/* <p className="mb-6">Description of Sparking Teams project goes here...</p> */}
       <div className="grid grid-cols-5 gap-0">
         {[1, 2, 3, 4, 5].map((num) => (
           <div key={num} className="relative h-96">

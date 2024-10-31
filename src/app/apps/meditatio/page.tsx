@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Meditatio() {
   return (
-    <div className="min-h-screen w-full bg-gray-900 p-8 px-12 text-gray-300">
+    <div className="to-gray-9000 min-h-screen w-full bg-gradient-to-br from-gray-600 p-8 px-12 text-gray-300">
       <h1 className="mb-8 text-center text-4xl font-semibold text-yellow-400">
         Meditatio
       </h1>
