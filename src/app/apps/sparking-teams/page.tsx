@@ -122,7 +122,7 @@ export default function SparkingTeams() {
 
       <div className="mx-auto mb-8 max-w-4xl text-center">
         <a
-          href="ipa/Sparking Teams-v1.0.ipa"
+          href="/ipa/Sparking Teams-v1.0.ipa"
           download
           className="inline-block rounded bg-blue-500 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-600 hover:shadow-lg"
         >
