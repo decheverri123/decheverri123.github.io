@@ -9,13 +9,13 @@ export default function Home() {
           Danny Echeverri
         </h1>
         <p className="text-lg text-center sm:text-left">
-          Full Stack Software Engineer with expertise across front-end,back-end,
-          and mobile technologies. Specialized in crafting high-performance
-          software solutions, I bring a track record of driving projects from
-          concept to completion through agile methodologies and cross-functional
-          team collaboration. With a passion for continuous learning and
-          innovation, I excel in environments that challenge my technical
-          prowess and collaborative spirit.
+          Full Stack Software Engineer with expertise across
+          front-end,back-end,and mobile technologies. Specialized in crafting
+          high-performance software solutions, I bring a track record of driving
+          projects from concept to completion through agile methodologies and
+          cross-functional team collaboration. With a passion for continuous
+          learning and innovation, I excel in environments that challenge my
+          technical prowess and collaborative spirit.
         </p>
 
         <section className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-4xl">
