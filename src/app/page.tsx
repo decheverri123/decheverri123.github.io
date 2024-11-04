@@ -1,7 +1,7 @@
 // src/app/page.tsx
 
 import Layout from "./LayoutHeader";
-
+import Image from "next/image";
 export default function HomePage() {
   return (
     <Layout>
@@ -94,7 +94,14 @@ export default function HomePage() {
           MA
         </p>
       </section>
-      <div className="mx-auto mb-12 max-w-2xl text-center text-lg">
+
+      <div className="flex flex-col items-center justify-center space-x-2">
+        <h3 className="mb-2 text-lg font-semibold">Powered by:</h3>
+        {/* next.j.s logo */}
+        <Image src="/next.svg" alt="Next.js Logo" width={100} height={30} />
+      </div>
+
+      <div className="mx-auto my-10 max-w-2xl text-center text-lg">
         <strong className="text-red-300">
           This website is a work in progress and still under construction.
         </strong>
