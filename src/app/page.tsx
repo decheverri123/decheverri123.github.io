@@ -97,7 +97,6 @@ export default function HomePage() {
 
       <div className="flex flex-col items-center justify-center space-x-2">
         <h3 className="mb-2 text-lg font-semibold">Powered by:</h3>
-        {/* next.j.s logo */}
         <Image src="/next.svg" alt="Next.js Logo" width={100} height={30} />
       </div>
 
