@@ -10,7 +10,7 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
-      <h2 className="mb-4 py-4 text-center text-2xl font-semibold text-red-400">
+      <h2 className="mb-4 py-4 text-center text-2xl font-semibold text-blue-400">
         iOS Apps
       </h2>
 
