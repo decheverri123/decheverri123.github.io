@@ -10,6 +10,10 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
+      <h2 className="mb-4 py-4 text-center text-2xl font-semibold text-red-400">
+        iOS Apps
+      </h2>
+
       <div className="mx-auto grid max-w-3xl gap-8 px-4 md:grid-cols-2 lg:max-w-5xl">
         <div className="card bg-base-100 image-full w-96 shadow-xl transition hover:scale-105">
           <figure>
