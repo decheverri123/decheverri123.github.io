@@ -2,12 +2,21 @@
 
 import Image from "next/image";
 import Layout from "../../LayoutHeader";
+import Link from "next/link";
 
 export default function Meditatio() {
   return (
     <Layout>
       <div className="min-h-screen w-full p-8 px-12 text-gray-300">
-        <h1 className="mb-8 text-center text-4xl font-semibold">Meditatio</h1>
+        <h1 className="mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold">
+          Meditatio
+        </h1>
+
+        <Link href="https://apps.apple.com/us/app/meditat-io/id6737626840">
+          <button className="btn btn-primary mx-auto mb-12 flex w-64">
+            View on App Store
+          </button>
+        </Link>
 
         {/* Two-Column Layout for Description and Technical Overview */}
         <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
