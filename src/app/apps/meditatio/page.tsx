@@ -1,6 +1,5 @@
 // src/app/apps/meditatio/page.tsx
 
-import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import Link from "next/link";
 

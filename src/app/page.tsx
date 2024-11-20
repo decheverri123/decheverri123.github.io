@@ -2,6 +2,8 @@
 
 import Layout from "./LayoutHeader";
 import Image from "next/image";
+import TimelineItem from "@/components/TimelineItem";
+
 export default function HomePage() {
   return (
     <Layout>
@@ -20,45 +22,43 @@ export default function HomePage() {
 
       {/* Work History Section */}
       <section className="mx-auto mb-8 max-w-4xl rounded-lg bg-gray-800 p-6 shadow-md">
-        <h2 className="mb-4 text-2xl font-semibold">Work History</h2>
-        <div className="mb-6">
-          <h3 className="text-xl font-semibold">Software Engineer II</h3>
-          <p className="text-gray-400">
-            2022 - Current | Data Innovations, Charleston, SC
-          </p>
-          <ul className="mt-2 list-inside list-disc space-y-2">
-            <li>
-              Revitalized Data Innovation’s flagship product, transitioning the
-              UI to Angular and the backend to a cloud-native architecture.
-            </li>
-            <li>
-              Implemented CI/CD pipelines with Jenkins, AWS, Docker, and
-              Kubernetes, improving deployment efficiency and reliability.
-            </li>
-            <li>
-              Developer on a greenfield Flutter project, creating a
-              cross-platform mobile app with thorough testing.
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold">Software Engineer</h3>
-          <p className="text-gray-400">2020 – 2022 | Microsoft, Seattle, WA</p>
-          <ul className="mt-2 list-inside list-disc space-y-2">
-            <li>
-              Developed high-performance solutions in C# and .NET based on
-              project requirements.
-            </li>
-            <li>
-              Worked with cross-functional teams to deliver scalable solutions
-              in Azure DevOps and ReactJS.
-            </li>
-            <li>
-              Built CI/CD pipelines in Azure DevOps, ensuring quality and
-              stability of changes for Microsoft engineers.
-            </li>
-          </ul>
-        </div>
+        <h1 className="font-center mb-4 text-center font-bold">Work History</h1>
+        <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
+          <TimelineItem
+            date="2022 - Current"
+            title="Software Engineer II"
+            subtitle="Data Innovations"
+            position="start"
+            bulletPoints={[
+              "Revitalized Data Innovation's flagship product, transitioning the UI to Angular and the backend to a cloud-native architecture.",
+              "Implemented CI/CD pipelines with Jenkins, AWS, Docker, and Kubernetes, improving deployment efficiency and reliability.",
+              "Developer on a greenfield Flutter project, creating a cross-platform mobile app with thorough testing.",
+            ]}
+          />
+
+          <TimelineItem
+            date="2020 - 2022"
+            title="Software Engineer"
+            subtitle="Microsoft"
+            position="end"
+            bulletPoints={[
+              "Developed high-performance solutions in C# and .NET based on project requirements.",
+              "Worked with cross-functional teams to deliver scalable solutions in Azure DevOps and ReactJS.",
+              "Built CI/CD pipelines in Azure DevOps, ensuring quality and stability of changes for Microsoft engineers.",
+            ]}
+          />
+
+          <TimelineItem
+            date="2015 - 2019"
+            title="Education"
+            subtitle="Amherst College - Amherst, MA"
+            position="start"
+            bulletPoints={[
+              "Bachelor of Arts: Computer Science",
+              "Bachelor of Arts: Neuroscience",
+            ]}
+          />
+        </ul>
       </section>
 
       {/* Skills & Tech Section */}
@@ -80,19 +80,6 @@ export default function HomePage() {
         <h2 className="mb-4 text-2xl font-semibold">Languages</h2>
         <p>Spanish - Native</p>
         <p>English - Native</p>
-      </section>
-
-      {/* Education Section */}
-      <section className="mx-auto mb-8 max-w-4xl rounded-lg bg-gray-800 p-6 shadow-md">
-        <h2 className="mb-4 text-2xl font-semibold">Education</h2>
-        <p>
-          2015 – 2019 Bachelor of Arts: Computer Science, Amherst College -
-          Amherst, MA
-        </p>
-        <p>
-          2015 – 2019 Bachelor of Arts: Neuroscience, Amherst College - Amherst,
-          MA
-        </p>
       </section>
 
       <div className="flex flex-col items-center justify-center space-x-2">
