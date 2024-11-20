@@ -159,19 +159,14 @@ export default function Meditatio() {
           </div>
         </div>
 
-        {/* Responsive Image Gallery Section */}
-        <div className="flex w-full flex-wrap items-center justify-center gap-4 overflow-x-auto md:flex-nowrap md:gap-0">
+        {/* Responsive Image Gallery Carousel */}
+        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box bg-neutral p-4">
           {[1, 2, 3, 4, 5, 6].map((num) => (
-            <div
-              key={num}
-              className="relative h-[350px] w-48 flex-shrink-0 sm:h-[500px] sm:w-60 md:h-[650px] md:w-64 lg:h-[800px] lg:w-[380px] xl:h-[700px] xl:w-[350px]"
-            >
-              <Image
+            <div key={num} className="carousel-item">
+              <img
                 src={`/assets/apps/meditatio/0${num}.png`}
                 alt={`Meditatio screenshot ${num}`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md shadow-md"
+                className="h-96 w-auto rounded-box"
               />
             </div>
           ))}
