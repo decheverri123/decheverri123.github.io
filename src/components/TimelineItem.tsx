@@ -31,9 +31,9 @@ export default function TimelineItem({
         </svg>
       </div>
       <div
-        className={`timeline-${position} mb-10 ${position === "start" ? "md:text-end" : ""}`}
+        className={`timeline-${position} mb-10 px-3 ${position === "start" ? "md:text-end" : ""}`}
       >
-        <time className="font-mono italic">{date}</time>
+        <time className="font-mono font-bold">{date}</time>
         <div className="text-lg font-black">{title}</div>
         {subtitle && <div className="text-base">{subtitle}</div>}
         <ul className="mt-2 list-inside list-disc space-y-2">
