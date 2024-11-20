@@ -126,19 +126,16 @@ export default function SparkingTeams() {
             Download Sparking Teams v1.0
           </a>
         </div>
-        {/* Responsive Image Gallery Section */}
-        <div className="flex flex-wrap justify-center gap-4 overflow-x-auto md:flex-nowrap md:gap-0">
+        {/* Responsive Image Gallery Carousel */}
+        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box bg-neutral p-4">
           {[1, 2, 3, 4, 5].map((num) => (
-            <div
-              key={num}
-              className="relative h-[250px] w-48 flex-shrink-0 sm:h-[500px] sm:w-60 md:h-[650px] md:w-64 lg:h-[800px] lg:w-[380px] xl:h-[700px] xl:w-[350px]"
-            >
+            <div key={num} className="carousel-item">
               <Image
                 src={`/assets/apps/sparking/0${num}.png`}
                 alt={`Sparking Teams screenshot ${num}`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md shadow-md"
+                width={400}
+                height={800}
+                className="h-[600px] w-auto rounded-box"
               />
             </div>
           ))}
