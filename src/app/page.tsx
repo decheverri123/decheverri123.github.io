@@ -106,13 +106,32 @@ export default function HomePage() {
           </div>
         </section>
 
-        <div className="flex flex-col items-center justify-center space-x-2">
-          <h3 className="mb-2 text-lg font-semibold text-secondary">
-            Powered by:
-          </h3>
-          <Image src="/next.svg" alt="Next.js Logo" width={100} height={30} />
+        <div className="flex flex-row items-center justify-center gap-12">
+          <h3 className="text-lg font-semibold text-secondary">Powered by:</h3>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/next.webp"
+              alt="Next.js Logo"
+              width={70}
+              height={70}
+              className="object-contain"
+            />
+            <Image
+              src="/tailwind.png"
+              alt="Tailwind Logo"
+              width={90}
+              height={90}
+              className="object-contain"
+            />
+            <Image
+              src="/daisy.svg"
+              alt="Daisy UI Logo"
+              width={90}
+              height={90}
+              className="object-contain"
+            />
+          </div>
         </div>
-
         <div className="mx-auto my-10 max-w-2xl text-center text-lg">
           <strong className="text-error">
             This website is a work in progress and still under construction.

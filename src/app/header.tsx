@@ -4,9 +4,12 @@
 
 import Link from "next/link";
 import { useTheme } from "./contexts/ThemeContext";
+import { useState, useRef, useEffect } from "react";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDetailsElement>(null);
 
   // List of available themes
   const themes = [
@@ -19,6 +22,21 @@ export default function Header() {
     "steps",
     "terminology",
   ];
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        dropdownRef.current.removeAttribute("open");
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <div className="navbar bg-base-100">
@@ -80,14 +98,20 @@ export default function Header() {
 
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
-          <details className="dropdown">
-            <summary className="btn btn-ghost">
+          <details className="dropdown" ref={dropdownRef}>
+            <summary
+              className="btn btn-ghost"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               Theme
               <svg
-                className="ml-2 h-4 w-4 transition-transform duration-200 [details[open]>summary>&]:rotate-180"
+                className="ml-2 h-4 w-4 transition-transform duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
+                style={{
+                  transform: isOpen ? "rotate(-90deg)" : "rotate(-180deg)",
+                }}
               >
                 <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
               </svg>
