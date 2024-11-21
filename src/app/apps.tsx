@@ -1,5 +1,6 @@
 // src/app/Apps.tsx
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Apps() {
   return (
@@ -8,14 +9,14 @@ export default function Apps() {
 
       {/* Sparking Teams Subsection */}
       <div className="mb-8">
-        <a
+        <Link
           href="https://github.com/decheverri123/Sparking-Teams/releases"
           target="_blank"
           rel="noopener noreferrer"
           className="mb-4 block text-center text-xl font-semibold text-blue-400 hover:text-blue-600"
         >
           Sparking Teams
-        </a>
+        </Link>
         <div className="grid grid-cols-5 gap-0">
           {[1, 2, 3, 4, 5].map((num) => (
             <div key={num} className="relative h-96 w-full">

@@ -1,5 +1,7 @@
 // src/app/Resume.tsx
 
+import Link from "next/link";
+
 export default function Resume() {
   return (
     <div className="mt-6 flex w-full max-w-6xl flex-col gap-6">
@@ -9,34 +11,34 @@ export default function Resume() {
         <p>Location: Mt. Pleasant, South Carolina, 29464</p>
         <p>
           Email:{" "}
-          <a
+          <Link
             href="mailto:decheverri123@gmail.com"
             className="text-blue-400 underline"
           >
             decheverri123@gmail.com
-          </a>
+          </Link>
         </p>
         <p>
           GitHub:{" "}
-          <a
+          <Link
             href="https://github.com/decheverri123"
             className="text-blue-400 underline"
             target="_blank"
             rel="noopener noreferrer"
           >
             github.com/decheverri123
-          </a>
+          </Link>
         </p>
         <p>
           LinkedIn:{" "}
-          <a
+          <Link
             href="https://www.linkedin.com/in/danny-echeverri/"
             className="text-blue-400 underline"
             target="_blank"
             rel="noopener noreferrer"
           >
             linkedin.com/in/danny-echeverri/
-          </a>
+          </Link>
         </p>
       </section>
 

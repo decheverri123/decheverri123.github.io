@@ -64,34 +64,34 @@ export default function Header() {
             className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/projects">Projects</a>
+              <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
 
         {/* Brand/Logo */}
-        <a href="/" className="btn btn-ghost text-xl">
+        <Link href="/" className="btn btn-ghost text-xl">
           Danny Echeverri
-        </a>
+        </Link>
       </div>
 
       {/* Desktop menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <Link href="/projects">Projects</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
