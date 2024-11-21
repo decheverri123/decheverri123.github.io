@@ -1,17 +1,26 @@
 // src/app/Layout.tsx
 
+"use client";
+
 import Header from "./header";
-import { ReactNode } from "react";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { useTheme } from "./contexts/ThemeContext";
 
-type LayoutProps = {
-  children: ReactNode;
-};
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const { theme } = useTheme();
 
-export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-600 to-gray-900 text-gray-300">
+    <div data-theme={theme} className="min-h-screen bg-base-100">
       <Header />
-      <main className="p-8">{children}</main>
+      <main>{children}</main>
     </div>
+  );
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <ThemeProvider>
+      <LayoutContent>{children}</LayoutContent>
+    </ThemeProvider>
   );
 }

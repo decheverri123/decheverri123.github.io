@@ -1,29 +1,118 @@
 // src/app/Header.tsx
 
+"use client";
+
 import Link from "next/link";
+import { useTheme } from "./contexts/ThemeContext";
 
 export default function Header() {
+  const { theme, setTheme } = useTheme();
+
+  // List of available themes
+  const themes = [
+    "armchair",
+    "chordsurfer",
+    "teal",
+    "seafoam",
+    "navypink",
+    "organic",
+    "steps",
+    "terminology",
+  ];
+
   return (
-    <header className="bg-gray-800 px-8 py-4 text-gray-200 shadow-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between">
-        <h1 className="text-2xl font-semibold text-gray-400">
-          <Link href="/" className="transition hover:text-yellow-400">
-            {" "}
-            Danny Echeverri{" "}
-          </Link>
-        </h1>
-        <div className="space-x-8">
-          <Link href="/" className="transition hover:text-yellow-400">
-            Home
-          </Link>
-          <Link href="/projects" className="transition hover:text-yellow-400">
-            Projects
-          </Link>
-          <Link href="/contact" className="transition hover:text-yellow-400">
-            Contact
-          </Link>
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        {/* Hamburger menu for small screens */}
+        <div className="dropdown inline-block lg:hidden">
+          <button tabIndex={0} className="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </button>
+          <ul
+            tabIndex={0}
+            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+          >
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/projects">Projects</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
+
+        {/* Brand/Logo */}
+        <a href="/" className="btn btn-ghost text-xl">
+          Danny Echeverri
+        </a>
+      </div>
+
+      {/* Desktop menu */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/projects">Projects</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="navbar-end">
+        <div className="dropdown dropdown-end">
+          <details className="dropdown">
+            <summary className="btn btn-ghost">
+              Theme
+              <svg
+                className="ml-2 h-4 w-4 transition-transform duration-200 [details[open]>summary>&]:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+              </svg>
+            </summary>
+            <ul className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+              {themes.map((themeName) => (
+                <li key={themeName}>
+                  <button
+                    onClick={() => setTheme(themeName)}
+                    className={`flex items-center gap-2 ${theme === themeName ? "active" : ""}`}
+                  >
+                    <div
+                      className="h-3 w-3 rounded-full"
+                      data-theme={themeName}
+                    >
+                      <div className="h-full w-full rounded-full bg-primary"></div>
+                    </div>
+                    <span className="capitalize">{themeName}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
+      </div>
+    </div>
   );
 }

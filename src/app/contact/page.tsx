@@ -5,10 +5,10 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 export default function ContactPage() {
   return (
     <Layout>
-      <h1 className="mb-8 text-center text-4xl font-semibold text-gray-200">
+      <h1 className="text-base-600 mb-8 text-center text-4xl font-semibold">
         Contact
       </h1>
-      <p className="mx-auto mb-8 max-w-xl text-center text-gray-300">
+      <p className="text-base-500 mx-auto mb-8 max-w-xl text-center">
         Get in touch with me through any of the platforms below!
       </p>
 
@@ -18,7 +18,7 @@ export default function ContactPage() {
           href="https://www.linkedin.com/in/danny-echeverri/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-gray-300 transition hover:text-blue-400"
+          className="text-base-400 flex items-center space-x-3 transition hover:text-accent"
         >
           <FaLinkedin className="text-3xl" />
           <span className="text-lg font-medium">LinkedIn</span>
@@ -27,7 +27,7 @@ export default function ContactPage() {
         {/* Email Link */}
         <a
           href="mailto:decheverri123@gmail.com"
-          className="flex items-center space-x-3 text-gray-300 transition hover:text-blue-400"
+          className="text-base-400 flex items-center space-x-3 transition hover:text-accent"
         >
           <FaEnvelope className="text-3xl" />
           <span className="text-lg font-medium">Email</span>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           href="https://github.com/decheverri123"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-gray-300 transition hover:text-blue-400"
+          className="text-base-400 flex items-center space-x-3 transition hover:text-accent"
         >
           <FaGithub className="text-3xl" />
           <span className="text-lg font-medium">GitHub</span>

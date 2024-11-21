@@ -15,13 +15,13 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   return (
     <li>
-      <hr />
+      <hr className="border-base-300" />
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="h-5 w-5"
+          className="h-5 w-5 text-secondary"
         >
           <path
             fillRule="evenodd"
@@ -33,16 +33,16 @@ export default function TimelineItem({
       <div
         className={`timeline-${position} mb-10 px-3 ${position === "start" ? "md:text-end" : ""}`}
       >
-        <time className="font-mono font-bold">{date}</time>
-        <div className="text-lg font-black">{title}</div>
-        {subtitle && <div className="text-base">{subtitle}</div>}
-        <ul className="mt-2 list-inside list-disc space-y-2">
+        <time className="font-mono font-bold text-primary">{date}</time>
+        <div className="text-lg font-black text-secondary">{title}</div>
+        {subtitle && <div className="text-base ">{subtitle}</div>}
+        <ul className="mt-2 list-inside list-disc space-y-2 ">
           {bulletPoints.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>
       </div>
-      <hr />
+      <hr className="border-base-300" />
     </li>
   );
 }

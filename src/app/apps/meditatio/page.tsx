@@ -6,41 +6,40 @@ import Link from "next/link";
 export default function Meditatio() {
   return (
     <Layout>
-      <div className="min-h-screen w-full p-8 px-12 text-gray-300">
-        <h1 className="mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold">
+      <div className="min-h-screen w-full p-8 px-12">
+        <h1 className="text-base-600 mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold">
           Meditatio
         </h1>
 
         <Link href="https://apps.apple.com/us/app/meditat-io/id6737626840">
-          <button className="btn btn-primary mx-auto mb-12 flex w-64">
+          <button className="btn btn-secondary mx-auto mb-12 flex w-64 text-secondary-content">
             View on App Store
           </button>
         </Link>
 
-        {/* Two-Column Layout for Description and Technical Overview */}
         <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Left Column: App Description and Key Features */}
+          {/* Left Column */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+            <h2 className="text-base-500 text-2xl font-semibold">
               App Description
             </h2>
-            <p className="text-lg">
+            <p className="text-base-600 text-lg">
               Transform your daily experiences into meaningful insights with
               Meditatio, a journaling app rooted in Stoic philosophy. This
               journal helps you examine your reactions to life&#39;s events and
               develop emotional resilience through structured self-reflection.
             </p>
-            <h2 className="text-2xl font-semibold text-gray-200">
+            <h2 className="text-base-500 text-2xl font-semibold">
               Key Features
             </h2>
 
-            <div className="text-left text-gray-400">
+            <div>
               {/* Three-Step Reflection Process */}
               <div className="mb-6">
-                <h3 className="mb-2 text-xl font-semibold text-gray-100">
+                <h3 className="text-base-400 mb-2 text-xl font-semibold">
                   Three-Step Reflection Process
                 </h3>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="text-base-600 list-inside list-disc space-y-1">
                   <li>Record the event that occurred</li>
                   <li>Examine your opinions and judgments about it</li>
                   <li>Analyze your emotional reactions</li>
@@ -50,10 +49,10 @@ export default function Meditatio() {
 
               {/* Daily Stoic Wisdom */}
               <div className="mb-6">
-                <h3 className="mb-2 text-xl font-semibold text-gray-100">
+                <h3 className="text-base-400 mb-2 text-xl font-semibold">
                   Daily Stoic Wisdom
                 </h3>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="text-base-600 list-inside list-disc space-y-1">
                   <li>
                     Curated collection of quotes from ancient Stoic philosophers
                   </li>
@@ -64,10 +63,10 @@ export default function Meditatio() {
 
               {/* Privacy & Security */}
               <div className="mb-6">
-                <h3 className="mb-2 text-xl font-semibold text-gray-100">
+                <h3 className="text-base-400 mb-2 text-xl font-semibold">
                   Privacy & Security
                 </h3>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="text-base-600 list-inside list-disc space-y-1">
                   <li>Your reflections stay private and protected</li>
                   <li>No third-party tracking</li>
                 </ul>
@@ -75,10 +74,10 @@ export default function Meditatio() {
 
               {/* Perfect for Section */}
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-100">
+                <h3 className="text-base-400 mb-2 text-xl font-semibold">
                   Perfect for:
                 </h3>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="text-base-600 list-inside list-disc space-y-1">
                   <li>
                     Anyone interested in personal growth and self-reflection
                   </li>
@@ -96,18 +95,18 @@ export default function Meditatio() {
             </div>
           </div>
 
-          {/* Right Column: Technical Overview */}
+          {/* Right Column */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+            <h2 className="text-base-500 text-2xl font-semibold">
               Technical Overview
             </h2>
 
             {/* Architecture & Core Technologies */}
-            <div className="text-gray-400">
-              <h3 className="mb-2 text-xl font-semibold text-gray-100">
+            <div>
+              <h3 className="text-base-400 mb-2 text-xl font-semibold">
                 Architecture & Core Technologies
               </h3>
-              <ul className="list-inside list-disc space-y-1 pl-4">
+              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
                 <li>Built with SwiftUI and structured using MVVM pattern</li>
                 <li>
                   Leverages SwiftData for persistent storage and data modeling
@@ -116,13 +115,13 @@ export default function Meditatio() {
             </div>
 
             {/* Authentication & Security */}
-            <div className="text-gray-400">
-              <h3 className="mb-2 text-xl font-semibold text-gray-100">
+            <div>
+              <h3 className="text-base-400 mb-2 text-xl font-semibold">
                 Authentication & Security
               </h3>
-              <ul className="list-inside list-disc space-y-1 pl-4">
+              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
                 <li>Multi-provider authentication system supporting:</li>
-                <ul className="list-inside list-disc space-y-1 pl-6">
+                <ul className="text-base-600 list-inside list-disc space-y-1 pl-6">
                   <li>Sign in with Apple using AuthenticationServices</li>
                   <li>Google Sign-In via GoogleSignIn-iOS</li>
                 </ul>
@@ -134,21 +133,21 @@ export default function Meditatio() {
             </div>
 
             {/* Data Layer */}
-            <div className="text-gray-400">
-              <h3 className="mb-2 text-xl font-semibold text-gray-100">
+            <div>
+              <h3 className="text-base-400 mb-2 text-xl font-semibold">
                 Data Layer
               </h3>
-              <ul className="list-inside list-disc space-y-1 pl-4">
+              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
                 <li>Robust data modeling using SwiftData @Model macro</li>
                 <li>Efficient querying with @Query property wrapper</li>
               </ul>
             </div>
             {/* Data Layer */}
-            <div className="text-gray-400">
-              <h3 className="mb-2 text-xl font-semibold text-gray-100">
+            <div>
+              <h3 className="text-base-400 mb-2 text-xl font-semibold">
                 Widget Support
               </h3>
-              <ul className="list-inside list-disc space-y-1 pl-4">
+              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
                 <li>
                   Uses WidgetKit to allow for home screen customization and
                   quick app launch.
@@ -158,8 +157,8 @@ export default function Meditatio() {
           </div>
         </div>
 
-        {/* Responsive Image Gallery Carousel */}
-        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box bg-neutral p-4">
+        {/* Image Gallery */}
+        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box bg-base-200 p-4">
           {[1, 2, 3, 4, 5, 6].map((num) => (
             <div key={num} className="carousel-item">
               <img
