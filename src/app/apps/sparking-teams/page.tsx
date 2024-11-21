@@ -1,6 +1,7 @@
 // src/app/apps/sparking-teams/page.tsx
 import Image from "next/image";
 import Layout from "../../LayoutHeader";
+import Link from "next/link";
 
 export default function SparkingTeams() {
   return (
@@ -120,28 +121,30 @@ export default function SparkingTeams() {
         </div>
 
         <div className="mx-auto mb-8 max-w-4xl text-center">
-          <a
+          <Link
             href="/ipa/Sparking Teams-v1.0.ipa"
             download
-            className="btn btn-accent text-accent-content"
+            className="btn btn-secondary mx-auto mb-12 flex w-64 text-secondary-content"
           >
             Download Sparking Teams v1.0
-          </a>
+          </Link>
         </div>
 
         {/* Image Gallery */}
-        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box p-4">
-          {[1, 2, 3, 4, 5].map((num) => (
-            <div key={num} className="carousel-item">
-              <Image
-                src={`/assets/apps/sparking/0${num}.png`}
-                alt={`Sparking Teams screenshot ${num}`}
-                width={400}
-                height={800}
-                className="h-[600px] w-auto rounded-box"
-              />
-            </div>
-          ))}
+        <div className="flex w-full justify-center">
+          <div className="carousel carousel-center max-w-7xl space-x-4 rounded-box p-4">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <div key={num} className="carousel-item">
+                <Image
+                  src={`/assets/apps/sparking/0${num}.png`}
+                  alt={`Sparking Teams screenshot ${num}`}
+                  width={400}
+                  height={800}
+                  className="h-[600px] w-auto rounded-box"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

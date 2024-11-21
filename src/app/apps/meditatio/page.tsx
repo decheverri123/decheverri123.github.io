@@ -2,6 +2,7 @@
 
 import Layout from "../../LayoutHeader";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Meditatio() {
   return (
@@ -158,16 +159,20 @@ export default function Meditatio() {
         </div>
 
         {/* Image Gallery */}
-        <div className="carousel carousel-center mx-auto max-w-7xl space-x-4 rounded-box bg-base-200 p-4">
-          {[1, 2, 3, 4, 5, 6].map((num) => (
-            <div key={num} className="carousel-item">
-              <img
-                src={`/assets/apps/meditatio/0${num}.png`}
-                alt={`Meditatio screenshot ${num}`}
-                className="h-96 w-auto rounded-box"
-              />
-            </div>
-          ))}
+        <div className="flex w-full justify-center">
+          <div className="carousel carousel-center max-w-7xl space-x-4 rounded-box p-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={num} className="carousel-item">
+                <Image
+                  src={`/assets/apps/meditatio/0${num}.png`}
+                  alt={`Meditatio screenshot ${num}`}
+                  width={400}
+                  height={800}
+                  className="h-[600px] w-auto rounded-box"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
