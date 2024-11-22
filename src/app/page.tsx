@@ -8,10 +8,10 @@ export default function HomePage() {
   return (
     <Layout>
       <div className="min-h-screen w-full p-4 sm:p-8 md:px-16 lg:px-24">
-        <h1 className="mb-4 sm:mb-8 text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-primary">
+        <h1 className="mb-4 text-center text-2xl font-semibold text-primary sm:mb-8 sm:text-3xl md:text-4xl">
           Danny Echeverri
         </h1>
-        <p className="mx-auto mb-8 sm:mb-12 max-w-xl sm:max-w-2xl text-center text-sm sm:text-base md:text-lg text-base-content px-4 sm:px-0">
+        <p className="mx-auto mb-8 max-w-xl px-4 text-center text-sm text-base-content sm:mb-12 sm:max-w-2xl sm:px-0 sm:text-base md:text-lg">
           Full Stack Software Engineer with expertise across front-end,
           back-end, and mobile technologies. Specialized in crafting
           high-performance software solutions, I bring a track record of driving
@@ -22,8 +22,8 @@ export default function HomePage() {
         </p>
 
         {/* Work History Section */}
-        <section className="mx-auto mb-8 max-w-full sm:max-w-4xl rounded-lg bg-base-200 p-4 sm:p-6 shadow-xl">
-          <h1 className="font-center mb-4 text-center text-xl sm:text-2xl font-bold text-secondary">
+        <section className="mx-auto mb-8 max-w-full rounded-lg bg-base-200 p-4 shadow-xl sm:max-w-4xl sm:p-6">
+          <h1 className="font-center mb-4 text-center text-xl font-bold text-secondary sm:text-2xl">
             Work History
           </h1>
           <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
@@ -101,8 +101,8 @@ export default function HomePage() {
             Languages
           </h2>
           <div className="space-y-2 text-base-content">
-            <p>Spanish - Native</p>
             <p>English - Native</p>
+            <p>Spanish - Native</p>
           </div>
         </section>
 
