@@ -59,13 +59,19 @@ export default function Header() {
             className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className="text-base font-medium">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link href="/projects" className="text-base font-medium">
+                Projects
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" className="text-base font-medium">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -79,20 +85,24 @@ export default function Header() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="text-base font-semibold">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" className="text-base font-semibold">
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" className="text-base font-semibold">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
 
-      <div className="navbar-end">
-        {/* Remove theme dropdown */}
-      </div>
+      <div className="navbar-end">{/* Remove theme dropdown */}</div>
     </div>
   );
 }
