@@ -7,11 +7,11 @@ import TimelineItem from "@/components/TimelineItem";
 export default function HomePage() {
   return (
     <Layout>
-      <div className="min-h-screen w-full p-8">
-        <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
+      <div className="min-h-screen w-full p-4 sm:p-8 md:px-16 lg:px-24">
+        <h1 className="mb-4 sm:mb-8 text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-primary">
           Danny Echeverri
         </h1>
-        <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-base-content">
+        <p className="mx-auto mb-8 sm:mb-12 max-w-xl sm:max-w-2xl text-center text-sm sm:text-base md:text-lg text-base-content px-4 sm:px-0">
           Full Stack Software Engineer with expertise across front-end,
           back-end, and mobile technologies. Specialized in crafting
           high-performance software solutions, I bring a track record of driving
@@ -22,8 +22,8 @@ export default function HomePage() {
         </p>
 
         {/* Work History Section */}
-        <section className="mx-auto mb-8 max-w-4xl rounded-lg bg-base-200 p-6 shadow-xl">
-          <h1 className="font-center mb-4 text-center text-2xl font-bold text-secondary">
+        <section className="mx-auto mb-8 max-w-full sm:max-w-4xl rounded-lg bg-base-200 p-4 sm:p-6 shadow-xl">
+          <h1 className="font-center mb-4 text-center text-xl sm:text-2xl font-bold text-secondary">
             Work History
           </h1>
           <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
@@ -140,41 +140,4 @@ export default function HomePage() {
       </div>
     </Layout>
   );
-}
-
-{
-  /* <ul class="menu w-56 rounded-box bg-base-200">
-  <li>
-    <a>Item 1</a>
-  </li>
-  <li>
-    <details open>
-      <summary>Parent</summary>
-      <ul>
-        <li>
-          <a>Submenu 1</a>
-        </li>
-        <li>
-          <a>Submenu 2</a>
-        </li>
-        <li>
-          <details open>
-            <summary>Parent</summary>
-            <ul>
-              <li>
-                <a>Submenu 1</a>
-              </li>
-              <li>
-                <a>Submenu 2</a>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </details>
-  </li>
-  <li>
-    <a>Item 3</a>
-  </li>
-</ul>; */
 }
