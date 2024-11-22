@@ -6,115 +6,89 @@ import Link from "next/link";
 export default function SparkingTeams() {
   return (
     <Layout>
-      <div className="min-h-screen w-full p-8 px-12">
-        <h1 className="text-base-600 mb-8 text-center text-4xl font-semibold">
+      <div className="min-h-screen w-full bg-base-100 p-8 px-12 text-base-content">
+        <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
           Sparking Teams
         </h1>
 
         <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Left Column */}
-          <div className="space-y-6">
-            <h2 className="text-base-500 text-2xl font-semibold">
+          <div className="relative space-y-6">
+            {/* Decorative element */}
+            <div className="absolute -left-4 -top-4 h-16 w-16 border-l-4 border-t-4 border-primary opacity-30"></div>
+            <div className="absolute -bottom-4 -right-4 h-16 w-16 border-b-4 border-r-4 border-secondary opacity-30"></div>
+
+            <h2 className="text-2xl font-semibold text-secondary">
               Key Features
             </h2>
-            <p className="text-base-600">
-              <strong>Companion app</strong> for the new Dragon Ball Sparking
-              Zero game.
+            <p className="text-base-content">
+              <strong className="text-accent">Companion app</strong> for the new
+              Dragon Ball Sparking Zero game.
             </p>
-            <p className="text-base-600">
-              <strong>Complete Character Database:</strong> View the complete
-              roster and every character&#39;s complete moveset, including
-              Skills, Blasts, and Ultimate techniques.
+            <p className="text-base-content">
+              <strong className="text-accent">
+                Complete Character Database:
+              </strong>{" "}
+              View the complete roster and every character&#39;s complete
+              moveset, including Skills, Blasts, and Ultimate techniques.
             </p>
-            <p className="text-base-600">
-              <strong>Advanced Search & Filtering:</strong> Easily find
-              characters with convenient search and filter.
+            <p className="text-base-content">
+              <strong className="text-accent">
+                Advanced Search & Filtering:
+              </strong>{" "}
+              Easily find characters with convenient search and filter.
             </p>
-            <p className="text-base-600">
-              <strong>Team Builder:</strong> Plan, build, and save your favorite
-              teams with the convenient team creator.
+            <p className="text-base-content">
+              <strong className="text-accent">Team Builder:</strong> Plan,
+              build, and save your favorite teams with the convenient team
+              creator.
             </p>
           </div>
 
           {/* Right Column */}
-          <div>
-            <h2 className="text-base-500 mb-4 text-2xl font-semibold">
+          <div className="relative space-y-6">
+            {/* Decorative element */}
+            <div className="absolute -right-4 -top-4 h-16 w-16 border-r-4 border-t-4 border-secondary opacity-30"></div>
+            <div className="absolute -bottom-4 -left-4 h-16 w-16 border-b-4 border-l-4 border-primary opacity-30"></div>
+
+            <h2 className="mb-4 text-2xl font-semibold text-secondary">
               Technical Overview
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-base-400 mb-2 text-xl font-semibold">
+            <div className="mb-6 rounded-lg bg-base-200 p-4 shadow-sm">
+              <h3 className="mb-2 text-xl font-semibold text-accent">
                 Architecture
               </h3>
-              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
+              <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
                 <li>
                   Built with SwiftUI and SwiftData for a modern, declarative UI
-                  and robust data persistence
                 </li>
                 <li>
-                  Follows MVVM architecture pattern with clear separation of
-                  concerns
+                  Follows MVVM (Model-View-ViewModel) architectural pattern
                 </li>
-                <li>
-                  Implements composition over inheritance for maximum code
-                  reusability
-                </li>
-                <li>
-                  Uses dependency injection through SwiftUI environment for
-                  better testability
-                </li>
+                <li>Leverages Swift concurrency for efficient data handling</li>
               </ul>
             </div>
-            {/* Data Management Section */}
-            <div className="mb-8">
-              <h3 className="text-base-400 mb-2 text-xl font-semibold">
+
+            <div className="mb-6 rounded-lg bg-base-200 p-4 shadow-sm">
+              <h3 className="mb-2 text-xl font-semibold text-accent">
                 Data Management
               </h3>
-              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
-                <li>SwiftData models with complex relationships:</li>
-                <ul className="list-inside list-disc space-y-1 pl-6">
-                  <li>Characters with transformations and moves</li>
-                  <li>Teams with character junctions</li>
-                  <li>
-                    Many-to-many relationships handled through junction tables
-                  </li>
-                </ul>
-                <li>Efficient data loading with pagination and lazy loading</li>
-                <li>
-                  Custom filter and sort implementations for optimal performance
-                </li>
+              <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
+                <li>Persistent data storage using SwiftData</li>
+                <li>Efficient querying with @Query property wrapper</li>
+                <li>Local caching of game character data</li>
               </ul>
             </div>
-            {/* Memory Optimization Section */}
-            <div className="mb-8">
-              <h3 className="text-base-400 mb-2 text-xl font-semibold">
-                Memory Optimization
+
+            <div className="rounded-lg bg-base-200 p-4 shadow-sm">
+              <h3 className="mb-2 text-xl font-semibold text-accent">
+                User Experience
               </h3>
-              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
-                <li>Implements custom image caching system using NSCache</li>
-                <li>Lazy loading of grid items and views</li>
-                <li>Memory-efficient cell reuse in grid layouts</li>
-                <li>Optimized view hierarchies to minimize memory footprint</li>
-              </ul>
-            </div>
-            {/* UI Components Section */}
-            <div>
-              <h3 className="text-base-400 mb-2 text-xl font-semibold">
-                UI Components
-              </h3>
-              <ul className="text-base-600 list-inside list-disc space-y-1 pl-4">
-                <li>Custom grid implementation with adaptive layouts</li>
-                <li>Fluid animations and transitions</li>
-                <li>Dark mode support with custom color schemes</li>
-                <li>iPad and iPhone adaptivity</li>
-                <li>Advanced search and filtering capabilities</li>
-                <li>Custom UI components:</li>
-                <ul className="list-inside list-disc space-y-1 pl-6">
-                  <li>Character cards with dynamic stat displays</li>
-                  <li>Team management interface</li>
-                  <li>Character transformation tracking</li>
-                  <li>Move set visualization</li>
-                </ul>
+              <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
+                <li>Intuitive, responsive UI design</li>
+                <li>Dark and light mode support</li>
+                <li>Accessibility features implemented</li>
               </ul>
             </div>
           </div>
