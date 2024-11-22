@@ -9,6 +9,14 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
+    /**
+     * Handles the event when the user clicks outside of the dropdown.
+     * We use a ref to keep track of it, which is like a special variable that we can
+     * use to access the element in the DOM. We also use the MouseEvent, which is
+     * an object that contains information about the event that triggered the
+     * function. We use this to check if the user clicked outside of the dropdown.
+     * @param {MouseEvent} event - The event that triggered the function.
+     */
     function handleClickOutside(event: MouseEvent) {
       if (
         dropdownRef.current &&
