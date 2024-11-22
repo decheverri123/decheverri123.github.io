@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Meditatio() {
   return (
     <Layout>
-      <div className="min-h-screen w-full bg-base-100 p-8 px-12 text-base-content">
+      <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8 px-12 text-base-content">
         <h1 className="mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold text-primary">
           Meditatio
         </h1>

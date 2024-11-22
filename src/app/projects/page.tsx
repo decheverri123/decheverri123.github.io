@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ProjectsPage() {
   return (
     <Layout>
-      <div className="min-h-screen w-full bg-base-100 p-8">
+      <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8">
         <div className="relative mx-auto max-w-7xl">
           {/* Subtle decorative elements */}
           <div className="absolute -left-4 -top-4 h-24 w-24 border-l-4 border-t-4 border-primary/20 opacity-30"></div>

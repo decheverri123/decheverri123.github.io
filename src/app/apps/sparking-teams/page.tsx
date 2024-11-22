@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function SparkingTeams() {
   return (
     <Layout>
-      <div className="min-h-screen w-full bg-base-100 p-8 px-12 text-base-content">
+      <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8 px-12 text-base-content">
         <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
           Sparking Teams
         </h1>
