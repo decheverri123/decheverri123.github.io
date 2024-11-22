@@ -3,10 +3,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
@@ -16,7 +15,6 @@ export default function Header() {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         dropdownRef.current.removeAttribute("open");
-        setIsOpen(false);
       }
     }
 
@@ -85,7 +83,7 @@ export default function Header() {
         <div className="hidden">
           <details ref={dropdownRef} className="dropdown dropdown-end">
             <summary className="btn btn-ghost">Theme</summary>
-            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+            <ul className="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
               {/* Intentionally left empty */}
             </ul>
           </details>

@@ -26,7 +26,9 @@ export default function ProjectsPage() {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-base-content/90">Sparking Teams</h2>
+              <h2 className="card-title text-base-content/90">
+                Sparking Teams
+              </h2>
               <p className="text-md font-medium text-base-content/75">
                 Build and manage teams with a powerful character database and
                 advanced filtering tools for the new Sparking Teams game.
