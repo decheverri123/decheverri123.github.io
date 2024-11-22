@@ -91,14 +91,7 @@ export default function Header() {
       </div>
 
       <div className="navbar-end">
-        <div className="hidden">
-          <details ref={dropdownRef} className="dropdown dropdown-end">
-            <summary className="btn btn-ghost">Theme</summary>
-            <ul className="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow">
-              {/* Intentionally left empty */}
-            </ul>
-          </details>
-        </div>
+        {/* Remove theme dropdown */}
       </div>
     </div>
   );

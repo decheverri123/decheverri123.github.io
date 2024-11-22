@@ -4,7 +4,6 @@
 
 import { useState, useEffect } from "react";
 import Header from "./header";
-import { ThemeProvider } from "./contexts/ThemeContext";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isClient, setIsClient] = useState(false);
@@ -19,11 +18,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-base-100">
-        <Header />
-        <main>{children}</main>
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-base-100">
+      <Header />
+      <main>{children}</main>
+    </div>
   );
 }
