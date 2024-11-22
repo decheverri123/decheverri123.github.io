@@ -6,6 +6,9 @@ import Link from "next/link";
 import { useRef, useEffect } from "react";
 
 export default function Header() {
+  // The ref to the dropdown element. We use a ref so that we can access the element
+  // in the DOM and add an event listener to it. We also use the `useRef` hook to
+  // create a ref that is persisted across rerenders.
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
