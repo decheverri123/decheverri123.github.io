@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "echo 'No tests specified'"
   },
   "dependencies": {
     "next": "15.0.2",
