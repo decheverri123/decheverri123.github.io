@@ -106,7 +106,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <div className="flex flex-row items-center justify-center gap-12">
+        <div className="flex flex-row items-center justify-center gap-4">
           <h3 className="text-lg font-semibold text-secondary">Powered by:</h3>
           <div className="flex items-center gap-4">
             <Image
@@ -119,21 +119,21 @@ export default function HomePage() {
             <Image
               src="/tailwind.png"
               alt="Tailwind Logo"
-              width={90}
-              height={90}
+              width={70}
+              height={70}
               className="object-contain"
             />
             <Image
               src="/daisy.svg"
               alt="Daisy UI Logo"
-              width={90}
-              height={90}
+              width={110}
+              height={110}
               className="object-contain"
             />
           </div>
         </div>
         <div className="mx-auto my-10 max-w-2xl text-center text-lg">
-          <strong className="text-error">
+          <strong className="font-extralight text-base-content">
             This website is a work in progress and still under construction.
           </strong>
         </div>
