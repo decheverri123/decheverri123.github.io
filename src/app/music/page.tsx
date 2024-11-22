@@ -27,11 +27,11 @@ export default function MusicPage() {
           <div className="absolute -left-4 -top-4 h-24 w-24 border-l-4 border-t-4 border-primary/20 opacity-30"></div>
           <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-4 border-r-4 border-secondary/20 opacity-30"></div>
 
-          <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
+          <h1 className="mb-8 text-center text-4xl font-semibold text-white">
             Music
           </h1>
 
-          <p className="mx-auto mb-12 max-w-xl text-center text-lg text-base-content/75">
+          <p className="mx-auto mb-12 max-w-xl text-center text-lg text-white/75">
             Exploring music through original compositions and acoustic
             performances
           </p>

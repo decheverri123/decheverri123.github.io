@@ -8,7 +8,7 @@ export default function Meditatio() {
   return (
     <Layout>
       <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8 px-12 text-base-content">
-        <h1 className="mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold text-primary">
+        <h1 className="mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold text-white">
           Meditatio
         </h1>
 
@@ -25,7 +25,7 @@ export default function Meditatio() {
             <div className="absolute -left-4 -top-4 h-16 w-16 border-l-4 border-t-4 border-primary opacity-30"></div>
             <div className="absolute -bottom-4 -right-4 h-16 w-16 border-b-4 border-r-4 border-secondary opacity-30"></div>
 
-            <h2 className="text-2xl font-semibold text-secondary">
+            <h2 className="text-2xl font-semibold text-white">
               App Description
             </h2>
             <p className="text-lg text-base-content">
@@ -34,14 +34,12 @@ export default function Meditatio() {
               journal helps you examine your reactions to life&#39;s events and
               develop emotional resilience through structured self-reflection.
             </p>
-            <h2 className="text-2xl font-semibold text-secondary">
-              Key Features
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">Key Features</h2>
 
             <div className="relative">
               {/* Three-Step Reflection Process */}
               <div className="mb-6 border-l-2 border-accent pl-6">
-                <h3 className="mb-2 text-xl font-semibold text-accent">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   Three-Step Reflection Process
                 </h3>
                 <ul className="list-inside list-disc space-y-1 text-base-content">
@@ -54,7 +52,7 @@ export default function Meditatio() {
 
               {/* Daily Stoic Wisdom */}
               <div className="mb-6 border-l-2 border-accent pl-6">
-                <h3 className="mb-2 text-xl font-semibold text-accent">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   Daily Stoic Wisdom
                 </h3>
                 <ul className="list-inside list-disc space-y-1 text-base-content">
@@ -68,7 +66,7 @@ export default function Meditatio() {
 
               {/* Privacy & Security */}
               <div className="mb-6 border-l-2 border-accent pl-6">
-                <h3 className="mb-2 text-xl font-semibold text-accent">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   Privacy & Security
                 </h3>
                 <ul className="list-inside list-disc space-y-1 text-base-content">
@@ -79,7 +77,7 @@ export default function Meditatio() {
 
               {/* Perfect for */}
               <div className="border-l-2 border-accent pl-6">
-                <h3 className="mb-2 text-xl font-semibold text-accent">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   Perfect for:
                 </h3>
                 <ul className="list-inside list-disc space-y-1 text-base-content">
@@ -106,13 +104,13 @@ export default function Meditatio() {
             <div className="absolute -right-4 -top-4 h-16 w-16 border-r-4 border-t-4 border-secondary opacity-30"></div>
             <div className="absolute -bottom-4 -left-4 h-16 w-16 border-b-4 border-l-4 border-primary opacity-30"></div>
 
-            <h2 className="text-2xl font-semibold text-secondary">
+            <h2 className="text-2xl font-semibold text-white">
               Technical Overview
             </h2>
 
             {/* Architecture & Core Technologies */}
             <div className="rounded-lg bg-base-200 p-4 shadow-sm">
-              <h3 className="mb-2 text-xl font-semibold text-accent">
+              <h3 className="mb-2 text-xl font-semibold text-white">
                 Architecture & Core Technologies
               </h3>
               <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
@@ -125,7 +123,7 @@ export default function Meditatio() {
 
             {/* Authentication & Security */}
             <div className="rounded-lg bg-base-200 p-4 shadow-sm">
-              <h3 className="mb-2 text-xl font-semibold text-accent">
+              <h3 className="mb-2 text-xl font-semibold text-white">
                 Authentication & Security
               </h3>
               <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
@@ -143,7 +141,7 @@ export default function Meditatio() {
 
             {/* Data Layer */}
             <div className="rounded-lg bg-base-200 p-4 shadow-sm">
-              <h3 className="mb-2 text-xl font-semibold text-accent">
+              <h3 className="mb-2 text-xl font-semibold text-white">
                 Data Layer
               </h3>
               <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">
@@ -154,7 +152,7 @@ export default function Meditatio() {
 
             {/* Widget Support */}
             <div className="rounded-lg bg-base-200 p-4 shadow-sm">
-              <h3 className="mb-2 text-xl font-semibold text-accent">
+              <h3 className="mb-2 text-xl font-semibold text-white">
                 Widget Support
               </h3>
               <ul className="list-inside list-disc space-y-1 pl-4 text-base-content">

@@ -7,7 +7,7 @@ export default function SparkingTeams() {
   return (
     <Layout>
       <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8 px-12 text-base-content">
-        <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
+        <h1 className="mb-8 text-center text-4xl font-semibold text-white">
           Sparking Teams
         </h1>
 
@@ -18,9 +18,7 @@ export default function SparkingTeams() {
             <div className="absolute -left-4 -top-4 h-16 w-16 border-l-4 border-t-4 border-primary opacity-30"></div>
             <div className="absolute -bottom-4 -right-4 h-16 w-16 border-b-4 border-r-4 border-secondary opacity-30"></div>
 
-            <h2 className="text-2xl font-semibold text-secondary">
-              Key Features
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">Key Features</h2>
             <p className="text-base-content">
               <strong className="text-accent">Companion app</strong> for the new
               Dragon Ball Sparking Zero game.
@@ -51,7 +49,7 @@ export default function SparkingTeams() {
             <div className="absolute -right-4 -top-4 h-16 w-16 border-r-4 border-t-4 border-secondary opacity-30"></div>
             <div className="absolute -bottom-4 -left-4 h-16 w-16 border-b-4 border-l-4 border-primary opacity-30"></div>
 
-            <h2 className="mb-4 text-2xl font-semibold text-secondary">
+            <h2 className="mb-4 text-2xl font-semibold text-white">
               Technical Overview
             </h2>
 

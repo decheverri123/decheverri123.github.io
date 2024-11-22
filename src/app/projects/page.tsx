@@ -31,13 +31,13 @@ export default function ProjectsPage() {
           <div className="absolute -left-4 -top-4 h-24 w-24 border-l-4 border-t-4 border-primary/20 opacity-30"></div>
           <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-4 border-r-4 border-secondary/20 opacity-30"></div>
 
-          <h1 className="mb-8 text-center text-4xl font-semibold text-primary">
+          <h1 className="mb-8 text-center text-4xl font-semibold text-white">
             Projects
           </h1>
 
-          <h2 className="mb-8 text-center text-3xl font-semibold text-secondary">
+          <h1 className="mb-8 text-center text-4xl font-semibold text-white">
             iOS Apps
-          </h2>
+          </h1>
 
           <div className="mx-auto grid max-w-3xl items-center justify-items-center gap-8 px-4 md:grid-cols-1 lg:max-w-5xl lg:grid-cols-2">
             {/* Sparking Teams Card */}
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
           <div className="relative my-16 flex items-center justify-center">
             <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
             <div className="relative z-10 bg-base-100 px-6 text-center">
-              <h2 className="text-3xl font-semibold text-secondary">Music</h2>
+              <h2 className="text-3xl font-semibold text-white">Music</h2>
             </div>
           </div>
 
