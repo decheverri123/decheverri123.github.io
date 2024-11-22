@@ -93,9 +93,13 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          <h2 className="mb-8 mt-16 text-center text-3xl font-semibold text-secondary">
-            Music
-          </h2>
+          {/* Decorative Divider between iOS Apps and Music */}
+          <div className="relative my-16 flex items-center justify-center">
+            <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+            <div className="relative z-10 bg-base-100 px-6 text-center">
+              <h2 className="text-3xl font-semibold text-secondary">Music</h2>
+            </div>
+          </div>
 
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
             {videos.map((video) => (
