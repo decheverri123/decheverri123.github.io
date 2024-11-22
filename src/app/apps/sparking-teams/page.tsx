@@ -11,6 +11,15 @@ export default function SparkingTeams() {
           Sparking Teams
         </h1>
 
+        <div className="mx-auto mb-8 max-w-4xl text-center">
+          <Link
+            href="https://apps.apple.com/us/app/sparking-teams/id6737282855"
+            className="btn btn-secondary mx-auto mb-12 flex w-64 text-secondary-content"
+          >
+            View on the App Store!
+          </Link>
+        </div>
+
         <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Left Column */}
           <div className="relative space-y-6">
@@ -90,15 +99,6 @@ export default function SparkingTeams() {
               </ul>
             </div>
           </div>
-        </div>
-
-        <div className="mx-auto mb-8 max-w-4xl text-center">
-          <Link
-            href="https://apps.apple.com/us/app/sparking-teams/id6737282855"
-            className="btn btn-secondary mx-auto mb-12 flex w-64 text-secondary-content"
-          >
-            View on the App Store!
-          </Link>
         </div>
 
         {/* Image Gallery */}

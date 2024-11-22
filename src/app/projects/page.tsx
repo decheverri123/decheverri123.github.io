@@ -2,6 +2,7 @@
 
 import Layout from "../LayoutHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { FaYoutube, FaTiktok } from "react-icons/fa";
 
 export default function ProjectsPage() {
@@ -35,58 +36,62 @@ export default function ProjectsPage() {
             Projects
           </h1>
 
-          <h1 className="mb-8 text-center text-4xl font-semibold text-white">
-            iOS Apps
-          </h1>
+          {/* Decorative Divider between iOS Apps and Music */}
+          <div className="relative my-16 flex items-center justify-center">
+            <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+            <div className="relative z-10 bg-base-100 px-6 text-center">
+              <h2 className="text-3xl font-semibold text-secondary">
+                iOS Apps
+              </h2>
+            </div>
+          </div>
 
           <div className="mx-auto grid max-w-3xl items-center justify-items-center gap-8 px-4 md:grid-cols-1 lg:max-w-5xl lg:grid-cols-2">
             {/* Sparking Teams Card */}
-            <div className="group card image-full w-96 bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
-              <figure className="opacity-70 transition-opacity group-hover:opacity-100">
-                <img
+            <div className="group card image-full w-3/4 max-w-md bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
+              <figure className="absolute inset-0 opacity-70 transition-opacity group-hover:opacity-100">
+                <Image
                   src="/assets/apps/sparking/logo.png"
-                  alt="Sparking Teams logo"
-                  suppressHydrationWarning={true}
-                  className="transition-transform group-hover:scale-110"
+                  alt="Sparking Teams App"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="group-hover:text-accent-focus card-title text-accent transition-colors">
-                  Sparking Teams
-                </h2>
-                <p className="text-md font-medium text-base-content/75 transition-colors group-hover:text-base-content">
-                  Build and manage teams with a powerful character database and
-                  advanced filtering tools for the new Sparking Teams game.
-                </p>
+              <div className="card-body items-center justify-center text-center">
+                <h2 className="card-title text-white">Sparking Teams</h2>
+                <p className="text-white/75">Team-building companion app</p>
                 <div className="card-actions justify-center">
-                  <Link href="/apps/sparking-teams">
-                    <button className="btn btn-secondary">View Project</button>
+                  <Link
+                    href="/apps/sparking-teams"
+                    className="btn btn-secondary btn-sm"
+                  >
+                    Learn More
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Meditatio Card */}
-            <div className="group card image-full w-96 bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
-              <figure className="opacity-70 transition-opacity group-hover:opacity-100">
-                <img
+            <div className="group card image-full w-3/4 max-w-md bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
+              <figure className="absolute inset-0">
+                <Image
                   src="/assets/apps/meditatio/logo.png"
-                  alt="Meditatio logo"
-                  suppressHydrationWarning={true}
-                  className="transition-transform group-hover:scale-110"
+                  alt="Meditatio App"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="group-hover:text-accent-focus card-title text-accent transition-colors">
-                  Meditatio
-                </h2>
-                <p className="text-md font-medium text-base-content/75 transition-colors group-hover:text-base-content">
-                  Reflect on daily experiences with structured journaling rooted
-                  in Stoic philosophy.
-                </p>
+              <div className="card-body items-center justify-center text-center">
+                <h2 className="card-title text-white">Meditatio</h2>
+                <p className="text-white/75">Mindfulness companion app</p>
                 <div className="card-actions justify-center">
-                  <Link href="/apps/meditatio">
-                    <button className="btn btn-secondary">View Project</button>
+                  <Link
+                    href="/apps/meditatio"
+                    className="btn btn-secondary btn-sm"
+                  >
+                    Learn More
                   </Link>
                 </div>
               </div>
@@ -97,11 +102,11 @@ export default function ProjectsPage() {
           <div className="relative my-16 flex items-center justify-center">
             <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
             <div className="relative z-10 bg-base-100 px-6 text-center">
-              <h2 className="text-3xl font-semibold text-white">Music</h2>
+              <h2 className="text-3xl font-semibold text-secondary">Music</h2>
             </div>
           </div>
 
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
             {videos.map((video) => (
               <div
                 key={video.id}
