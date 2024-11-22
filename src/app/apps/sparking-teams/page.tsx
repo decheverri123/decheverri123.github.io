@@ -96,11 +96,10 @@ export default function SparkingTeams() {
 
         <div className="mx-auto mb-8 max-w-4xl text-center">
           <Link
-            href="/ipa/Sparking Teams-v1.0.ipa"
-            download
+            href="https://apps.apple.com/us/app/sparking-teams/id6737282855"
             className="btn btn-secondary mx-auto mb-12 flex w-64 text-secondary-content"
           >
-            Download Sparking Teams v1.0
+            View on the App Store!
           </Link>
         </div>
 
