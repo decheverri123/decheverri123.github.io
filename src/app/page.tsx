@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <Layout>
       <div className="min-h-screen w-full p-4 text-white sm:p-8 md:px-16 lg:px-24">
-        <h1 className="mb-4 text-center text-2xl font-semibold text-primary sm:mb-8 sm:text-3xl md:text-4xl">
+        <h1 className="mb-4 text-center text-2xl font-semibold text-secondary sm:mb-8 sm:text-3xl md:text-4xl">
           Danny Echeverri
         </h1>
         <p className="mx-auto mb-8 max-w-xl px-4 text-center text-sm text-base-content sm:mb-12 sm:max-w-2xl sm:px-0 sm:text-base md:text-lg">
