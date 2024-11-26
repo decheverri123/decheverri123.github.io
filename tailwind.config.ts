@@ -14,22 +14,16 @@ const config: Config = {
         mono: ["GeistMono", "Courier", "monospace"],
       },
       screens: {
-        'xs': '320px',     // Extra small devices
-        'sm': '640px',     // Small devices
-        'md': '768px',     // Medium devices
-        'lg': '1024px',    // Large devices
-        'xl': '1280px',    // Extra large devices
-        '2xl': '1536px',   // 2X large devices
+        xs: "320px", // Extra small devices
+        sm: "640px", // Small devices
+        md: "768px", // Medium devices
+        lg: "1024px", // Large devices
+        xl: "1280px", // Extra large devices
+        "2xl": "1536px", // 2X large devices
       },
       fontSize: {
-        'xs-mobile': '0.625rem',   // Smallest mobile font size
-        'sm-mobile': '0.75rem',    // Small mobile font size
-      },
-      spacing: {
-        'safe-top': 'env(safe-area-inset-top)',
-        'safe-bottom': 'env(safe-area-inset-bottom)',
-        'safe-left': 'env(safe-area-inset-left)',
-        'safe-right': 'env(safe-area-inset-right)',
+        "xs-mobile": "0.625rem", // Smallest mobile font size
+        "sm-mobile": "0.75rem", // Small mobile font size
       },
     },
   },
