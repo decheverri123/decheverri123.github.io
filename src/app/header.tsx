@@ -37,7 +37,7 @@ export default function Header() {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         {/* Hamburger menu for small screens */}
-        <div className="dropdown inline-block lg:hidden">
+        <div className="dropdown inline-block text-white lg:hidden">
           <button tabIndex={0} className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export default function Header() {
           </button>
           <ul
             tabIndex={0}
-            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-white shadow"
           >
             <li>
               <Link href="/" className="text-base font-medium">
@@ -77,7 +77,7 @@ export default function Header() {
         </div>
 
         {/* Brand/Logo */}
-        <Link href="/" className="btn btn-ghost text-xl">
+        <Link href="/" className="btn btn-ghost text-xl text-white">
           Danny Echeverri
         </Link>
       </div>
