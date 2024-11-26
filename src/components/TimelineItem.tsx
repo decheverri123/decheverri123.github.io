@@ -33,12 +33,18 @@ export default function TimelineItem({
       <div
         className={`timeline-${position} mb-6 sm:mb-10 px-2 sm:px-3 ${position === "start" ? "md:text-end" : ""}`}
       >
-        <time className="font-mono font-bold text-primary text-xs sm:text-sm">{date}</time>
-        <div className="text-base sm:text-lg font-black text-secondary">{title}</div>
+        <time className="font-mono font-bold text-primary text-xs sm:text-sm">
+          {date}
+        </time>
+        <div className="text-base sm:text-lg font-black text-secondary">
+          {title}
+        </div>
         {subtitle && <div className="text-sm sm:text-base">{subtitle}</div>}
         <ul className="mt-2 list-inside list-disc space-y-1 sm:space-y-2 text-xs sm:text-base">
           {bulletPoints.map((point, index) => (
-            <li key={index} className="break-words">{point}</li>
+            <li key={index} className="break-words">
+              {point}
+            </li>
           ))}
         </ul>
       </div>
