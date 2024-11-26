@@ -17,9 +17,12 @@ import {
   SiJenkins,
   SiAzuredevops,
   SiAmazonwebservices,
-  SiSwift,
-  SiJavascript,
   SiApple,
+  SiJavascript,
+  SiVisualbasic,
+  SiGithubactions,
+  SiXcode,
+  SiSwift,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -44,6 +47,11 @@ export default function SkillsSection() {
               label="JavaScript/TypeScript"
               iconColor="#F7DF1E"
               secondaryIconColor="#3178C6"
+            />
+            <SkillCard
+              icon={SiVisualbasic}
+              label="Visual Basic"
+              iconColor="#512BD4"
             />
           </div>
         </div>
@@ -132,6 +140,12 @@ export default function SkillsSection() {
               label="Azure DevOps"
               iconColor="#B794F4"
             />
+            <SkillCard
+              icon={SiGithubactions}
+              label="GitHub Actions"
+              iconColor="#2088FF"
+            />
+            <SkillCard icon={SiXcode} label="Xcode Cloud" iconColor="#147EFB" />
           </div>
         </div>
       </div>
