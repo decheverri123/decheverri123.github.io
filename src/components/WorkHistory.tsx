@@ -32,7 +32,7 @@ export default function WorkHistory() {
         <TimelineItem
           date="2015 - 2019"
           title="Education"
-          subtitle="Amherst College - Amherst, MA"
+          subtitle="Amherst College"
           position="start"
           bulletPoints={[
             "Bachelor of Arts: Computer Science",
