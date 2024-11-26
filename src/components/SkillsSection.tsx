@@ -39,7 +39,7 @@ export default function SkillsSection() {
           </h3>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
             <SkillCard icon={SiCsharp} label="C#" iconColor="#512BD4" />
-            <SkillCard icon={SiPython} label="Python" iconColor="#3776AB" />
+            <SkillCard icon={SiPython} label="Python" iconColor="#4B8BBE" />
             <SkillCard icon={FaJava} label="Java" iconColor="#007396" />
             <SkillCard
               icon={SiJavascript}

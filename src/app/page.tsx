@@ -13,13 +13,12 @@ export default function HomePage() {
           Danny Echeverri
         </h1>
         <p className="mx-auto mb-8 max-w-xl px-4 text-center text-sm text-base-content sm:mb-12 sm:max-w-2xl sm:px-0 sm:text-base md:text-lg">
-          Full Stack Software Engineer with expertise across front-end,
-          back-end, and mobile technologies. Specialized in crafting
-          high-performance software solutions, I bring a track record of driving
-          projects from concept to completion through agile methodologies and
-          cross-functional team collaboration. With a passion for continuous
-          learning and innovation, I excel in environments that challenge my
-          technical prowess and collaborative spirit.
+          Hey! I&apos;m a software engineer who loves building things across the
+          full stack. Whether it&apos;s crafting a mobile app for my favorite
+          game, designing robust backend systems, or bringing web interfaces to
+          life, I&apos;m always up for a good technical challenge. When I&apos;m
+          not coding, you&apos;ll find me writing music and exploring new
+          technologies just for the fun of it.
         </p>
 
         {/* Work History Section */}
