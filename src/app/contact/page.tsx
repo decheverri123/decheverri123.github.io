@@ -34,9 +34,6 @@ export default function ContactPage() {
                 <h2 className="group-hover:text-secondary-focus card-title text-secondary transition-colors">
                   LinkedIn
                 </h2>
-                <p className="text-base-content/75 transition-colors group-hover:text-base-content">
-                  Professional Network
-                </p>
               </div>
             </a>
 
@@ -50,9 +47,6 @@ export default function ContactPage() {
                 <h2 className="group-hover:text-secondary-focus card-title text-secondary transition-colors">
                   Email
                 </h2>
-                <p className="text-base-content/75 transition-colors group-hover:text-base-content">
-                  Direct Communication
-                </p>
               </div>
             </a>
 
@@ -68,9 +62,6 @@ export default function ContactPage() {
                 <h2 className="group-hover:text-secondary-focus card-title text-secondary transition-colors">
                   GitHub
                 </h2>
-                <p className="text-base-content/75 transition-colors group-hover:text-base-content">
-                  Code & Projects
-                </p>
               </div>
             </a>
           </div>
