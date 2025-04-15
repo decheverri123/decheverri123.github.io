@@ -122,13 +122,24 @@ export default function RNC() {
             <h2 className="mt-10 text-2xl font-semibold text-white">
               The Ethical Question
             </h2>
-            <p className="text-lg text-base-content">
-              If memories are rewritten with every recall, what is truth? Is
-              factual chronology more trustworthy than emotional resonance? RNC
-              invites us to interrogate the narrative authority of
-              recollection—and whether remembering itself can become a kind of
-              harm.
-            </p>
+            <div className="space-y-4 text-lg text-base-content">
+              <p>
+                If memories are rewritten with every recall, what is truth? Is
+                factual chronology more trustworthy than emotional resonance?
+                RNC invites us to interrogate the narrative authority of
+                recollection—and whether remembering itself can become a kind of
+                harm.{" "}
+              </p>
+              <p>
+                Taken to its extreme, this paradigm doesn’t just destabilize
+                narrative—it destabilizes identity. If memory defines who we
+                are, what remains when memory collapses? When recollection
+                becomes revision, our identity is built on corruption layered
+                upon corruption—until the original memory vanishes entirely, and
+                we&apos;re left performing versions of ourselves we no longer
+                recognize.
+              </p>
+            </div>
           </div>
 
           <div className="space-y-6">
