@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 import Layout from "../../LayoutHeader";
 
 export default function RNC() {
-  // State to track which memory layer we're currently viewing
   const [memoryLayer, setMemoryLayer] = useState(0);
 
-  // Subtle visual glitch effect that randomly changes every few seconds
   useEffect(() => {
     const interval = setInterval(() => {
       if (Math.random() > 0.7) {
@@ -26,11 +24,13 @@ export default function RNC() {
         >
           Reconsolidative Narrative Collapse
         </h1>
+        <p className="mb-8 text-center italic text-base-content">
+          &ldquo;Perception Horror: Where the act of remembering itself becomes
+          dangerous&rdquo;
+        </p>
 
         <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Left Column */}
           <div className="relative space-y-6">
-            {/* Decorative element */}
             <div className="absolute -left-4 -top-4 h-16 w-16 border-l-4 border-t-4 border-primary opacity-30"></div>
             <div className="absolute -bottom-4 -right-4 h-16 w-16 border-b-4 border-r-4 border-secondary opacity-30"></div>
 
@@ -57,22 +57,43 @@ export default function RNC() {
             </p>
 
             <h2 className="mt-10 text-2xl font-semibold text-white">
+              History & Background
+            </h2>
+            <p className="text-lg text-base-content">
+              RNC is grounded in the neuroscience of{" "}
+              <em>memory reconsolidation</em>—a process wherein retrieved
+              memories become temporarily labile and susceptible to change
+              before being restored. Initially studied in PTSD research, it
+              revealed how memory is not a fixed archive but a dynamic process.
+            </p>
+            <p className="text-lg text-base-content">
+              While elements of nonlinear memory distortion appear in modernist
+              and postmodernist literature—Woolf&apos;s stream-of-consciousness,
+              Faulkner&apos;s broken timelines, Borges&apos; recursive
+              metaphysics—
+              <strong>Reconsolidative Narrative Collapse</strong> is the first
+              paradigm to deliberately translate this neurocognitive model into
+              formal literary structure. It was coined and implemented in{" "}
+              <em>Blackport</em>, the debut novel by Danny Echeverri.
+            </p>
+
+            <h2 className="mt-10 text-2xl font-semibold text-white">
               Origin & Development
             </h2>
             <p
               className={`text-lg text-base-content transition-all duration-500 ${memoryLayer === 2 ? "opacity-95 blur-[0.2px]" : ""}`}
             >
-              Reconsolidative Narrative Collapse emerged from the intersection
-              of neuroscience research on memory retrieval and literary
-              explorations of trauma. The term was first developed during the
-              writing of <em>Blackport</em>, my debut novel, which serves as the
-              foundational text for this emerging literary framework.
+              Reconsolidative Narrative Collapse emerged during the development
+              of <em>Blackport</em>, where conventional flashbacks and traumatic
+              memory needed a more immersive, destabilizing form. The result was
+              a method where structure, style, and reader experience mirror the
+              instability of recall itself.
             </p>
             <p className="text-lg text-base-content">
-              RNC goes beyond unreliable narration or conventional flashbacks by
-              creating perceptual slippage that mirrors how traumatic memory
-              actually functions in the brain—not as distant recollection but as
-              lived experience that temporarily overwrites present perception.
+              Unlike traditional flashbacks or unreliable narration, RNC creates
+              seamless perceptual shifts that destabilize reader orientation in
+              tandem with the protagonist’s mental state—mimicking the emotional
+              vertigo of unresolved trauma.
             </p>
 
             <h2 className="mt-10 text-2xl font-semibold text-white">
@@ -92,12 +113,24 @@ export default function RNC() {
               Pretty simple but I love it.&rdquo;
             </blockquote>
             <p className="mt-4 text-lg text-base-content">
-              In this excerpt, a formal dinner scene dissolves mid-sentence into
-              an intimate kitchen memory without warning or explanation.
+              In this excerpt, a formal dinner transitions mid-sentence into a
+              memory without warning. The result is not exposition, but an
+              emotional rupture that pulls the reader into a co-hallucinated
+              timeline—an example of how memory overwrites reality.
+            </p>
+
+            <h2 className="mt-10 text-2xl font-semibold text-white">
+              The Ethical Question
+            </h2>
+            <p className="text-lg text-base-content">
+              If memories are rewritten with every recall, what is truth? Is
+              factual chronology more trustworthy than emotional resonance? RNC
+              invites us to interrogate the narrative authority of
+              recollection—and whether remembering itself can become a kind of
+              harm.
             </p>
           </div>
 
-          {/* Right Column */}
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">
               Key Principles
@@ -107,79 +140,101 @@ export default function RNC() {
                 className={`transition-all duration-300 ${memoryLayer === 1 ? "text-primary" : ""}`}
               >
                 <strong>Memory as Mechanism, Not Content:</strong> Memories are
-                not presented as static backstory but as active, unstable agents
-                in the narrative. Each recall subtly alters the present
-                timeline, emotional context, or reader understanding.
+                active forces that bend and reshape the story as they appear.
               </li>
               <li
                 className={`transition-all duration-300 ${memoryLayer === 2 ? "text-primary" : ""}`}
               >
                 <strong>Emotional Truth Over Objective Fact:</strong> The
-                &quot;truth&quot; of a scene is not based on what objectively
-                happened, but on how the character feels about what happened.
-                The reader is encouraged to accept emotional resonance as
-                narrative authority, even when it contradicts prior scenes.
+                feeling of a moment takes precedence over its exact factual
+                configuration.
               </li>
               <li
                 className={`transition-all duration-300 ${memoryLayer === 0 ? "text-primary" : ""}`}
               >
                 <strong>Recursive Flashbacks Without Signposting:</strong>{" "}
-                Transitions into memory are intentionally seamless, often using
-                identical sensory cues or mirrored language to blur the border
-                between past and present. These flashbacks function less as
-                exposition and more as recursive emotional loops.
+                Memories bleed into present action without clear boundaries or
+                formatting.
               </li>
               <li
                 className={`transition-all duration-300 ${memoryLayer === 1 ? "text-primary" : ""}`}
               >
-                <strong>Perceptual Unreliability:</strong> The
-                protagonist&apos;s perception of reality is fluid and
-                emotionally reactive, but so is the reader&apos;s. The narrative
-                destabilizes traditional reader trust by creating moments where
-                both character and reader question the authenticity of shared
-                events.
+                <strong>Perceptual Unreliability:</strong> Reader and character
+                undergo the same breakdown in spatial, temporal, and narrative
+                coherence.
               </li>
               <li
                 className={`transition-all duration-300 ${memoryLayer === 2 ? "text-primary" : ""}`}
               >
-                <strong>Co-hallucination Between Reader and Character:</strong>{" "}
-                The story is designed to make the reader experience the
-                protagonist&apos;s psychological state. As the
-                protagonist&apos;s memory fractures, the reader&apos;s ability
-                to orient themselves within the story does too.
+                <strong>Co-hallucination:</strong> The reader is not a passive
+                witness but an active participant in the protagonist’s fractured
+                recall.
               </li>
               <li
                 className={`transition-all duration-300 ${memoryLayer === 0 ? "text-primary" : ""}`}
               >
-                <strong>Structural Glitches as Meaning:</strong> Repetition,
-                recursion, or dialogue &quot;errors&quot; are not mistakes but
-                intentional formal devices meant to simulate the recursive
-                distortion of memory.
+                <strong>Structural Glitches:</strong> Repetitions, recursion,
+                and intentional formatting &ldquo;errors&rdquo; mirror how
+                memory deteriorates.
+              </li>
+              <li
+                className={`transition-all duration-300 ${memoryLayer === 1 ? "text-primary" : ""}`}
+              >
+                <strong>Emotionally Weighted Objects as Anchors:</strong> Items
+                that reappear across timelines gain emotional weight—and
+                entropy.
+              </li>
+              <li
+                className={`transition-all duration-300 ${memoryLayer === 2 ? "text-primary" : ""}`}
+              >
+                <strong>Objects Corrupt When Recalled:</strong> With each memory
+                pass, objects become more symbolic, less literal—until they
+                break reality.
               </li>
             </ul>
 
             <h2 className="mt-10 text-2xl font-semibold text-white">
-              Theoretical Foundations
+              Narrative Rules
             </h2>
-            <div className="text-lg text-base-content">
-              RNC draws from several disciplines:
-              <ul className="mt-4 list-inside list-disc space-y-2 text-lg text-base-content">
-                <li>
-                  <strong>Neuroscience:</strong> Research on memory
-                  reconsolidation demonstrates how memories become temporarily
-                  unstable during recall
-                </li>
-                <li>
-                  <strong>Trauma Theory:</strong> Understanding of how traumatic
-                  memories intrude upon consciousness without permission
-                </li>
-                <li>
-                  <strong>Literary Theory:</strong> Builds upon but
-                  distinguishes itself from unreliable narration and
-                  stream-of-consciousness techniques
-                </li>
-              </ul>
-            </div>
+            <ul className="list-inside list-disc space-y-4 text-lg text-base-content">
+              <li>
+                <strong>Anchor Before You Fracture:</strong> Ground the reader
+                emotionally before distorting perception.
+              </li>
+              <li>
+                <strong>Every Distortion Must Echo a Prior Beat:</strong> All
+                narrative fractures must be thematically rooted.
+              </li>
+              <li>
+                <strong>Time Can Warp—Emotion Cannot:</strong> Character
+                psychology remains emotionally consistent despite structural
+                chaos.
+              </li>
+              <li>
+                <strong>Reader Realizes Collapse Mid-Fall:</strong> Let the
+                reader feel destabilized before they understand why.
+              </li>
+              <li>
+                <strong>The Reader Is a Co-Conspirator:</strong> Structure
+                invites complicity in collapsing memory and trust.
+              </li>
+            </ul>
+
+            <h2 className="mt-10 text-2xl font-semibold text-white">
+              Applications & Future Directions
+            </h2>
+            <p className="text-lg text-base-content">
+              RNC offers radical potential for narrative forms outside
+              literature—interactive fiction, VR, trauma therapy storytelling,
+              and nonlinear cinema. As readers learn to trust feeling over
+              chronology, RNC may form the narrative grammar of how we tell
+              stories in the post-reality age.
+            </p>
+            <p className="text-lg text-base-content">
+              Future RNC stories may explore not just personal trauma, but
+              collective amnesia, AI memory, or the emotional distortion of
+              history itself.
+            </p>
 
             <div className="mt-16 border-t border-gray-700 pt-8">
               <p className="text-sm text-gray-400">

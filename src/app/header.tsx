@@ -69,6 +69,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/apps/rnc" className="text-base font-medium">
+                RNC
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="text-base font-medium">
                 Contact
               </Link>
@@ -92,6 +97,11 @@ export default function Header() {
           <li>
             <Link href="/projects" className="text-base font-semibold">
               Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/apps/rnc" className="text-base font-semibold">
+              RNC
             </Link>
           </li>
           <li>
