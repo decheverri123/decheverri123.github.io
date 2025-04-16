@@ -21,7 +21,7 @@ export default function RNC() {
     <Layout>
       <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8 px-12 text-base-content">
         <h1
-          className={`mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold text-white transition-opacity duration-1000 ${memoryLayer === 1 ? "opacity-90" : "opacity-100"}`}
+          className={`mb-8 flex flex-row items-center justify-center text-center text-4xl font-bold text-primary transition-opacity duration-1000 ${memoryLayer === 1 ? "opacity-90" : "opacity-100"}`}
         >
           Reconsolidative Narrative Collapse
         </h1>
@@ -35,7 +35,9 @@ export default function RNC() {
             <div className="absolute -left-4 -top-4 h-16 w-16 border-l-4 border-t-4 border-primary opacity-30"></div>
             <div className="absolute -bottom-4 -right-4 h-16 w-16 border-b-4 border-r-4 border-secondary opacity-30"></div>
 
-            <h2 className="text-2xl font-semibold text-white">Definition</h2>
+            <h2 className="text-2xl font-semibold text-secondary">
+              Definition
+            </h2>
             <p
               className={`text-lg text-base-content transition-all duration-700 ${memoryLayer === 2 ? "translate-x-1 blur-[0.3px]" : ""}`}
             >
@@ -56,7 +58,7 @@ export default function RNC() {
               rewrites itself through grief, trauma, and unstable recollection.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Origin & Development
             </h2>
             <p
@@ -75,7 +77,7 @@ export default function RNC() {
               lived experience that temporarily overwrites present perception.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Reader as Co-Conspirator
             </h2>
             <p className="text-lg text-base-content">
@@ -89,7 +91,7 @@ export default function RNC() {
               complicit in the collapse itself.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Perception Horror
             </h2>
             <p className="text-lg text-base-content">
@@ -104,7 +106,36 @@ export default function RNC() {
               is not what happened, but how memory reassembles what happened.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
+              Blackport: A Case Study in Perceptual Horror
+            </h2>
+            <p className="text-lg text-base-content">
+              <em>Blackport</em> is the debut novel that gave rise to the
+              Reconsolidative Narrative Collapse framework. It follows Luke
+              Hadaway, a grieving and recovering addict who arrives in the
+              coastal town of Blackport searching for answers about his missing
+              wife. What he finds instead is a purgatorial nightmare where
+              memory fractures the moment it is accessed, and where perception
+              itself becomes a terrain of horror. As Luke encounters twisted
+              denizens, warped architecture, and echoes of his own past, he—and
+              the reader—begin to question what is real, what is remembered, and
+              what has already been lost to the recursive deterioration of
+              trauma.
+            </p>
+            <p className="text-lg text-base-content">
+              RNC is used extensively throughout <em>Blackport</em> to fragment
+              the timeline, blur flashbacks into present action, and present
+              trauma not as a past event but a looping, sensorial trap that
+              rewrites itself mid-sentence. Scenes like the infamous "dessert
+              collapse" are crafted to immerse the reader in the protagonist’s
+              own psychological destabilization, collapsing memories of warmth
+              into cold reconstructions that masquerade as tribute. By eschewing
+              traditional transitions, the novel leverages RNC to make horror a
+              function of memory itself. The horror is not what Luke
+              encounters—it’s what he re-remembers.
+            </p>
+
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Visual Model
             </h2>
             <RNCVisualization />
@@ -115,7 +146,7 @@ export default function RNC() {
               perception and rewriting.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Easter Eggs
             </h2>
             <p className="text-lg text-base-content">
@@ -126,11 +157,11 @@ export default function RNC() {
               twice.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Excerpt from <em>Blackport</em>
             </h2>
             <blockquote
-              className={`border-l-4 pl-4 text-lg italic text-base-content transition-all duration-700 ${memoryLayer === 0 ? "border-primary" : "border-gray-500"}`}
+              className={`border-l-4 pl-4 text-lg italic text-base-content transition-all duration-700 ${memoryLayer === 0 ? "border-primary" : "border-base-300"}`}
             >
               "The dish is finished with dehydrated hibiscus powder,
               crystallized elder flowers, and gold leaf from the Wheeler private
@@ -149,7 +180,7 @@ export default function RNC() {
               structure.
             </p>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               The Ethical Question
             </h2>
             <p className="text-lg text-base-content">
@@ -169,7 +200,7 @@ export default function RNC() {
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-white">
+            <h2 className="text-2xl font-semibold text-secondary">
               Key Principles
             </h2>
             <ul className="list-inside list-disc space-y-6 text-lg text-base-content">
@@ -187,7 +218,7 @@ export default function RNC() {
                 authority, even when it contradicts prior scenes.
               </li>
               <li>
-                <strong>Recursive Flashbacks Without Signposting:</strong>{" "}
+                <strong>Recursive Flashbacks Without Signposting:</strong>
                 Transitions into memory are intentionally seamless, often using
                 identical sensory cues or mirrored language to blur the border
                 between past and present. These flashbacks function less as
@@ -202,7 +233,7 @@ export default function RNC() {
                 question the authenticity of shared events.
               </li>
               <li>
-                <strong>Co-hallucination Between Reader and Character:</strong>{" "}
+                <strong>Co-hallucination Between Reader and Character:</strong>
                 The story is designed to make the reader experience the
                 protagonist's psychological state. As the protagonist's memory
                 fractures, the reader's ability to orient themselves within the
@@ -215,7 +246,7 @@ export default function RNC() {
                 memory.
               </li>
               <li>
-                <strong>Emotionally Weighted Objects as Anchors:</strong>{" "}
+                <strong>Emotionally Weighted Objects as Anchors:</strong>
                 Specific objects serve as touchstones whose significance shifts
                 over time. These objects reveal the instability of the story's
                 timeline while providing emotional continuity.
@@ -228,7 +259,7 @@ export default function RNC() {
               </li>
             </ul>
 
-            <h2 className="mt-10 text-2xl font-semibold text-white">
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Narrative Rules
             </h2>
             <ul className="list-inside list-disc space-y-4 text-lg text-base-content">
@@ -257,9 +288,9 @@ export default function RNC() {
               </li>
             </ul>
 
-            <div className="mt-16 border-t border-gray-700 pt-8">
-              <p className="text-sm text-gray-400">
-                © Danny Echeverri, 2024. Reconsolidative Narrative Collapse
+            <div className="mt-16 border-t border-base-300 pt-8">
+              <p className="text-sm text-base-content opacity-70">
+                &copy; Danny Echeverri, 2024. Reconsolidative Narrative Collapse
                 (RNC) is a literary paradigm developed by Danny Echeverri. First
                 defined and implemented in the novel <em>Blackport</em>. This
                 framework represents a pioneering approach to narrative

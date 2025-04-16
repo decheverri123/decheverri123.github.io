@@ -1,6 +1,5 @@
 import SkillCard from "./SkillCard";
 import {
-  SiCsharp,
   SiPython,
   SiTypescript,
   SiDart,
@@ -15,15 +14,13 @@ import {
   SiKubernetes,
   SiDotnet,
   SiJenkins,
-  SiAzuredevops,
-  SiAmazonwebservices,
   SiApple,
-  SiJavascript,
-  SiVisualbasic,
   SiGithubactions,
   SiXcode,
   SiSwift,
 } from "react-icons/si";
+
+import { FaCode } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 
 export default function SkillsSection() {
@@ -38,18 +35,18 @@ export default function SkillsSection() {
             Programming Languages
           </h3>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-            <SkillCard icon={SiCsharp} label="C#" iconColor="#512BD4" />
+            <SkillCard icon={FaCode} label="C#" iconColor="#512BD4" />
             <SkillCard icon={SiPython} label="Python" iconColor="#4B8BBE" />
             <SkillCard icon={FaJava} label="Java" iconColor="#007396" />
             <SkillCard
-              icon={SiJavascript}
+              icon={FaCode}
               secondaryIcon={SiTypescript}
               label="JavaScript/TypeScript"
               iconColor="#F7DF1E"
               secondaryIconColor="#3178C6"
             />
             <SkillCard
-              icon={SiVisualbasic}
+              icon={SiDotnet}
               label="Visual Basic"
               iconColor="#512BD4"
             />
@@ -121,11 +118,7 @@ export default function SkillsSection() {
               iconColor="#326CE5"
             />
             <SkillCard icon={SiDotnet} label=".NET" iconColor="#B794F4" />
-            <SkillCard
-              icon={SiAmazonwebservices}
-              label="AWS"
-              iconColor="#FF9900"
-            />
+            <SkillCard icon={FaCode} label="AWS" iconColor="#FF9900" />
           </div>
         </div>
 
@@ -135,11 +128,7 @@ export default function SkillsSection() {
           </h3>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
             <SkillCard icon={SiJenkins} label="Jenkins" iconColor="#D24939" />
-            <SkillCard
-              icon={SiAzuredevops}
-              label="Azure DevOps"
-              iconColor="#B794F4"
-            />
+            <SkillCard icon={FaCode} label="Azure DevOps" iconColor="#B794F4" />
             <SkillCard
               icon={SiGithubactions}
               label="GitHub Actions"
