@@ -398,6 +398,81 @@ export default function RNC() {
             </p>
 
             <h2 className="mt-10 text-2xl font-semibold text-secondary">
+              🧠 Section for Nerds: The Neuroscience Behind RNC
+            </h2>
+            <p className="text-lg text-base-content">
+              Memory consolidation is not a singular process but a multi-phase
+              biological phenomenon involving protein synthesis, neural tagging,
+              and distributed reactivation. Two key studies form the backbone of
+              this understanding:
+              <ul className="ml-6 mt-4 list-disc">
+                <li>
+                  <a
+                    className="text-accent underline"
+                    href="https://pubmed.ncbi.nlm.nih.gov/10963596"
+                    target="_blank"
+                  >
+                    Nader, Schafe & LeDoux (2000) – Fear memories require
+                    protein synthesis in the amygdala for reconsolidation after
+                    retrieval
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-accent underline"
+                    href="https://pubmed.ncbi.nlm.nih.gov/14744210/"
+                    target="_blank"
+                  >
+                    Dudai (2004) – The Neurobiology of Consolidations, or, How
+                    Stable is the Engram?
+                  </a>
+                </li>
+              </ul>
+            </p>
+
+            <h3 className="mt-6 text-xl font-semibold text-primary">
+              🧬 Synaptic Consolidation
+            </h3>
+            <p className="text-lg text-base-content">
+              Immediately after learning, calcium influx via NMDA and
+              voltage-gated channels triggers kinase pathways (PKA, MAPK/ERK),
+              activating CREB, a transcription factor that drives the expression
+              of memory-related genes like zif268 and Arc. These genes initiate
+              spine growth and receptor trafficking. “Synaptic tagging” ensures
+              only recently activated synapses capture the protein synthesis
+              that stabilizes the memory.
+            </p>
+
+            <h3 className="mt-6 text-xl font-semibold text-primary">
+              🧠 System Consolidation
+            </h3>
+            <p className="text-lg text-base-content">
+              Over days to years, hippocampal-cortical replay shifts memory
+              reliance from the hippocampus to the neocortex.
+              Reactivations—often during sleep—induce secondary rounds of local
+              synaptic consolidation. Ultimately, long-term storage resides in
+              distributed neocortical circuits.
+            </p>
+
+            <h3 className="mt-6 text-xl font-semibold text-primary">
+              🔁 Reconsolidation
+            </h3>
+            <p className="text-lg text-base-content">
+              Nader et al. demonstrated that retrieval reopens a memory trace
+              and makes it labile. Unless re-stabilized by fresh protein
+              synthesis in the amygdala, the memory degrades. Reconsolidation
+              mimics the molecular cascade of initial encoding—CREB activation,
+              immediate early genes, and new plasticity.
+            </p>
+            <p className="text-lg text-base-content">
+              Dudai proposes reconsolidation exists to allow new learning to
+              modify old memory. From an evolutionary standpoint, it's a
+              compromise between stability and adaptability. But it means memory
+              is inherently risky—the act of remembering is also the act of
+              rewriting.
+            </p>
+
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
               The Ethical Question
             </h2>
             <p className="text-lg text-base-content">
