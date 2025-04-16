@@ -275,8 +275,7 @@ export default function RNC() {
               <li>
                 <strong className="text-primary">
                   Co-hallucination Between Reader and Character:
-                </strong>
-                {""}
+                </strong>{" "}
                 The story is designed to make the reader experience the
                 protagonist's psychological state. As the protagonist's memory
                 fractures, the reader's ability to orient themselves within the
@@ -293,8 +292,7 @@ export default function RNC() {
               <li>
                 <strong className="text-primary">
                   Emotionally Weighted Objects as Anchors:
-                </strong>
-                {""}
+                </strong>{" "}
                 Specific objects serve as touchstones whose significance shifts
                 over time. These objects reveal the instability of the story's
                 timeline while providing emotional continuity.
