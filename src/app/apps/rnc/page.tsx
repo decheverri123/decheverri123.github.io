@@ -205,20 +205,26 @@ export default function RNC() {
             </h2>
             <ul className="list-inside list-disc space-y-6 text-lg text-base-content">
               <li>
-                <strong>Memory as Mechanism, Not Content:</strong> Memories are
-                not presented as static backstory but as active, unstable agents
-                in the narrative. Each recall subtly alters the present
-                timeline, emotional context, or reader understanding.
+                <strong className="text-primary">
+                  Memory as Mechanism, Not Content:
+                </strong>{" "}
+                Memories are not presented as static backstory but as active,
+                unstable agents in the narrative. Each recall subtly alters the
+                present timeline, emotional context, or reader understanding.
               </li>
               <li>
-                <strong>Emotional Truth Over Objective Fact:</strong> The
-                "truth" of a scene is not based on what objectively happened,
-                but on how the character feels about what happened. The reader
-                is encouraged to accept emotional resonance as narrative
-                authority, even when it contradicts prior scenes.
+                <strong className="text-primary">
+                  Emotional Truth Over Objective Fact:
+                </strong>{" "}
+                The "truth" of a scene is not based on what objectively
+                happened, but on how the character feels about what happened.
+                The reader is encouraged to accept emotional resonance as
+                narrative authority, even when it contradicts prior scenes.
               </li>
               <li>
-                <strong>Recursive Flashbacks Without Signposting:</strong>
+                <strong className="text-primary">
+                  Recursive Flashbacks Without Signposting:
+                </strong>
                 Transitions into memory are intentionally seamless, often using
                 identical sensory cues or mirrored language to blur the border
                 between past and present. These flashbacks function less as
@@ -226,36 +232,46 @@ export default function RNC() {
                 recontextualize the present.
               </li>
               <li>
-                <strong>Perceptual Unreliability:</strong> The protagonist's
-                perception of reality is fluid and emotionally reactive, but so
-                is the reader's. The narrative destabilizes traditional reader
-                trust by creating moments where both character and reader
-                question the authenticity of shared events.
+                <strong className="text-primary">
+                  Perceptual Unreliability:
+                </strong>{" "}
+                The protagonist's perception of reality is fluid and emotionally
+                reactive, but so is the reader's. The narrative destabilizes
+                traditional reader trust by creating moments where both
+                character and reader question the authenticity of shared events.
               </li>
               <li>
-                <strong>Co-hallucination Between Reader and Character:</strong>
+                <strong className="text-primary">
+                  Co-hallucination Between Reader and Character:
+                </strong>
                 The story is designed to make the reader experience the
                 protagonist's psychological state. As the protagonist's memory
                 fractures, the reader's ability to orient themselves within the
                 story does too.
               </li>
               <li>
-                <strong>Structural Glitches as Meaning:</strong> Repetition,
-                recursion, or dialogue "errors" are not mistakes but intentional
-                formal devices meant to simulate the recursive distortion of
-                memory.
+                <strong className="text-primary">
+                  Structural Glitches as Meaning:
+                </strong>{" "}
+                Repetition, recursion, or dialogue "errors" are not mistakes but
+                intentional formal devices meant to simulate the recursive
+                distortion of memory.
               </li>
               <li>
-                <strong>Emotionally Weighted Objects as Anchors:</strong>
+                <strong className="text-primary">
+                  Emotionally Weighted Objects as Anchors:
+                </strong>
                 Specific objects serve as touchstones whose significance shifts
                 over time. These objects reveal the instability of the story's
                 timeline while providing emotional continuity.
               </li>
               <li>
-                <strong>Objects Corrupt When Recalled:</strong> The more a motif
-                or object reappears, the more emotionally charged—and
-                narratively corrupted—it becomes. Each reappearance is less
-                innocent, more impossible.
+                <strong className="text-primary">
+                  Objects Corrupt When Recalled:
+                </strong>{" "}
+                The more a motif or object reappears, the more emotionally
+                charged—and narratively corrupted—it becomes. Each reappearance
+                is less innocent, more impossible.
               </li>
             </ul>
 
