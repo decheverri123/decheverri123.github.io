@@ -58,6 +58,88 @@ export default function RNC() {
               rewrites itself through grief, trauma, and unstable recollection.
             </p>
 
+            <h2 className="text-2xl font-semibold text-secondary">
+              Influences & Comparisons
+            </h2>
+            <p className="text-lg text-base-content">
+              RNC is often compared to other non-linear or memory-centric
+              narratives, but key distinctions set it apart:
+            </p>
+            <ul className="list-inside list-disc space-y-6 text-lg text-base-content">
+              <li>
+                <strong className="text-primary">
+                  Memento (Film by Christopher Nolan):
+                </strong>{" "}
+                While <em>Memento</em> uses a reversed structure to reflect
+                memory loss, its timeline is fixed. RNC, by contrast, posits
+                that each memory retrieval actively rewrites narrative reality,
+                creating perceptual shifts in both character and reader. It’s
+                not just about disorder—it’s about destabilization.
+              </li>
+              <li>
+                <strong className="text-primary">
+                  Eternal Sunshine of the Spotless Mind:
+                </strong>{" "}
+                Michel Gondry’s film explores erasure and emotional memory. RNC
+                focuses on how memory is continuously corrupted by the act of
+                remembering, generating narrative shifts that mirror the brain’s
+                own reconsolidation process.
+              </li>
+              <li>
+                <strong className="text-primary">
+                  Slaughterhouse-Five by Kurt Vonnegut:
+                </strong>{" "}
+                Vonnegut’s timeline is disjointed to reflect trauma, but remains
+                stylistically consistent. RNC uses trauma as a mechanism for
+                memory collapse, where recalling the past changes the
+                present—something Vonnegut’s structure hints at but does not
+                mechanize.
+              </li>
+              <li>
+                <strong className="text-primary">
+                  Unreliable Narrators (e.g., The Turn of the Screw, Fight
+                  Club):
+                </strong>{" "}
+                Traditional unreliable narrators are biased or delusional. In
+                RNC, the unreliability is systemic. Reader and character alike
+                experience the collapse, creating a co-hallucinatory narrative
+                that feels increasingly unstable with each recursive flashback.
+              </li>
+            </ul>
+            <p className="text-lg text-base-content">
+              These similarities speak to RNC's lineage, but its innovation lies
+              in how it turns memory into the very engine of narrative
+              mutation—rewriting both story and self with every retrieval.
+            </p>
+
+            <h2 className="mt-10 text-2xl font-semibold text-secondary">
+              Literary Context & Influence
+            </h2>
+            <p className="text-lg text-base-content">
+              RNC emerges from a literary lineage of narrative experimentation.
+              Writers like Faulkner fractured chronology to reveal psychological
+              depth; Proust explored involuntary memory as a gateway to the
+              past; Borges built entire metaphysics out of recursive time. These
+              influences echo throughout RNC. But while those traditions focused
+              on memory thematically, RNC uses memory <em>structurally</em>—as
+              the architecture of collapse itself.
+            </p>
+            <p className="text-lg text-base-content">
+              RNC differs from the classic unreliable narrator. Traditional
+              unreliability occurs <em>within</em> a stable story world—a
+              character remembers wrong, but the reader still sees the cracks.
+              In RNC, those cracks don’t reveal—they{" "}
+              <strong className="text-primary">spread</strong>. The
+              unreliability infects the timeline, the prose, even the reader’s
+              own recollection. It’s not just perspective—it’s recursive
+              mutation.
+            </p>
+            <p className="text-lg text-base-content">
+              In short: whereas earlier literary traditions questioned how we{" "}
+              <em>tell</em> stories, RNC questions whether storytelling itself
+              can ever stabilize meaning once memory is involved.
+            </p>
+
             <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Origin & Development
             </h2>
@@ -280,27 +362,37 @@ export default function RNC() {
             </h2>
             <ul className="list-inside list-disc space-y-4 text-lg text-base-content">
               <li>
-                <strong>Anchor Before You Fracture:</strong> Establish
-                emotional, temporal, and spatial "normalcy" before bending
-                reality
+                <strong className="text-primary">
+                  Anchor Before You Fracture:
+                </strong>{" "}
+                Establish emotional, temporal, and spatial "normalcy" before
+                bending reality
               </li>
               <li>
-                <strong>Every Distortion Must Echo a Prior Beat:</strong> All
-                glitches must trace back to something previously encountered
+                <strong className="text-primary">
+                  Every Distortion Must Echo a Prior Beat:
+                </strong>{" "}
+                All glitches must trace back to something previously encountered
               </li>
               <li>
-                <strong>Time Can Warp—Emotion Cannot:</strong> The timeline may
-                fracture, but character psychology remains emotionally
-                consistent
+                <strong className="text-primary">
+                  Time Can Warp—Emotion Cannot:
+                </strong>{" "}
+                The timeline may fracture, but character psychology remains
+                emotionally consistent
               </li>
               <li>
-                <strong>Reader Realizes Collapse Mid-Fall:</strong> The
-                transition should be seamless—but gut-punching in retrospect
+                <strong className="text-primary">
+                  Reader Realizes Collapse Mid-Fall:
+                </strong>{" "}
+                The transition should be seamless—but gut-punching in retrospect
               </li>
               <li>
-                <strong>The Reader Is a Co-Conspirator:</strong> Readers are
-                participants who must reconcile, question, and sometimes betray
-                their own memory of the text
+                <strong className="text-primary">
+                  The Reader Is a Co-Conspirator:
+                </strong>{" "}
+                Readers are participants who must reconcile, question, and
+                sometimes betray their own memory of the text
               </li>
             </ul>
 
