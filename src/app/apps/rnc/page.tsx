@@ -41,13 +41,16 @@ export default function RNC() {
             <p
               className={`text-lg text-base-content transition-all duration-700 ${memoryLayer === 2 ? "translate-x-1 blur-[0.3px]" : ""}`}
             >
-              Reconsolidative Narrative Collapse is a paradigm of storytelling
-              in which memory retrieval becomes the primary engine of narrative
-              disintegration. Rooted in the neuroscience principle of memory
-              reconsolidation—the process by which recalled memories become
-              temporarily unstable and susceptible to distortion—this structure
-              reimagines narrative not as a linear recounting of events, but as
-              a recursive, emotionally-driven reconstruction of meaning.
+              <strong className="text-accent">
+                <em>Reconsolidative Narrative Collapse </em>
+              </strong>
+              is a paradigm of storytelling in which memory retrieval becomes
+              the primary engine of narrative disintegration. Rooted in the
+              neuroscience principle of memory reconsolidation—the process by
+              which recalled memories become temporarily unstable and
+              susceptible to distortion—this structure reimagines narrative not
+              as a linear recounting of events, but as a recursive,
+              emotionally-driven reconstruction of meaning.
             </p>
             <p
               className={`text-lg text-base-content transition-opacity duration-500 ${memoryLayer === 0 ? "opacity-100" : "opacity-80"}`}
