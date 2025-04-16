@@ -256,7 +256,7 @@ export default function RNC() {
               <li>
                 <strong className="text-primary">
                   Recursive Flashbacks Without Signposting:
-                </strong>
+                </strong>{" "}
                 Transitions into memory are intentionally seamless, often using
                 identical sensory cues or mirrored language to blur the border
                 between past and present. These flashbacks function less as
@@ -276,6 +276,7 @@ export default function RNC() {
                 <strong className="text-primary">
                   Co-hallucination Between Reader and Character:
                 </strong>
+                {""}
                 The story is designed to make the reader experience the
                 protagonist's psychological state. As the protagonist's memory
                 fractures, the reader's ability to orient themselves within the
@@ -293,6 +294,7 @@ export default function RNC() {
                 <strong className="text-primary">
                   Emotionally Weighted Objects as Anchors:
                 </strong>
+                {""}
                 Specific objects serve as touchstones whose significance shifts
                 over time. These objects reveal the instability of the story's
                 timeline while providing emotional continuity.
