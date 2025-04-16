@@ -59,87 +59,63 @@ export default function RNC() {
             </p>
 
             <h2 className="text-2xl font-semibold text-secondary">
-              Influences & Comparisons
+              Literary Context & Comparisons
             </h2>
             <p className="text-lg text-base-content">
-              RNC is often compared to other non-linear or memory-centric
-              narratives, but key distinctions set it apart:
+              RNC emerges from a long literary lineage of narrative
+              experimentation. Writers like Faulkner fractured chronology to
+              expose psychological depth; Proust explored involuntary memory as
+              a gateway to the past; Borges built recursive metaphysics from
+              linguistic loops. These works paved the way—but RNC diverges by
+              making memory not just theme but architecture. Where others evoke
+              memory, RNC mechanizes it.
+            </p>
+            <p className="text-lg text-base-content">
+              It is often compared to nonlinear or memory-based narratives, yet
+              its key innovation lies in how memory becomes the engine of
+              narrative instability:
             </p>
             <ul className="list-inside list-disc space-y-6 text-lg text-base-content">
               <li>
                 <strong className="text-primary">
-                  Memento (Film by Christopher Nolan):
+                  Memento (Christopher Nolan):
                 </strong>{" "}
-                While <em>Memento</em> uses a reversed structure to reflect
-                memory loss, its timeline is fixed. RNC, by contrast, posits
-                that each memory retrieval actively rewrites narrative reality,
-                creating perceptual shifts in both character and reader. It’s
-                not just about disorder—it’s about destabilization.
+                While <em>Memento</em> employs a reverse structure to echo
+                memory loss, its timeline is static. RNC allows each memory to
+                rewrite narrative reality. It's not about presentation—it's
+                about mutation.
               </li>
               <li>
                 <strong className="text-primary">
                   Eternal Sunshine of the Spotless Mind:
                 </strong>{" "}
-                Michel Gondry’s film explores erasure and emotional memory. RNC
-                focuses on how memory is continuously corrupted by the act of
-                remembering, generating narrative shifts that mirror the brain’s
-                own reconsolidation process.
+                Gondry explores erased memory; RNC explores corrupted memory.
+                The former removes pain, the latter forces us to relive it
+                inaccurately, shifting the narrative every time.
               </li>
               <li>
                 <strong className="text-primary">
-                  Slaughterhouse-Five by Kurt Vonnegut:
+                  Slaughterhouse-Five (Vonnegut):
                 </strong>{" "}
-                Vonnegut’s timeline is disjointed to reflect trauma, but remains
-                stylistically consistent. RNC uses trauma as a mechanism for
-                memory collapse, where recalling the past changes the
-                present—something Vonnegut’s structure hints at but does not
-                mechanize.
+                Vonnegut uses disjunction as metaphor. RNC uses memory as formal
+                device. In Vonnegut, we drift through time. In RNC, time drifts
+                through us.
               </li>
               <li>
                 <strong className="text-primary">
                   Unreliable Narrators (e.g., The Turn of the Screw, Fight
                   Club):
                 </strong>{" "}
-                Traditional unreliable narrators are biased or delusional. In
-                RNC, the unreliability is systemic. Reader and character alike
-                experience the collapse, creating a co-hallucinatory narrative
-                that feels increasingly unstable with each recursive flashback.
+                Those works contain unreliable characters. RNC contains an
+                unreliable world. The reader, like the character, is
+                hallucinating structure.
               </li>
             </ul>
             <p className="text-lg text-base-content">
-              These similarities speak to RNC's lineage, but its innovation lies
-              in how it turns memory into the very engine of narrative
-              mutation—rewriting both story and self with every retrieval.
+              In short: earlier traditions asked, "How do we tell stories about
+              memory?" RNC asks, "What happens to story itself when memory can’t
+              be trusted?"
             </p>
-
-            <h2 className="mt-10 text-2xl font-semibold text-secondary">
-              Literary Context & Influence
-            </h2>
-            <p className="text-lg text-base-content">
-              RNC emerges from a literary lineage of narrative experimentation.
-              Writers like Faulkner fractured chronology to reveal psychological
-              depth; Proust explored involuntary memory as a gateway to the
-              past; Borges built entire metaphysics out of recursive time. These
-              influences echo throughout RNC. But while those traditions focused
-              on memory thematically, RNC uses memory <em>structurally</em>—as
-              the architecture of collapse itself.
-            </p>
-            <p className="text-lg text-base-content">
-              RNC differs from the classic unreliable narrator. Traditional
-              unreliability occurs <em>within</em> a stable story world—a
-              character remembers wrong, but the reader still sees the cracks.
-              In RNC, those cracks don’t reveal—they{" "}
-              <strong className="text-primary">spread</strong>. The
-              unreliability infects the timeline, the prose, even the reader’s
-              own recollection. It’s not just perspective—it’s recursive
-              mutation.
-            </p>
-            <p className="text-lg text-base-content">
-              In short: whereas earlier literary traditions questioned how we{" "}
-              <em>tell</em> stories, RNC questions whether storytelling itself
-              can ever stabilize meaning once memory is involved.
-            </p>
-
             <h2 className="mt-10 text-2xl font-semibold text-secondary">
               Origin & Development
             </h2>
