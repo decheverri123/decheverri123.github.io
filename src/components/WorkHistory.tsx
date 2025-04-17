@@ -8,9 +8,16 @@ export default function WorkHistory() {
         Work History
       </h1>
       <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
-        {workHistory.map((item) => (
-          <TimelineItem key={item.date + item.title} {...item} />
-        ))}
+        {workHistory.map((item, idx) => {
+          const position = idx % 2 === 0 ? "start" : "end";
+          return (
+            <TimelineItem
+              key={item.date + item.title}
+              {...item}
+              position={position}
+            />
+          );
+        })}
       </ul>
     </section>
   );

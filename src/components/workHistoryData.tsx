@@ -4,10 +4,10 @@ import type { TimelineItemProps } from "./TimelineItem";
 
 export const workHistory: TimelineItemProps[] = [
   {
-    date: "2025",
+    date: "2025 - Present",
     title: "Independent Software Engineering Consultant",
     subtitle: "Self-Employed, Greenville, South Carolina",
-    position: "end",
+
     bulletPoints: [
       <span key="bp-1" className="tag">
         Secured e-commerce project by proactively identifying client needs and
@@ -29,11 +29,12 @@ export const workHistory: TimelineItemProps[] = [
       </span>,
     ],
   },
+
   {
     date: "2022 - 2024",
     title: "Software Engineer II",
     subtitle: "Data Innovations",
-    position: "start",
+
     bulletPoints: [
       <span key="di-1" className="tag">
         Revitalized Data Innovation's flagship product, transitioning the UI to{" "}
@@ -59,7 +60,7 @@ export const workHistory: TimelineItemProps[] = [
     date: "2020 - 2022",
     title: "Software Engineer",
     subtitle: "Microsoft",
-    position: "end",
+
     bulletPoints: [
       <span key="ms-1" className="tag">
         Developed high-performance solutions in{" "}
@@ -83,7 +84,7 @@ export const workHistory: TimelineItemProps[] = [
     date: "2015 - 2019",
     title: "Education",
     subtitle: "Amherst College",
-    position: "start",
+
     bulletPoints: [
       "Bachelor of Arts: Computer Science",
       "Bachelor of Arts: Neuroscience",
