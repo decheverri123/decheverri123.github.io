@@ -9,22 +9,22 @@ export const workHistory: TimelineItemProps[] = [
     subtitle: "Self-Employed, Greenville, South Carolina",
     position: "end",
     bulletPoints: [
-      <span key="bp-0">
+      <span key="bp-1" className="tag">
         Secured e-commerce project by proactively identifying client needs and
         demonstrating online sales expertise.
       </span>,
-      <span key="bp-1" className="tag">
+      <span key="bp-2" className="tag">
         Implemented comprehensive{" "}
         <strong className="text-primary">Shopify</strong> store with custom
         theme, content migration, and platform configuration.
       </span>,
-      <span key="bp-2" className="tag">
+      <span key="bp-3" className="tag">
         Developed <strong className="text-primary">TypeScript</strong>-powered
         product configurator using{" "}
         <strong className="text-primary">Shopify Storefront API</strong> for
         custom fence specifications.
       </span>,
-      <span key="bp-3">
+      <span key="bp-4" className="tag ">
         Independently managed entire client relationship and delivery lifecycle.
       </span>,
     ],
