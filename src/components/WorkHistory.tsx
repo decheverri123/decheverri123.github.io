@@ -8,14 +8,54 @@ export default function WorkHistory() {
       </h1>
       <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
         <TimelineItem
+          date="2025"
+          title="Independent Software Engineering Consultant"
+          subtitle="Self-Employed, Greenville, South Carolina"
+          position="end"
+          bulletPoints={[
+            "Secured e-commerce project by proactively identifying client needs and demonstrating online sales expertise.",
+            <span key="bp-1" className="tag">
+              Implemented comprehensive{" "}
+              <strong className="text-primary">Shopify</strong> store with
+              custom theme, content migration, and platform configuration.
+            </span>,
+            <span key="bp-2" className="tag">
+              Developed <strong className="text-primary">TypeScript</strong>
+              -powered product configurator using{" "}
+              <strong className="text-primary">
+                Shopify Storefront API
+              </strong>{" "}
+              for custom fence specifications.
+            </span>,
+            "Independently managed entire client relationship and delivery lifecycle.",
+          ]}
+        />
+        <TimelineItem
           date="2022 - 2024"
           title="Software Engineer II"
           subtitle="Data Innovations"
           position="start"
           bulletPoints={[
-            "Revitalized Data Innovation's flagship product, transitioning the UI to Angular and the backend to a cloud-native architecture.",
-            "Implemented CI/CD pipelines with Jenkins, AWS, Docker, and Kubernetes, improving deployment efficiency and reliability.",
-            "Developer on a greenfield Flutter project, creating a cross-platform mobile app with thorough testing.",
+            <span key="di-1" className="tag">
+              Revitalized Data Innovation's flagship product, transitioning the
+              UI to <strong className="text-primary">Angular</strong> and the
+              backend to a{" "}
+              <strong className="text-primary">cloud-native</strong>{" "}
+              architecture.
+            </span>,
+            <span key="di-2" className="tag">
+              Implemented <strong className="text-primary">CI/CD</strong>{" "}
+              pipelines with <strong className="text-primary">Jenkins</strong>,{" "}
+              <strong className="text-primary">AWS</strong>,{" "}
+              <strong className="text-primary">Docker</strong>, and{" "}
+              <strong className="text-primary">Kubernetes</strong>, improving
+              deployment efficiency and reliability.
+            </span>,
+            <span key="di-3" className="tag">
+              Developer on a greenfield{" "}
+              <strong className="text-primary">Flutter</strong> project,
+              creating a cross-platform mobile app with thorough testing.
+            </span>,
           ]}
         />
         <TimelineItem
@@ -24,9 +64,22 @@ export default function WorkHistory() {
           subtitle="Microsoft"
           position="end"
           bulletPoints={[
-            "Developed high-performance solutions in C# and .NET based on project requirements.",
-            "Worked with cross-functional teams to deliver scalable solutions in Azure DevOps and ReactJS.",
-            "Built CI/CD pipelines in Azure DevOps, ensuring quality and stability of changes for Microsoft engineers.",
+            <span key="ms-1" className="tag">
+              Developed high-performance solutions in{" "}
+              <strong className="text-primary">C#</strong> and{" "}
+              <strong className="text-primary">.NET</strong> based on project
+              requirements.
+            </span>,
+            <span key="ms-2" className="tag">
+              Worked with cross-functional teams to deliver scalable solutions
+              in <strong className="text-primary">Azure DevOps</strong> and{" "}
+              <strong className="text-primary">ReactJS</strong>.
+            </span>,
+            <span key="ms-3" className="tag">
+              Built <strong className="text-primary">CI/CD</strong> pipelines in{" "}
+              <strong className="text-primary">Azure DevOps</strong>, ensuring
+              quality and stability of changes for Microsoft engineers.
+            </span>,
           ]}
         />
         <TimelineItem

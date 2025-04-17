@@ -2,7 +2,7 @@ interface TimelineItemProps {
   date: string;
   title: string;
   subtitle?: string;
-  bulletPoints: string[];
+  bulletPoints: React.ReactNode[];
   position?: "start" | "end";
 }
 
