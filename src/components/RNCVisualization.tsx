@@ -18,15 +18,17 @@ export default function RNCVisualization() {
   }, []);
 
   return (
-    <div className="relative mx-auto mt-20 h-[500px] w-[500px] text-white">
+    <div className="relative mx-auto mt-10 text-white w-full max-w-[500px] aspect-square md:w-[500px] md:h-[500px] w-[90vw] h-[90vw]">
       {/* Central Label */}
       <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center">
-        <h2 className="text-2xl font-bold">RNC</h2>
-        <p className="text-sm text-gray-300">Always collapsing inward</p>
+        <h2 className="text-2xl font-bold text-base md:text-2xl">RNC</h2>
+        <p className="text-xs md:text-sm text-gray-300">
+          Always collapsing inward
+        </p>
       </div>
 
       {/* Rotating Arrows */}
-      <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2">
         <svg
           className="h-full w-full animate-[spin_15s_linear_infinite]"
           viewBox="0 0 100 100"
@@ -86,7 +88,7 @@ export default function RNCVisualization() {
 
       {/* Text Labels - positioned further from the circle */}
       {/* Top - Memory is retrieved */}
-      <div className="absolute left-1/2 top-2 -translate-x-1/2 translate-y-8 text-center w-60">
+      <div className="absolute left-1/2 top-[4%] -translate-x-1/2 text-center w-3/4 md:w-60 text-xs md:text-base">
         <span
           className={`transition-all duration-500 ${
             highlightedIndex === 0 ? "text-white" : "text-gray-300"
@@ -97,7 +99,7 @@ export default function RNCVisualization() {
       </div>
 
       {/* Right - It destabilizes */}
-      <div className="absolute right-2 top-1/2 -translate-y-1/2 translate-x-1/3 text-center w-60">
+      <div className="absolute right-[2%] top-1/2 -translate-y-1/2 text-center w-3/4 md:w-60 text-xs md:text-base">
         <span
           className={`transition-all duration-500 ${
             highlightedIndex === 1 ? "text-white" : "text-gray-300"
@@ -108,7 +110,7 @@ export default function RNCVisualization() {
       </div>
 
       {/* Bottom - It rewrites perception */}
-      <div className="absolute left-1/2 bottom-2 -translate-x-1/2 text-center w-60 -translate-y-8">
+      <div className="absolute left-1/2 bottom-[4%] -translate-x-1/2 text-center w-3/4 md:w-60 text-xs md:text-base">
         <span
           className={`transition-all duration-500 ${
             highlightedIndex === 2 ? "text-white" : "text-gray-300"
@@ -119,7 +121,7 @@ export default function RNCVisualization() {
       </div>
 
       {/* Left - Perception becomes new memory */}
-      <div className="absolute left-2 top-1/2 -translate-y-1/2 -translate-x-1/3 text-center w-60">
+      <div className="absolute left-[2%] top-1/2 -translate-y-1/2 text-center w-3/4 md:w-60 text-xs md:text-base">
         <span
           className={`transition-all duration-500 ${
             highlightedIndex === 3 ? "text-white" : "text-gray-300"
