@@ -8,6 +8,7 @@ export default function RNC() {
   const excerptRef = useRef<HTMLDivElement | null>(null);
   const [memoryLayer, setMemoryLayer] = useState(0);
   const [showExcerpt, setShowExcerpt] = useState(false);
+  const excerptHeaderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +19,29 @@ export default function RNC() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (showExcerpt && excerptRef.current) {
+      excerptRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [showExcerpt]);
+
+  const handleShowLess = () => {
+    setShowExcerpt(false);
+    if (excerptHeaderRef.current) {
+      setTimeout(() => {
+        if (excerptHeaderRef.current) {
+          excerptHeaderRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 300);
+    }
+  };
 
   return (
     <Layout>
@@ -224,13 +248,14 @@ export default function RNC() {
           </div>
 
           <div className="space-y-6">
-            <h2 className="mt-10 text-2xl font-semibold text-secondary">
+            <h2
+              ref={excerptHeaderRef}
+              className="mt-10 text-2xl font-semibold text-secondary"
+            >
               Excerpt from <em>Blackport</em>
             </h2>
             <blockquote
-              className={`border-l-4 pl-4 text-lg italic text-base-content transition-all duration-700 ${
-                memoryLayer === 0 ? "border-primary" : "border-base-300"
-              }`}
+              className={`border-l-4 pl-4 text-lg italic text-base-content transition-all duration-700 ${memoryLayer === 0 ? "border-primary" : "border-base-300"}`}
             >
               “And for dessert,” he announced, his accent somehow even more
               theatrically French than before, “we present Lait Brûlé de
@@ -254,12 +279,14 @@ export default function RNC() {
               <br />
               <br />
               {!showExcerpt && (
-                <span
-                  className="cursor-pointer text-accent underline"
-                  onClick={() => setShowExcerpt(true)}
-                >
-                  Read more ↴
-                </span>
+                <div className="text-right">
+                  <span
+                    className="cursor-pointer text-accent underline"
+                    onClick={() => setShowExcerpt(true)}
+                  >
+                    Read more ↴
+                  </span>
+                </div>
               )}
               <div
                 ref={excerptRef}
@@ -384,16 +411,19 @@ export default function RNC() {
                   current standards."
                   <br />
                   <br />
-                  <span
-                    className="cursor-pointer text-accent underline"
-                    onClick={() => setShowExcerpt(false)}
-                  >
-                    Show less ▲
-                  </span>
+                  <br />
+                  <br />
+                  <div className="mt-4 text-right">
+                    <span
+                      className="cursor-pointer text-accent underline"
+                      onClick={handleShowLess}
+                    >
+                      Show less ▲
+                    </span>
+                  </div>
                 </span>
               </div>
             </blockquote>
-
             <h2 className="text-2xl font-semibold text-secondary">
               Key Principles
             </h2>
