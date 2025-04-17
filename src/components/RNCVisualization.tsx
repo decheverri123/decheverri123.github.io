@@ -87,45 +87,66 @@ export default function RNCVisualization() {
       {/* Text Labels - positioned further from the circle */}
       {/* Top - Memory is retrieved */}
       <div className="absolute left-1/2 top-2 -translate-x-1/2 translate-y-8 text-center w-60">
+        {/* Horizontal for md+, vertical for xs/sm */}
         <span
-          className={`transition-all duration-500 ${
-            highlightedIndex === 0 ? "text-white" : "text-gray-300"
-          }`}
+          className={`hidden md:inline transition-all duration-500 ${highlightedIndex === 0 ? "text-white" : "text-gray-300"}`}
         >
           {phrases[0]}
+        </span>
+        <span
+          className={`flex flex-col items-center md:hidden transition-all duration-500 ${highlightedIndex === 0 ? "text-white" : "text-gray-300"}`}
+        >
+          {phrases[0].split(" ").map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
         </span>
       </div>
 
       {/* Right - It destabilizes */}
       <div className="absolute right-2 top-1/2 -translate-y-1/2 translate-x-1/3 text-center w-60">
         <span
-          className={`transition-all duration-500 ${
-            highlightedIndex === 1 ? "text-white" : "text-gray-300"
-          }`}
+          className={`hidden md:inline transition-all duration-500 ${highlightedIndex === 1 ? "text-white" : "text-gray-300"}`}
         >
           {phrases[3]}
+        </span>
+        <span
+          className={`flex flex-col items-center md:hidden transition-all duration-500 ${highlightedIndex === 1 ? "text-white" : "text-gray-300"}`}
+        >
+          {phrases[3].split(" ").map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
         </span>
       </div>
 
       {/* Bottom - It rewrites perception */}
       <div className="absolute left-1/2 bottom-2 -translate-x-1/2 text-center w-60 -translate-y-8">
         <span
-          className={`transition-all duration-500 ${
-            highlightedIndex === 2 ? "text-white" : "text-gray-300"
-          }`}
+          className={`hidden md:inline transition-all duration-500 ${highlightedIndex === 2 ? "text-white" : "text-gray-300"}`}
         >
           {phrases[1]}
+        </span>
+        <span
+          className={`flex flex-col items-center md:hidden transition-all duration-500 ${highlightedIndex === 2 ? "text-white" : "text-gray-300"}`}
+        >
+          {phrases[1].split(" ").map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
         </span>
       </div>
 
       {/* Left - Perception becomes new memory */}
       <div className="absolute left-2 top-1/2 -translate-y-1/2 -translate-x-1/3 text-center w-60">
         <span
-          className={`transition-all duration-500 ${
-            highlightedIndex === 3 ? "text-white" : "text-gray-300"
-          }`}
+          className={`hidden md:inline transition-all duration-500 ${highlightedIndex === 3 ? "text-white" : "text-gray-300"}`}
         >
           {phrases[2]}
+        </span>
+        <span
+          className={`flex flex-col items-center md:hidden transition-all duration-500 ${highlightedIndex === 3 ? "text-white" : "text-gray-300"}`}
+        >
+          {phrases[2].split(" ").map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
         </span>
       </div>
     </div>
