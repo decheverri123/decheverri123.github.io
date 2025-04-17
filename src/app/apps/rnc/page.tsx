@@ -80,18 +80,6 @@ export default function RNC() {
               Literary Context & Comparisons
             </h2>
             <p className="text-lg text-base-content">
-              RNC draws on a long literary lineage. Writers like Faulkner (whom
-              I haven’t deeply studied), Proust, and Borges all grappled with
-              time, memory, and selfhood. This framework wouldn’t exist without
-              them. But RNC diverges by making memory not just the subject of
-              introspection, but the literal mechanism through which the story
-              falls apart. Where others evoke memory, RNC tries to mechanize it.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-secondary">
-              Literary Context & Comparisons
-            </h2>
-            <p className="text-lg text-base-content">
               RNC emerges from a long literary lineage of narrative
               experimentation. Writers like Faulkner fractured chronology to
               expose psychological depth; Proust explored involuntary memory as
