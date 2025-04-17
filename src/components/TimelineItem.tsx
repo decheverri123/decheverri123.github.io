@@ -1,8 +1,8 @@
-interface TimelineItemProps {
+export interface TimelineItemProps {
   date: string;
   title: string;
   subtitle?: string;
-  bulletPoints: React.ReactNode[];
+  bulletPoints: Array<string | React.ReactNode>;
   position?: "start" | "end";
 }
 
