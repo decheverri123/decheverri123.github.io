@@ -68,11 +68,11 @@ export default function Header() {
                 Projects
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/apps/rnc" className="text-base font-medium">
                 RNC
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/contact" className="text-base font-medium">
                 Contact
@@ -99,11 +99,11 @@ export default function Header() {
               Projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/apps/rnc" className="text-base font-semibold">
               RNC
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact" className="text-base font-semibold">
               Contact
