@@ -5,7 +5,6 @@ import WorkHistory from "@/components/WorkHistory";
 import SkillsSection from "@/components/SkillsSection";
 import LanguagesSection from "@/components/LanguagesSection";
 import PoweredBySection from "@/components/PoweredBySection";
-import Link from "next/link";
 export default function HomePage() {
   return (
     <Layout>
@@ -20,18 +19,6 @@ export default function HomePage() {
           life, I&apos;m always up for a good technical challenge. When I&apos;m
           not coding, you&apos;ll find me writing music and exploring new
           technologies just for the fun of it.
-        </p>
-
-        <p className="mx-auto mb-12 max-w-xl px-4 text-center text-sm text-base-content sm:max-w-2xl sm:px-0 sm:text-base md:text-lg">
-          Oh, and I also casually invented a new paradigm for how narrative
-          works in literature—
-          <Link
-            href="/apps/rnc"
-            className="font-semibold text-primary underline-offset-2 hover:underline"
-          >
-            Reconsolidative Narrative Collapse
-          </Link>
-          .
         </p>
 
         {/* Work History Section */}
