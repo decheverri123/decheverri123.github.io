@@ -78,6 +78,11 @@ export default function Header() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link href="/catalina-rosa" className="text-base font-semibold">
+                Catalina Rosa Line
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -107,6 +112,11 @@ export default function Header() {
           <li>
             <Link href="/contact" className="text-base font-semibold">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link href="/catalina-rosa" className="text-base font-semibold">
+              Catalina Rosa Line
             </Link>
           </li>
         </ul>
