@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../../LayoutHeader";
 
 export default function RosaSecundaPage() {
@@ -12,11 +13,11 @@ export default function RosaSecundaPage() {
     tagline: "Premium playability with artful aging.",
     description:
       "Studio-ready classic with vintage looks and modern stability.",
-    heroImage: "/assets/apps/catalina-rosa/secunda-hero.png", // Replace with actual image path
+    heroImage: "/assets/apps/catalina-rosa/secunda.png", // Replace with actual image path
     detailImages: [
-      "/assets/apps/catalina-rosa/secunda-detail1.png",
-      "/assets/apps/catalina-rosa/secunda-detail2.png",
-      "/assets/apps/catalina-rosa/secunda-detail3.png",
+      "/assets/apps/catalina-rosa/secunda.png",
+      "/assets/apps/catalina-rosa/prima.png",
+      "/assets/apps/catalina-rosa/terza.png",
     ],
     features: [
       "Light-relic polyurethane finish",
@@ -58,7 +59,7 @@ export default function RosaSecundaPage() {
         <div
           className="absolute inset-0 bg-black/50"
           style={{
-            backgroundImage: "url('/assets/apps/catalina-rosa/hero-bg.jpg')",
+            backgroundImage: "url('/assets/apps/catalina-rosa/prima.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundBlendMode: "overlay",
@@ -101,10 +102,21 @@ export default function RosaSecundaPage() {
               </div>
             </div>
             <div className="rounded-lg bg-base-200 p-4">
-              <div className="relative aspect-square overflow-hidden rounded-md">
-                <div className="flex h-full w-full items-center justify-center bg-gray-300">
-                  <p>Guitar Image Placeholder</p>
-                </div>
+              <div className="carousel carousel-center h-96 w-full rounded-box">
+                {guitarData.detailImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="carousel-item relative h-full w-full"
+                  >
+                    <Image
+                      src={image}
+                      alt={`${guitarData.name} view ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      priority={index === 0}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
