@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import Layout from "../LayoutHeader";
 import ComparisonTable from "../../components/ComparisonTable";
 import FeatureSection from "../../components/FeatureSection";
+import Image from "next/image";
 
 export default function CatalinaRosaPage() {
-  const [selectedTab, setSelectedTab] = useState("all");
   const [specTab, setSpecTab] = useState("Body & Neck");
 
   const models = [
@@ -168,100 +168,33 @@ export default function CatalinaRosaPage() {
     ],
   };
 
-  const filteredModels =
-    selectedTab === "all"
-      ? models
-      : models.filter((model) => model.id === selectedTab);
-
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="relative flex min-h-[300px] items-center justify-center bg-gradient-to-r from-pink-900 to-pink-700 text-white">
-        <div
-          className="absolute inset-0 bg-black/50"
-          style={{
-            backgroundImage: "url('/assets/apps/catalina-rosa/hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundBlendMode: "overlay",
-          }}
-        ></div>
-        <div className="relative z-10 px-4 text-center">
-          <h1 className="mb-2 text-4xl font-bold sm:text-5xl">
-            Catalina <span className="text-pink-300">Rosa</span>
-          </h1>
-          <p className="text-lg italic">
-            "For those who want to shimmer while they shred."
-          </p>
+
+      <div
+        className="hero mb-8 min-h-[500px]"
+        style={{
+          backgroundImage: "url(/assets/apps/catalina-rosa/full-body.png)",
+        }}
+      >
+        <div className="hero-overlay"></div>
+        <div className="hero-content mb-24 text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-2 text-4xl font-bold sm:text-5xl">
+              Catalina <span className="text-pink-300">Rosa</span>
+            </h1>
+            <p className="text-lg italic">
+              "For those who want to shimmer while they shred."
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
-        <p className="mx-auto mb-10 max-w-2xl text-center text-base-content">
-          Explore a collection of handcrafted electric guitars blending timeless
-          elegance and modern performance. Each model offers its own unique
-          character while maintaining our signature aesthetic.
-        </p>
-
-        {/* Model Filter Tabs - Custom animated version */}
-        <div className="mb-8 flex justify-center">
-          <div
-            className="relative rounded-full bg-base-300"
-            style={{ display: "inline-flex", padding: "2px" }}
-          >
-            {/* Active tab indicator (animated pill) */}
-            <div
-              className="absolute rounded-full bg-primary transition-all duration-300 ease-in-out"
-              style={{
-                height: "calc(100% - 4px)",
-                top: "2px",
-                left: (() => {
-                  const tabOptions = ["all", "prima", "secunda", "terza"];
-                  const tabIndex = tabOptions.indexOf(selectedTab);
-                  const tabWidth = 100 / tabOptions.length;
-                  return `${tabIndex * tabWidth}%`;
-                })(),
-                width: `${100 / 4}%`,
-              }}
-            />
-
-            {/* Tab buttons */}
-            <button
-              onClick={() => setSelectedTab("all")}
-              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "all" ? "text-primary-content" : ""}`}
-              style={{ flex: 1 }}
-            >
-              All Models
-            </button>
-            <button
-              onClick={() => setSelectedTab("prima")}
-              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "prima" ? "text-primary-content" : ""}`}
-              style={{ flex: 1 }}
-            >
-              Prima
-            </button>
-            <button
-              onClick={() => setSelectedTab("secunda")}
-              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "secunda" ? "text-primary-content" : ""}`}
-              style={{ flex: 1 }}
-            >
-              Secunda
-            </button>
-            <button
-              onClick={() => setSelectedTab("terza")}
-              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "terza" ? "text-primary-content" : ""}`}
-              style={{ flex: 1 }}
-            >
-              Terza
-            </button>
-          </div>
-        </div>
-
+      <div className="min-h-screen bg-base-100 px-4 lg:px-48">
         {/* Model Cards - Using DaisyUI's image-full card */}
-        <div
-          className={`grid grid-cols-1 gap-6 ${filteredModels.length === 1 ? "place-items-center" : "sm:grid-cols-2 lg:grid-cols-3"}`}
-        >
-          {filteredModels.map((model) => (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {models.map((model) => (
             <div
               key={model.name}
               className="group relative h-[400px] overflow-hidden rounded-lg bg-base-100 shadow-lg transition-all duration-300"
@@ -365,8 +298,8 @@ export default function CatalinaRosaPage() {
         </div>
 
         {/* Feature Sections with Reusable Component */}
-        <div className="py-16">
-          <h2 className="mb-12 text-center text-3xl font-bold">
+        <div className="py-8 xs:px-1 sm:px-2 md:px-12 lg:px-48">
+          <h2 className="mb-12 text-3xl font-bold text-secondary">
             Guitar Features
           </h2>
 
@@ -391,87 +324,64 @@ export default function CatalinaRosaPage() {
           />
 
           {/* Section 3: Three Feature Cards */}
-          <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mb-16 grid grid-cols-1 gap-8 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {/* Feature 1 */}
-            <div className="card bg-base-100 p-6 shadow-lg">
-              <h4 className="mb-4 text-center text-xl font-bold">
-                Slim C-Shape Maple Neck
-              </h4>
-              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-16 w-16 text-base-content/30"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+            <div className="card max-w-lg bg-base-100 shadow-sm">
+              <figure className="relative h-48">
+                <Image
+                  src="/assets/apps/catalina-rosa/prima.png"
+                  alt="Rosewood or Maple Fingerboard"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Rosewood or Maple Fingerboard</h2>
+                <p>
+                  Rosewood fingerboards are valued for their warm tone and
+                  smooth attack, whereas maple fingerboards provide a brighter
+                  tone and snappier attack.
+                </p>
               </div>
-              <p className="text-center text-base-content/80">
-                A modern neck shape that facilitates both comfort and speed,
-                combined with a satin finish for smooth, friction-free
-                playability.
-              </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="card bg-base-100 p-6 shadow-lg">
-              <h4 className="mb-4 text-center text-xl font-bold">
-                Carved Neck Joint Heel
-              </h4>
-              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-16 w-16 text-base-content/30"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+            <div className="card max-w-lg bg-base-100 shadow-sm">
+              <figure className="relative h-48">
+                <Image
+                  src="/assets/apps/catalina-rosa/secunda.png"
+                  alt="Medium Stainless-Steel Frets"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Medium Stainless-Steel Frets</h2>
+                <p>
+                  Stainless-steel frets are exceptionally durable, while also
+                  lessening resistance when bending strings.
+                </p>
               </div>
-              <p className="text-center text-base-content/80">
-                The smoothly contoured neck heel makes accessing even the
-                uppermost frets both comfortable and easy.
-              </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="card bg-base-100 p-6 shadow-lg">
-              <h4 className="mb-4 text-center text-xl font-bold">
-                Comfortable Contoured Body
-              </h4>
-              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-16 w-16 text-base-content/30"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+            <div className="card max-w-lg bg-base-100 shadow-sm">
+              <figure className="relative h-48">
+                <Image
+                  src="/assets/apps/catalina-rosa/pickups.png"
+                  alt="Premium Gotoh Hardware"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Premium Gotoh Hardware</h2>
+                <p>
+                  Gotoh locking tuners, combined with the Gotoh 2-point tremolo
+                  bridge, ensure smooth operation and exceptional pitch
+                  stability.
+                </p>
               </div>
-              <p className="text-center text-base-content/80">
-                The alder body is beveled along the lower bout to increase
-                playing comfort.
-              </p>
             </div>
           </div>
         </div>

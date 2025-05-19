@@ -1,6 +1,9 @@
 "use client";
 
+"use client";
+
 import React from "react";
+import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../../../components/SpecificationsTable";
 import FeatureSection from "../../../components/FeatureSection";
@@ -61,6 +64,7 @@ export default function RosaPrimaPage() {
           backgroundImage: "url(/assets/apps/catalina-rosa/prima.png)",
         }}
       >
+        <div className="hero-overlay"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold text-secondary">
@@ -69,7 +73,7 @@ export default function RosaPrimaPage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
+      <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8 md:px-12 lg:px-16">
         {/* Feature Sections with Reusable Component */}
         <div className="mx-auto max-w-5xl">
           <div>
@@ -77,7 +81,7 @@ export default function RosaPrimaPage() {
               Emotion, Refined
             </h2>
 
-            <div className="mb-16">
+            <div className="mb-8">
               <p className="mb-4 text-base-content/80">
                 The Catalina Rosa Prima is a bold reimagining of the modern
                 player’s guitar—blending boutique-level craftsmanship with
@@ -110,7 +114,7 @@ export default function RosaPrimaPage() {
               </p>
             </div>
           </div>
-          <div className="divider"></div>
+          <div className="divider mb-10"></div>
 
           {/* Section 1: Image Left, Text Right */}
           <FeatureSection
@@ -182,6 +186,93 @@ export default function RosaPrimaPage() {
             imageAlt="Rosa Prima Hardware"
             textPosition="left"
           />
+          {/* Premium Hardware Features */}
+          <div className="mb-10 mt-20">
+            <h2 className="mb-8 text-center text-3xl font-bold">
+              Premium Components
+            </h2>
+            <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+              {/* Feature 1 */}
+              <div className="card bg-base-100 shadow-sm">
+                <figure className="relative h-48">
+                  <Image
+                    src="/assets/apps/catalina-rosa/prima.png"
+                    alt="Rosewood or Maple Fingerboard"
+                    fill
+                    className="object-cover"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    Rosewood or Maple Fingerboard
+                    <div className="badge badge-secondary">CHOICE</div>
+                  </h2>
+                  <p>
+                    Rosewood fingerboards are valued for their warm tone and
+                    smooth attack, whereas maple fingerboards provide a brighter
+                    tone and snappier attack.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <div className="badge badge-outline">Tonewoods</div>
+                    <div className="badge badge-outline">Playability</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="card bg-base-100 shadow-sm">
+                <figure className="relative h-48">
+                  <Image
+                    src="/assets/apps/catalina-rosa/secunda.png"
+                    alt="Medium Stainless-Steel Frets"
+                    fill
+                    className="object-cover"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    Medium Stainless-Steel Frets
+                    <div className="badge badge-secondary">PREMIUM</div>
+                  </h2>
+                  <p>
+                    Stainless-steel frets are exceptionally durable, while also
+                    lessening resistance when bending strings.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <div className="badge badge-outline">Hardware</div>
+                    <div className="badge badge-outline">Durability</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="card bg-base-100 shadow-sm">
+                <figure className="relative h-48">
+                  <Image
+                    src="/assets/apps/catalina-rosa/pickups.png"
+                    alt="Premium Gotoh Hardware"
+                    fill
+                    className="object-cover"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    Premium Gotoh Hardware
+                    <div className="badge badge-secondary">QUALITY</div>
+                  </h2>
+                  <p>
+                    Gotoh locking tuners, combined with the Gotoh 2-point
+                    tremolo bridge, ensure smooth operation and exceptional
+                    pitch stability.
+                  </p>
+                  <div className="card-actions justify-end">
+                    <div className="badge badge-outline">Hardware</div>
+                    <div className="badge badge-outline">Tuning Stability</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* Specifications Section */}
         <div className="mx-auto mb-16 max-w-4xl">
