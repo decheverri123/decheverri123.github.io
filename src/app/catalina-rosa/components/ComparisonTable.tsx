@@ -15,20 +15,20 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
   specifications,
 }) => {
   return (
-    <div className="overflow-x-auto rounded-box border border-base-content/5 mb-8 shadow-xl text-base-content">
+    <div className="mb-8 overflow-x-auto rounded-box border border-base-content/5 text-base-content shadow-xl">
       <table className="w-full border-collapse xs:text-sm">
         <thead>
-          <tr className="xs:text-xs sm:text-sm md:text-md font-display text-base-content">
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
+          <tr className="md:text-md font-display text-base-content xs:text-xs sm:text-sm">
+            <th className="bg-base-200 px-4 py-3 text-left font-bold uppercase">
               Feature
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
+            <th className="bg-base-200 px-4 py-3 text-left font-bold uppercase">
               Prima
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
+            <th className="bg-base-200 px-4 py-3 text-left font-bold uppercase">
               Secunda
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
+            <th className="bg-base-200 px-4 py-3 text-left font-bold uppercase">
               Terza
             </th>
           </tr>
@@ -37,18 +37,18 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
           {specifications.map((row, rowIndex) => (
             <tr
               key={rowIndex}
-              className="border-b border-base-200 xs:text-xs sm:text-base font-serif text-base-content"
+              className="border-b border-base-200 font-serif text-base-content xs:text-xs sm:text-base"
             >
-              <td className="py-3 px-4 xs:pr-1 font-semibold text-base-content bg-base-200 font-display">
+              <td className="bg-base-200 px-4 py-3 font-display font-semibold text-base-content xs:pr-1">
                 {row.feature}
               </td>
-              <td className="py-3 px-4 bg-base-100 text-base-content">
+              <td className="bg-base-100 px-4 py-3 text-base-content">
                 {row.prima}
               </td>
-              <td className="py-3 px-4 bg-base-100 text-base-content">
+              <td className="bg-base-100 px-4 py-3 text-base-content">
                 {row.secunda}
               </td>
-              <td className="py-3 px-4 bg-base-100 text-base-content">
+              <td className="bg-base-100 px-4 py-3 text-base-content">
                 {row.terza}
               </td>
             </tr>

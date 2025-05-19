@@ -21,7 +21,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   objectFit = "cover",
 }) => {
   return (
-    <div className="card card-bordered bg-base-100 shadow-lg md:card-lg lg:card-xl">
+    <div className="md:card-lg lg:card-xl card card-bordered bg-base-100 shadow-lg">
       <figure className="relative h-48">
         <Image
           src={imageSrc}
@@ -31,7 +31,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-primary font-display">
+        <h2 className="card-title font-display text-primary">
           {title}
           {badge && <div className="badge badge-secondary">{badge}</div>}
         </h2>

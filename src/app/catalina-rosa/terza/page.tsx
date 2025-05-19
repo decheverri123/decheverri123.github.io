@@ -2,9 +2,9 @@
 
 import React from "react";
 import Layout from "../../LayoutHeader";
-import SpecificationsTable from "../../../components/SpecificationsTable";
-import FeatureSection from "../../../components/FeatureSection";
-import FeatureCard from "../../../components/FeatureCard";
+import SpecificationsTable from "../components/SpecificationsTable";
+import FeatureSection from "../components/FeatureSection";
+import FeatureCard from "../components/FeatureCard";
 
 export default function RosaTerzaPage() {
   const guitarData = {
@@ -119,7 +119,7 @@ export default function RosaTerzaPage() {
                 </p>
               </>
             }
-            imageSrc="/assets/apps/catalina-rosa/terza.png"
+            imageSrc="/assets/apps/catalina-rosa/terza-03.png"
             imageAlt="Rosa Terza Body"
             textPosition="left"
           />
@@ -173,28 +173,22 @@ export default function RosaTerzaPage() {
               <FeatureCard
                 title="Open-Pore Satin Finish"
                 description="Lightweight and breathable, this finish enhances resonance and feels natural in hand—distinct from the relic’d satin finish of the Prima and Secunda."
-                imageSrc="/assets/apps/catalina-rosa/terza-body.png"
+                imageSrc="/assets/apps/catalina-rosa/terza-back.png"
                 imageAlt="Open-Pore Finish"
-                badge="TONEWOOD"
-                tags={["Resonance", "Aesthetics"]}
               />
 
               <FeatureCard
                 title="Vintage-Style Tuners"
                 description="Classic look, reliable functionality. These tuners complete the Terza’s vintage-modern aesthetic and keep weight balanced at the headstock."
-                imageSrc="/assets/apps/catalina-rosa/tuners.jpg"
+                imageSrc="/assets/apps/catalina-rosa/tuners.webp"
                 imageAlt="Vintage Tuners"
-                badge="CLASSIC"
-                tags={["Hardware", "Weight Balance"]}
               />
 
               <FeatureCard
                 title="Wilkinson Tremolo"
                 description="Smooth bends, vintage feel. The Wilkinson tremolo provides expressive control with dependable tuning—distinct from the Gotoh systems used on other Rosa models."
-                imageSrc="/assets/apps/catalina-rosa/wilkinson.png"
+                imageSrc="/assets/apps/catalina-rosa/hardware.png"
                 imageAlt="Wilkinson Trem"
-                badge="VIBE"
-                tags={["Bridge", "Tuning Stability"]}
               />
             </div>
           </div>

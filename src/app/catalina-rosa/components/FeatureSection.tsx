@@ -71,7 +71,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     <div className="mb-16 grid grid-cols-1 items-center gap-8 md:grid-cols-12">
       {/* Image Column with configurable width */}
       <div className={`${getImageColumnClass()} ${imageColumnOrder}`}>
-        <div className="overflow-hidden rounded-lg border border-base-200 bg-base-100 shadow-lg relative h-64">
+        <div className="relative h-64 overflow-hidden rounded-lg border border-base-200 bg-base-100 shadow-lg">
           {imageComponent ? (
             // Render custom image component if provided
             imageComponent
@@ -95,10 +95,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 
       {/* Text Column with dynamic width */}
       <div className={`${getTextColumnClass()} ${textColumnOrder}`}>
-        <h3 className="mb-4 text-2xl font-bold text-primary font-display">
+        <h3 className="mb-4 font-display text-2xl font-bold text-primary">
           {title}
         </h3>
-        <div className="text-base-content text-md font-serif">
+        <div className="text-md font-serif text-base-content">
           {description}
         </div>
       </div>

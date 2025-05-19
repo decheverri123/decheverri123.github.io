@@ -25,7 +25,7 @@ const DetailedFeatureSection: React.FC<DetailedFeatureSectionProps> = ({
     <div>
       {/* Main section title */}
       <h1
-        className={`mb-4 text-center text-4xl font-bold text-secondary font-display`}
+        className={`mb-4 text-center font-display text-4xl font-bold text-secondary`}
       >
         {title}
       </h1>

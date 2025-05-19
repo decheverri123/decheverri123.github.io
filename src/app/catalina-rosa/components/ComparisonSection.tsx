@@ -1,13 +1,11 @@
 import React from "react";
 import ComparisonTable from "./ComparisonTable";
 
-// Define the type for specification items
 interface SpecificationItem {
   feature: string;
   prima: string;
   secunda: string;
   terza: string;
-  [key: string]: string; // Allow additional properties
 }
 
 interface ComparisonSectionProps {
@@ -25,12 +23,12 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
 }) => {
   return (
     <div className={className}>
-      <h2 className="mb-8 text-center text-4xl font-bold text-primary font-display">
+      <h2 className="mb-8 text-center font-display text-4xl font-bold text-primary">
         Compare Models
       </h2>
       <div className="mb-4 flex justify-center">
         <div
-          className="relative rounded-full bg-base-300 min-w-full min-h-12"
+          className="relative min-h-12 min-w-full rounded-full bg-base-300"
           style={{ display: "inline-flex", padding: "2px" }}
         >
           {/* Active tab indicator (animated pill) */}
@@ -53,7 +51,7 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative z-10 px-3 py-0.5 text-base-content sm:font-bold transition-colors duration-300 xs:text-xs sm:text-sm md:text-sm xs:font-normal  ${
+              className={`relative z-10 px-3 py-0.5 text-base-content transition-colors duration-300 xs:text-xs xs:font-normal sm:text-sm sm:font-bold md:text-sm ${
                 activeTab === tab ? "text-primary-content" : ""
               }`}
               style={{ flex: 1 }}

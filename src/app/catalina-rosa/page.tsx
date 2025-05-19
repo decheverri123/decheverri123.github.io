@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import Layout from "../LayoutHeader";
-import ModelSection from "../../components/ModelSection";
-import IntroSection from "../../components/IntroSection";
-import DetailedFeatureSection from "../../components/DetailedFeatureSection";
-import ComparisonSection from "../../components/ComparisonSection";
-import FeatureCardSection from "../../components/FeatureCardSection";
+import ModelSection from "./components/ModelSection";
+import IntroSection from "./components/IntroSection";
+import DetailedFeatureSection from "./components/DetailedFeatureSection";
+import ComparisonSection from "./components/ComparisonSection";
+import FeatureCardSection from "./components/FeatureCardSection";
 import Image from "next/image";
 
 export default function CatalinaRosaPage() {

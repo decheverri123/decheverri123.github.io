@@ -27,7 +27,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
       {/* Title always visible */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 pb-5">
         <div className="flex items-center justify-between">
-          <h2 className="card-title font-bold text-error font-display">
+          <h2 className="card-title font-display font-bold text-error">
             {name}
           </h2>
 
@@ -39,22 +39,22 @@ const ModelCard: React.FC<ModelCardProps> = ({
       </div>
 
       {/* Content only visible on hover with bottom-to-top animation - hidden on mobile */}
-      <div className="absolute inset-0 hidden lg:flex flex-col justify-between bg-black/80 p-6 opacity-0 transition-all duration-500 ease-in-out translate-y-8 group-hover:translate-y-0 group-hover:opacity-100">
+      <div className="absolute inset-0 hidden translate-y-8 flex-col justify-between bg-black/80 p-6 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 lg:flex">
         <div className="flex flex-col space-y-2">
-          <div className="flex items-center justify-between transition-transform duration-300 ease-out delay-[5ms]">
+          <div className="flex items-center justify-between transition-transform delay-[5ms] duration-300 ease-out">
             <h2 className="card-title font-display">{name}</h2>
             <div className="badge badge-primary badge-outline badge-lg">
               {price}
             </div>
           </div>
-          <p className="mt-2 text-sm italic font-serif transition-transform duration-300 ease-out delay-[100ms]">
+          <p className="mt-2 font-serif text-sm italic transition-transform delay-[100ms] duration-300 ease-out">
             {tagline}
           </p>
-          <p className="mt-2 font-serif transition-transform duration-300 ease-out delay-[150ms]">
+          <p className="mt-2 font-serif transition-transform delay-[150ms] duration-300 ease-out">
             {description}
           </p>
 
-          <div className="mt-4 space-y-1 transition-transform duration-300 ease-out delay-[200ms]">
+          <div className="mt-4 space-y-1 transition-transform delay-[200ms] duration-300 ease-out">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -68,7 +68,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
           </div>
         </div>
 
-        <div className="card-actions justify-center transition-transform duration-300 ease-out delay-[400ms]">
+        <div className="card-actions justify-center transition-transform delay-[400ms] duration-300 ease-out">
           <Link
             href={href}
             className="btn btn-primary transition-all duration-300"

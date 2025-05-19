@@ -2,9 +2,9 @@
 
 import React from "react";
 import Layout from "../../LayoutHeader";
-import SpecificationsTable from "../../../components/SpecificationsTable";
-import FeatureSection from "../../../components/FeatureSection";
-import FeatureCard from "../../../components/FeatureCard";
+import SpecificationsTable from "../components/SpecificationsTable";
+import FeatureSection from "../components/FeatureSection";
+import FeatureCard from "../components/FeatureCard";
 
 export default function RosaPrimaPage() {
   // Dummy data for the Prima model
