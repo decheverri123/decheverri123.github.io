@@ -1,53 +1,53 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Layout from "../../LayoutHeader";
-import ImageCarousel from "../../../components/ImageCarousel";
 import SpecificationsTable from "../../../components/SpecificationsTable";
+import FeatureSection from "../../../components/FeatureSection";
+import FeatureCard from "../../../components/FeatureCard";
 
 export default function RosaTerzaPage() {
-  // Dummy data for the Terza model
   const guitarData = {
     name: "Rosa Terza",
-    price: "$1,499",
-    tagline: "Vibrant modern performance for all.",
-    description: "Affordable, sleek, and no-nonsense. Your new workhorse.",
-    heroImage: "/assets/apps/catalina-rosa/terza-hero.png", // Replace with actual image path
+    price: "$1,600",
+    tagline: "Minimal by design, maximal in character.",
+    description:
+      "The most stripped-down Rosa. Pure feel. Pure sound. No distractions.",
+    heroImage: "/assets/apps/catalina-rosa/terza.png",
     detailImages: [
       "/assets/apps/catalina-rosa/terza.png",
       "/assets/apps/catalina-rosa/secunda.png",
       "/assets/apps/catalina-rosa/prima.png",
     ],
     features: [
-      "Gloss metallic shell pink finish",
-      "Gold dot inlays with Luminlay side dots",
-      "Stainless steel frets with compound radius",
-      "Ceramic pickups with modern output",
+      "Open-pore satin finish",
+      "Rose-themed dot inlays",
+      "Standard nickel frets",
+      "Custom Serena and Corazon pickups",
     ],
     specifications: {
-      body: "Nyatoh w/ Maple Cap",
-      neck: "Standard Roasted Maple",
-      fretboard: "Indian Laurel",
-      radius: '10"-14" Compound',
-      frets: "22 Medium Jumbo Stainless",
-      pickups: "HSS",
-      bridge: "Standard 2-Point (Gold)",
-      tuners: "Die-Cast Locking (Gold)",
-      finish: "Gloss metallic shell pink",
-      weight: "7.9 lbs",
-      case: "Padded Gig Bag (Embroidered)",
+      body: "Poplar or Swamp Ash",
+      neck: "Roasted Maple",
+      fretboard: "Maple or Rosewood",
+      radius: '10"–14" Compound',
+      frets: "22 Medium Nickel",
+      pickups: "HSS (Custom)",
+      bridge: "Wilkinson Tremolo",
+      tuners: "Vintage-Style",
+      finish: "Open-Pore Satin",
+      weight: "7.1 lbs",
+      case: "Gig Bag",
     },
     testimonials: [
       {
         quote:
-          "The Terza is the perfect entry into boutique guitars. Incredible value for the price.",
-        author: "David Lee, Guitar Instructor",
+          "The Terza nails that vintage-meets-modern vibe. It’s raw and honest, just like the best music.",
+        author: "Julian Vega, Producer & Guitarist",
       },
       {
         quote:
-          "I bought the Terza as my first 'real' guitar and couldn't be happier. It plays like instruments twice its price.",
-        author: "Emma Taylor, Emerging Artist",
+          "This thing punches way above its price. Lightweight, expressive, and totally inspiring.",
+        author: "Cameron Lee, Touring Musician",
       },
     ],
   };
@@ -56,9 +56,7 @@ export default function RosaTerzaPage() {
     <Layout>
       <div
         className="hero min-h-[500px]"
-        style={{
-          backgroundImage: "url(/assets/apps/catalina-rosa/terza.png)",
-        }}
+        style={{ backgroundImage: `url(${guitarData.heroImage})` }}
       >
         <div className="hero-overlay"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -69,79 +67,143 @@ export default function RosaTerzaPage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-base-100 px-4 py-10 text-base-content sm:px-8">
-        {/* Overview Section */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">Overview</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div>
-              <p className="mb-6 text-lg">{guitarData.description}</p>
-              <p className="mb-6">
-                The Rosa Terza makes Echeverri quality accessible to more
-                players. With smart design choices and focused craftsmanship, it
-                delivers exceptional playability and tone while maintaining an
-                attractive price point.
+
+      <div className="min-h-screen bg-base-100 px-4 py-10 text-base-content sm:px-8 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-5xl">
+          <div>
+            <h2 className="mb-4 font-display text-2xl font-semibold text-primary">
+              Minimal Form, Maximum Vibe
+            </h2>
+
+            <div className="mb-8">
+              <p className="mb-4 text-base-content/80">
+                The Catalina Rosa Terza is the most stripped-down entry in the
+                lineup—focused on essential feel, bold tone, and unmistakable
+                identity. With an open-pore satin finish and no frills to hide
+                behind, the Terza invites players to connect directly with their
+                sound.
               </p>
-              <div className="mt-6 space-y-2">
-                <h3 className="text-xl font-semibold">Key Features</h3>
-                <ul className="space-y-2">
-                  {guitarData.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="mr-2">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="mb-4 text-base-content/80">
+                Powered by our signature Serena and Corazon pickup pairing, it
+                delivers expressive clarity, bell-like highs, and vintage-voiced
+                punch in a clean and honest platform that rewards subtlety as
+                much as fire.
+              </p>
+              <p className="mb-4 text-base-content/80">
+                The Terza may be minimal in looks, but it’s massive in soul.
+                Every detail—from the weight-balanced poplar body to the
+                vintage-style tuners—is chosen for tone, comfort, and character.
+              </p>
+              <p className="mb-4 text-base-content/80">
+                If you believe a great guitar shouldn’t get in the way, the
+                Terza is your perfect match.
+              </p>
             </div>
-            <div className="rounded-lg bg-base-200 p-4">
-              <ImageCarousel
-                images={guitarData.detailImages}
-                altPrefix={guitarData.name}
+          </div>
+
+          <div className="divider mb-10"></div>
+
+          <FeatureSection
+            title="Refined Essentials"
+            description={
+              <>
+                <p className="mb-4 text-base-content/80">
+                  The Terza’s open-pore satin finish and simplified hardware
+                  setup create an instrument that feels direct and dynamic. Its
+                  resonance is immediate, its tone responsive, and its look
+                  timeless.
+                </p>
+                <p className="text-base-content/80">
+                  Everything you need, nothing you don’t. This is
+                  Rosa—distilled.
+                </p>
+              </>
+            }
+            imageSrc="/assets/apps/catalina-rosa/terza.png"
+            imageAlt="Rosa Terza Body"
+            textPosition="left"
+          />
+
+          <FeatureSection
+            title="Signature Rosa Pickups"
+            description={
+              <>
+                <p className="mb-4 text-base-content/80">
+                  The Serena and Corazon pickups come standard in all Catalina
+                  Rosa models. They’re expressive, warm, and built for clarity.
+                </p>
+                <p className="mb-4 text-base-content/80">
+                  Serena single coils deliver that bell-like shimmer heard in
+                  tracks like "Dancing in a Burning Room," while the Corazon
+                  humbucker in the bridge sings with creamy mids and
+                  harmonically rich presence.
+                </p>
+                <p className="text-base-content/80">
+                  Balanced, responsive, and musical in every setting, these
+                  pickups make the Terza a natural voice for expressive players.
+                </p>
+              </>
+            }
+            imageSrc="/assets/apps/catalina-rosa/pickups.png"
+            imageAlt="Rosa Terza Pickups"
+            textPosition="right"
+          />
+
+          <FeatureSection
+            title="Honest Construction, Timeless Tone"
+            description={
+              <p className="mb-4 text-base-content/80">
+                Built with modern reliability and vintage flavor, the Terza’s
+                no-nonsense design includes a comfortable roasted maple neck,
+                vintage-style tuners, and a Wilkinson tremolo for classic pitch
+                modulation and smooth bends. It’s simple, expressive, and ready
+                for anything.
+              </p>
+            }
+            imageSrc="/assets/apps/catalina-rosa/terza-03.png"
+            imageAlt="Rosa Terza Hardware"
+            textPosition="left"
+          />
+
+          <div className="mb-10 mt-20">
+            <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary">
+              Premium Components
+            </h2>
+            <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+              <FeatureCard
+                title="Open-Pore Satin Finish"
+                description="Lightweight and breathable, this finish enhances resonance and feels natural in hand—distinct from the relic’d satin finish of the Prima and Secunda."
+                imageSrc="/assets/apps/catalina-rosa/terza-body.png"
+                imageAlt="Open-Pore Finish"
+                badge="TONEWOOD"
+                tags={["Resonance", "Aesthetics"]}
+              />
+
+              <FeatureCard
+                title="Vintage-Style Tuners"
+                description="Classic look, reliable functionality. These tuners complete the Terza’s vintage-modern aesthetic and keep weight balanced at the headstock."
+                imageSrc="/assets/apps/catalina-rosa/tuners.jpg"
+                imageAlt="Vintage Tuners"
+                badge="CLASSIC"
+                tags={["Hardware", "Weight Balance"]}
+              />
+
+              <FeatureCard
+                title="Wilkinson Tremolo"
+                description="Smooth bends, vintage feel. The Wilkinson tremolo provides expressive control with dependable tuning—distinct from the Gotoh systems used on other Rosa models."
+                imageSrc="/assets/apps/catalina-rosa/wilkinson.png"
+                imageAlt="Wilkinson Trem"
+                badge="VIBE"
+                tags={["Bridge", "Tuning Stability"]}
               />
             </div>
           </div>
-        </div>
 
-        {/* Specifications Section */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">Specifications</h2>
-          <SpecificationsTable specifications={guitarData.specifications} />
-        </div>
-
-        {/* Testimonials */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">What Players Say</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {guitarData.testimonials.map((testimonial, index) => (
-              <div key={index} className="card bg-base-200 shadow-md">
-                <div className="card-body">
-                  <p className="italic">"{testimonial.quote}"</p>
-                  <p className="mt-4 text-right font-semibold">
-                    — {testimonial.author}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="card mx-auto mt-16 max-w-2xl bg-base-200 p-8 text-center shadow-lg">
-          <h3 className="mb-4 text-2xl font-bold">
-            Ready to Experience the Rosa Terza?
-          </h3>
-          <p className="mb-6">
-            Contact us to discuss custom options or to place an order for your
-            Rosa Terza guitar.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn btn-primary">
-              Contact Us
-            </Link>
-            <Link href="/catalina-rosa" className="btn btn-outline">
-              Back to Models
-            </Link>
+          <div className="mx-auto mb-16 max-w-4xl">
+            <h2 className="mb-6 text-center text-3xl font-bold">
+              Specifications
+            </h2>
+            <SpecificationsTable specifications={guitarData.specifications} />
           </div>
         </div>
       </div>
