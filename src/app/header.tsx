@@ -90,8 +90,8 @@ export default function Header() {
               Contact
             </Link>
           </li>
-          <li className="group relative">
-            <div className="flex items-center gap-1">
+          <li className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="flex items-center gap-1">
               <Link
                 href="/catalina-rosa"
                 className="text-base font-semibold hover:text-primary"
@@ -113,7 +113,10 @@ export default function Header() {
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </div>
-            <ul className="absolute left-0 top-full z-20 mt-1 hidden min-w-[200px] rounded-box bg-base-100 p-2 shadow-lg group-hover:block">
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content left-0 top-full z-[1] mt-1 min-w-[200px] rounded-box bg-base-100 p-2 shadow-lg"
+            >
               <li>
                 <Link
                   href="/catalina-rosa"
