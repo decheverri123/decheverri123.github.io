@@ -90,38 +90,55 @@ export default function Header() {
               Contact
             </Link>
           </li>
-          <li>
-            <details>
-              <summary className="text-base font-semibold">
+          <li className="group relative">
+            <div className="flex items-center gap-1">
+              <Link
+                href="/catalina-rosa"
+                className="text-base font-semibold hover:text-primary"
+              >
                 Catalina Rosa Line
-              </summary>
-              <ul className="z-10 rounded-box bg-base-100 p-2 shadow">
-                <li>
-                  <Link
-                    href="/catalina-rosa/prima"
-                    className="hover:text-primary"
-                  >
-                    Prima
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/catalina-rosa/secunda"
-                    className="hover:text-primary"
-                  >
-                    Secunda
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/catalina-rosa/terza"
-                    className="hover:text-primary"
-                  >
-                    Terza
-                  </Link>
-                </li>
-              </ul>
-            </details>
+              </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="transition-transform duration-200 group-hover:rotate-180"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <ul className="absolute left-0 top-full z-20 mt-1 hidden min-w-[200px] rounded-box bg-base-100 p-2 shadow-lg group-hover:block">
+              <li>
+                <Link
+                  href="/catalina-rosa/prima"
+                  className="block px-4 py-2 hover:bg-base-200 hover:text-primary"
+                >
+                  Prima
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/catalina-rosa/secunda"
+                  className="block px-4 py-2 hover:bg-base-200 hover:text-primary"
+                >
+                  Secunda
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/catalina-rosa/terza"
+                  className="block px-4 py-2 hover:bg-base-200 hover:text-primary"
+                >
+                  Terza
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
