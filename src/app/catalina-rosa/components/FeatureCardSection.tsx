@@ -6,8 +6,6 @@ export interface FeatureCardData {
   description: string;
   imageSrc: string;
   imageAlt?: string;
-  badge?: string;
-  tags?: string[];
   objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 }
 
@@ -61,8 +59,6 @@ const FeatureCardSection: React.FC<FeatureCardSectionProps> = ({
                 ? feature.title
                 : "Feature image")
             }
-            badge={feature.badge}
-            tags={feature.tags}
             objectFit={feature.objectFit}
           />
         ))}
