@@ -329,18 +329,17 @@ export default function CatalinaRosaPage() {
             <div className="card max-w-lg bg-base-100 shadow-sm">
               <figure className="relative h-48">
                 <Image
-                  src="/assets/apps/catalina-rosa/prima.png"
+                  src="/assets/apps/catalina-rosa/neck.png"
                   alt="Rosewood or Maple Fingerboard"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Rosewood or Maple Fingerboard</h2>
+                <h2 className="card-title text-primary">Flamed Maple Neck</h2>
                 <p>
-                  Rosewood fingerboards are valued for their warm tone and
-                  smooth attack, whereas maple fingerboards provide a brighter
-                  tone and snappier attack.
+                  The neck is made of flamed maple, which is a type of wood that
+                  is prized for its warm tone and smooth attack.
                 </p>
               </div>
             </div>
@@ -356,7 +355,9 @@ export default function CatalinaRosaPage() {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Medium Stainless-Steel Frets</h2>
+                <h2 className="card-title text-primary">
+                  Medium Stainless-Steel Frets
+                </h2>
                 <p>
                   Stainless-steel frets are exceptionally durable, while also
                   lessening resistance when bending strings.
@@ -375,7 +376,9 @@ export default function CatalinaRosaPage() {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Premium Gotoh Hardware</h2>
+                <h2 className="card-title text-primary">
+                  Premium Gotoh Hardware
+                </h2>
                 <p>
                   Gotoh locking tuners, combined with the Gotoh 2-point tremolo
                   bridge, ensure smooth operation and exceptional pitch
