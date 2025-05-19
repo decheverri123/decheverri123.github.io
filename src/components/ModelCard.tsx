@@ -43,7 +43,9 @@ const ModelCard: React.FC<ModelCardProps> = ({
         <div className="flex flex-col space-y-2">
           <div className="flex items-center justify-between transition-transform duration-300 ease-out delay-[5ms]">
             <h2 className="card-title font-display">{name}</h2>
-            <div className="badge badge-primary badge-lg">{price}</div>
+            <div className="badge badge-primary badge-outline badge-lg">
+              {price}
+            </div>
           </div>
           <p className="mt-2 text-sm italic font-serif transition-transform duration-300 ease-out delay-[100ms]">
             {tagline}
@@ -66,10 +68,10 @@ const ModelCard: React.FC<ModelCardProps> = ({
           </div>
         </div>
 
-        <div className="card-actions justify-end transition-transform duration-300 ease-out delay-[400ms]">
+        <div className="card-actions justify-center transition-transform duration-300 ease-out delay-[400ms]">
           <Link
             href={href}
-            className="btn btn-secondary hover:btn-primary transition-all duration-300"
+            className="btn btn-primary transition-all duration-300"
           >
             View Model
           </Link>

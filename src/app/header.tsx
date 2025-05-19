@@ -37,7 +37,7 @@ export default function Header() {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         {/* Hamburger menu for small screens */}
-        <div className="dropdown inline-block text-white lg:hidden">
+        <div className="dropdown inline-block text-white md:hidden">
           <button tabIndex={0} className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
             <Link href="/" className="text-base font-semibold">

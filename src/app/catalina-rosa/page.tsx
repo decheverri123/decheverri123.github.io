@@ -32,7 +32,7 @@ export default function CatalinaRosaPage() {
     {
       id: "secunda",
       name: "Rosa Secunda",
-      price: "$1,899",
+      price: "$2,000",
       image: "/assets/apps/catalina-rosa/secunda.png",
       description:
         "Studio-ready classic with vintage looks and modern stability.",

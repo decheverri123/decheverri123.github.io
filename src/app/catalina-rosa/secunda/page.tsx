@@ -10,7 +10,7 @@ export default function RosaSecundaPage() {
   // Dummy data for the Secunda model
   const guitarData = {
     name: "Rosa Secunda",
-    price: "$1,899",
+    price: "$2000",
     tagline: "Premium playability with artful aging.",
     description:
       "Studio-ready classic with vintage looks and modern stability.",
