@@ -17,7 +17,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   objectFit = "cover",
 }) => {
   return (
-    <div className="md:card-lg lg:card-xl card card-bordered bg-base-100 shadow-lg">
+    <div className="md:card-lg lg:card-xl card card-bordered border-separate border-primary shadow-lg">
       <figure className="relative h-48">
         <Image
           src={imageSrc}

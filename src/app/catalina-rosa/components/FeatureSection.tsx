@@ -71,7 +71,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     <div className="mb-16 grid grid-cols-1 items-center gap-8 md:grid-cols-12">
       {/* Image Column with configurable width */}
       <div className={`${getImageColumnClass()} ${imageColumnOrder}`}>
-        <div className="relative h-64 overflow-hidden rounded-lg border border-base-200 bg-base-100 shadow-lg">
+        <div className="relative h-64 overflow-hidden rounded-lg border-2 border-accent bg-base-100 shadow-lg">
           {imageComponent ? (
             // Render custom image component if provided
             imageComponent
@@ -81,7 +81,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               src={imageSrc}
               alt={imageAlt}
               fill
-              className="object-cover"
+              className="rounded-lg object-contain"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           ) : (

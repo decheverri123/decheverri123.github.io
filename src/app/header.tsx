@@ -116,6 +116,14 @@ export default function Header() {
             <ul className="absolute left-0 top-full z-20 mt-1 hidden min-w-[200px] rounded-box bg-base-100 p-2 shadow-lg group-hover:block">
               <li>
                 <Link
+                  href="/catalina-rosa"
+                  className="block px-4 py-2 hover:bg-base-200 hover:text-primary"
+                >
+                  All Models
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/catalina-rosa/prima"
                   className="block px-4 py-2 hover:bg-base-200 hover:text-primary"
                 >

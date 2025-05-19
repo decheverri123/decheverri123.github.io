@@ -15,8 +15,8 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
   specifications,
 }) => {
   return (
-    <div className="mb-8 overflow-x-auto rounded-box border border-base-content/5 text-base-content shadow-xl">
-      <table className="w-full border-collapse xs:text-sm">
+    <div className="mb-8 overflow-x-auto rounded-box border border-base-content/5 border-primary text-base-content shadow-xl">
+      <table className="w-full xs:text-sm">
         <thead>
           <tr className="md:text-md font-display text-base-content xs:text-xs sm:text-sm">
             <th className="bg-base-200 px-4 py-3 text-left font-bold uppercase">

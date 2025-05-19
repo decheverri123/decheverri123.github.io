@@ -233,11 +233,11 @@ export default function CatalinaRosaPage() {
                 <Image
                   src="/assets/apps/catalina-rosa/body-relief.jpg"
                   alt="Advanced Weight Relief"
-                  className="object-fill"
+                  className="object-cover"
                   fill
                 />
               ),
-              imageColumnWidth: 7,
+              imageColumnWidth: 6,
             },
             {
               title: "Custom-Voiced Pickups",
@@ -268,13 +268,13 @@ export default function CatalinaRosaPage() {
                 <Image
                   src="/assets/apps/catalina-rosa/pickups-detailed.png"
                   alt="Custom-Voiced Pickups"
-                  className="object-cover"
                   fill
+                  className="object-cover"
                 />
               ),
               imageAlt: "Custom-Voiced Pickups",
               textPosition: "right",
-              imageColumnWidth: 6,
+              imageColumnWidth: 4,
             },
             {
               title: "Exceptional Playability",
@@ -313,7 +313,7 @@ export default function CatalinaRosaPage() {
               ),
               imageAlt: "Exceptional Playability",
               textPosition: "left",
-              imageColumnWidth: 7,
+              imageColumnWidth: 6,
             },
           ]}
         />
