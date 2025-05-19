@@ -53,7 +53,7 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative z-10 px-3 py-0.5 font-bold transition-colors duration-300 xs:text-sm sm:text-base md:text-sm  ${
+              className={`relative z-10 px-3 py-0.5 sm:font-bold transition-colors duration-300 xs:text-xs sm:text-sm md:text-sm xs:font-normal  ${
                 activeTab === tab ? "text-primary-content" : ""
               }`}
               style={{ flex: 1 }}
