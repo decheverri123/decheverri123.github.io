@@ -283,18 +283,53 @@ export default function CatalinaRosaPage() {
             Guitar Features
           </h2>
           {/* Section 1: Acoustic Design Technology */}
+
           <FeatureSection
-            title="Acoustic Design Technology Produces Balanced Tone"
-            description="Catalina Rosa Design technology utilizes scientific processes such as 3D modeling to devise wood-routing techniques that increase body resonance and improve the transfer of vibrations between neck and body."
+            title="Advanced Weight Relief for Comfort and Resonance"
+            description="Through precision 3D modeling and iterative prototyping, Catalina Rosa models feature a refined weight-relief system that reduces fatigue without sacrificing tone. Carefully placed internal chambers preserve structural integrity while enhancing resonance and sustain—making each guitar feel lighter, livelier, and more responsive."
             imageSrc="/assets/apps/catalina-rosa/body-relief.jpg"
-            imageAlt="Acoustic Design Technology"
+            imageAlt="Advanced Weight Relief"
             textPosition="left"
+          />
+          <FeatureSection
+            title="Custom-Voiced Pickups"
+            description={
+              <>
+                <p className="mb-4 text-base-content/80">
+                  At the heart of every Catalina Rosa model lies a pair of
+                  custom-voiced pickups—built not to chase trends, but to
+                  capture feeling.
+                </p>
+                <p className="mb-4 text-base-content/80">
+                  The Serena single coils are designed for chime, nuance, and
+                  that elusive bell-like clarity—the kind you hear in tracks
+                  like "Dancing in a Burning Room." Articulate and expressive,
+                  Serena pickups reward subtlety and dynamics, delivering lush
+                  cleans and glassy breakup with effortless grace.
+                </p>
+                <p className="mb-4 text-base-content/80">
+                  In the bridge, the Corazón humbucker provides the warmth and
+                  punch of a vintage PAF, tuned for soulful mids, singing highs,
+                  and tight lows. It's the emotional anchor of the Catalina Rosa
+                  line—ideal for expressive solos, saturated leads, or
+                  vintage-inspired rhythm work.
+                </p>
+              </>
+            }
+            imageSrc="/assets/apps/catalina-rosa/pickups-detailed.png"
+            imageAlt="Custom-Voiced Pickups"
+            textPosition="right"
           />
           {/* Section 2: Exceptional Playability */}
           <FeatureSection
             title="Exceptional Playability"
             description={
-              'With its slim C-shape neck, carved neck joint heel, beveled body, and 13.8"/350 mm fingerboard radius, the Catalina Rosa models are exceptionally easy and comfortable to play.'
+              <p>
+                With its slim C-shape neck, carved neck joint heel, beveled
+                body, and 10"–14" compound radius fingerboard radius, the
+                Catalina Rosa models are exceptionally easy and comfortable to
+                play.
+              </p>
             }
             imageSrc="/assets/apps/catalina-rosa/secunda.png"
             imageAlt="Exceptional Playability"
@@ -319,18 +354,15 @@ export default function CatalinaRosaPage() {
             <FeatureCard
               title="Premium Gotoh Hardware"
               description="Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability."
-              imageSrc="/assets/apps/catalina-rosa/pickups.png"
+              imageSrc="/assets/apps/catalina-rosa/hardware.png"
               imageAlt="Premium Gotoh Hardware"
             />
-            <FeatureCard
-              title="Custom-Voiced Pickups"
-              description="Designed in-house for balance, clarity, and emotional depth, the Flor single coils and Corazón humbucker deliver a versatile, expressive tonal palette. Built for nuance—not hype—these pickups reward dynamics and respond like an extension of your hands."
-              imageSrc="/assets/apps/catalina-rosa/pickups.png"
-              imageAlt="Catalina Rosa Pickups"
-            />
+
             <FeatureCard
               title="Compound Radius Fingerboard"
-              description="A 10–14 compound radius allows effortless chording near the nut and fluid bends up high, giving players the best of both worlds."
+              description={
+                'A 10"–14" compound radius allows effortless chording near the nut and fluid bends up high, giving players the best of both worlds.'
+              }
               imageSrc="/assets/apps/catalina-rosa/fingerboard.jpg"
               imageAlt="Compound Radius Fingerboard"
             />

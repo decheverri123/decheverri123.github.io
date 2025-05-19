@@ -145,18 +145,29 @@ export default function RosaPrimaPage() {
             description={
               <>
                 <p className="mb-4 text-base-content/80">
-                  The Catalina Rosa Prima set combines two custom single
-                  coils—Flor—and a commanding bridge humbucker—Corazón—to
-                  deliver a spectrum of tones that bloom with clarity, depth,
-                  and emotion. Flor offers glassy highs, scooped mids, and
-                  articulate lows—perfect for clean rhythms and expressive
-                  leads. Corazón brings the fire, with a vocal midrange, smooth
-                  attack, and tight low-end punch that cuts through without
-                  overpowering.
+                  At the heart of every Catalina Rosa model lies a pair of
+                  custom-voiced pickups—built not to chase trends, but to
+                  capture feeling.
+                </p>
+                <p className="mb-4 text-base-content/80">
+                  The Serena single coils are designed for chime, nuance, and
+                  that elusive bell-like clarity—the kind you hear in tracks
+                  like "Dancing in a Burning Room." Articulate and expressive,
+                  Serena pickups reward subtlety and dynamics, delivering lush
+                  cleans and glassy breakup with effortless grace.
+                </p>
+                <p className="mb-4 text-base-content/80">
+                  In the bridge, the Corazón humbucker provides the warmth and
+                  punch of a vintage PAF, tuned for soulful mids, singing highs,
+                  and tight lows. It's the emotional anchor of the Catalina Rosa
+                  line—ideal for expressive solos, saturated leads, or
+                  vintage-inspired rhythm work.
                 </p>
                 <p className="text-base-content/80">
-                  Together, they create a dynamic, modern sound that feels
-                  timeless—one part velvet, one part voltage.
+                  Together, Serena and Corazón form a versatile, musical pairing
+                  that makes each Catalina Rosa feel more like an instrument of
+                  expression than just a guitar. Clean or driven, soft or
+                  aggressive—they speak your language.
                 </p>
               </>
             }
