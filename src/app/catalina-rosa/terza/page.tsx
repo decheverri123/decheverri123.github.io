@@ -2,8 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Layout from "../../LayoutHeader";
+import ImageCarousel from "../../../components/ImageCarousel";
 
 export default function RosaTerzaPage() {
   // Dummy data for the Terza model
@@ -14,9 +14,9 @@ export default function RosaTerzaPage() {
     description: "Affordable, sleek, and no-nonsense. Your new workhorse.",
     heroImage: "/assets/apps/catalina-rosa/terza-hero.png", // Replace with actual image path
     detailImages: [
-      "/assets/apps/catalina-rosa/terza-detail1.png",
-      "/assets/apps/catalina-rosa/terza-detail2.png",
-      "/assets/apps/catalina-rosa/terza-detail3.png",
+      "/assets/apps/catalina-rosa/terza.png",
+      "/assets/apps/catalina-rosa/secunda.png",
+      "/assets/apps/catalina-rosa/prima.png",
     ],
     features: [
       "Gloss metallic shell pink finish",
@@ -101,22 +101,10 @@ export default function RosaTerzaPage() {
               </div>
             </div>
             <div className="rounded-lg bg-base-200 p-4">
-              <div className="carousel carousel-center h-96 w-full rounded-box">
-                {guitarData.detailImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="carousel-item relative h-full w-full"
-                  >
-                    <Image
-                      src={image}
-                      alt={`${guitarData.name} view ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                    />
-                  </div>
-                ))}
-              </div>
+              <ImageCarousel
+                images={guitarData.detailImages}
+                altPrefix={guitarData.name}
+              />
             </div>
           </div>
         </div>
