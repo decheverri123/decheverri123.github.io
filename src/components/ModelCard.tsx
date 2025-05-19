@@ -33,19 +33,27 @@ const ModelCard: React.FC<ModelCardProps> = ({
         </div>
       </div>
 
-      {/* Content only visible on hover */}
-      <div className="absolute inset-0 flex flex-col justify-between bg-black/80 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div>
-          <div className="flex items-center justify-between">
+      {/* Content only visible on hover with bottom-to-top animation */}
+      <div className="absolute inset-0 flex flex-col justify-between bg-black/80 p-6 opacity-0 transition-all duration-500 ease-in-out translate-y-8 group-hover:translate-y-0 group-hover:opacity-100">
+        <div className="flex flex-col space-y-2">
+          <div className="flex items-center justify-between transition-transform duration-300 ease-out delay-[5ms]">
             <h2 className="card-title font-display">{name}</h2>
             <div className="badge badge-primary badge-lg">{price}</div>
           </div>
-          <p className="mt-2 text-sm italic font-serif">{tagline}</p>
-          <p className="mt-2 font-serif">{description}</p>
+          <p className="mt-2 text-sm italic font-serif transition-transform duration-300 ease-out delay-[100ms]">
+            {tagline}
+          </p>
+          <p className="mt-2 font-serif transition-transform duration-300 ease-out delay-[150ms]">
+            {description}
+          </p>
 
-          <div className="mt-4 space-y-1">
+          <div className="mt-4 space-y-1 transition-transform duration-300 ease-out delay-[200ms]">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center text-sm">
+              <div
+                key={index}
+                className="flex items-center text-sm transition-transform duration-300 ease-out"
+                style={{ transitionDelay: `${250 + index * 50}ms` }}
+              >
                 <span className="mr-2 text-secondary">•</span>
                 {feature}
               </div>
@@ -53,8 +61,11 @@ const ModelCard: React.FC<ModelCardProps> = ({
           </div>
         </div>
 
-        <div className="card-actions justify-end">
-          <Link href={href} className="btn btn-secondary">
+        <div className="card-actions justify-end transition-transform duration-300 ease-out delay-[400ms]">
+          <Link
+            href={href}
+            className="btn btn-secondary hover:btn-primary transition-all duration-300"
+          >
             View Model
           </Link>
         </div>
