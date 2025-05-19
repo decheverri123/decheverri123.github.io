@@ -257,22 +257,17 @@ export default function CatalinaRosaPage() {
               <div className="absolute inset-0 flex flex-col justify-between bg-black/80 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div>
                   <div className="flex items-center justify-between">
-                    <h2 className="card-title text-white">{model.name}</h2>
+                    <h2 className="card-title">{model.name}</h2>
                     <div className="badge badge-primary badge-lg">
                       {model.price}
                     </div>
                   </div>
-                  <p className="mt-2 text-sm italic text-gray-200">
-                    {model.tagline}
-                  </p>
-                  <p className="mt-2 text-gray-100">{model.description}</p>
+                  <p className="mt-2 text-sm italic">{model.tagline}</p>
+                  <p className="mt-2">{model.description}</p>
 
                   <div className="mt-4 space-y-1">
                     {model.features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center text-sm text-gray-200"
-                      >
+                      <div key={index} className="flex items-center text-sm">
                         <span className="mr-2 text-secondary">•</span>
                         {feature}
                       </div>
@@ -292,7 +287,7 @@ export default function CatalinaRosaPage() {
 
         {/* Specifications Section */}
         <div className="mb-10 mt-20">
-          <h2 className="mb-8 text-center text-3xl font-bold text-primary">
+          <h2 className="mb-8 text-center text-3xl font-bold">
             Compare Models
           </h2>
 
@@ -343,7 +338,7 @@ export default function CatalinaRosaPage() {
 
         {/* Call to Action */}
         <div className="card mx-auto mt-16 max-w-2xl bg-base-200 p-8 text-center shadow-lg">
-          <h3 className="mb-4 text-2xl font-bold text-primary">
+          <h3 className="mb-4 text-2xl font-bold">
             Ready to Experience Echeverri Craftsmanship?
           </h3>
           <p className="mb-6">

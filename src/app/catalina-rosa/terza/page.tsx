@@ -53,7 +53,7 @@ export default function RosaTerzaPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="relative flex min-h-[400px] items-center justify-center bg-gradient-to-r from-pink-600 to-pink-400 text-white">
+      <div className="relative flex min-h-[400px] items-center justify-center bg-gradient-to-r from-pink-600 to-pink-400">
         <div
           className="absolute inset-0 bg-black/50"
           style={{
@@ -77,7 +77,7 @@ export default function RosaTerzaPage() {
       <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
         {/* Overview Section */}
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold text-primary">Overview</h2>
+          <h2 className="mb-6 text-3xl font-bold">Overview</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <p className="mb-6 text-lg">{guitarData.description}</p>
@@ -88,13 +88,11 @@ export default function RosaTerzaPage() {
                 attractive price point.
               </p>
               <div className="mt-6 space-y-2">
-                <h3 className="text-xl font-semibold text-primary">
-                  Key Features
-                </h3>
+                <h3 className="text-xl font-semibold">Key Features</h3>
                 <ul className="space-y-2">
                   {guitarData.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
-                      <span className="mr-2 text-primary">•</span>
+                      <span className="mr-2">•</span>
                       {feature}
                     </li>
                   ))}
@@ -104,7 +102,7 @@ export default function RosaTerzaPage() {
             <div className="rounded-lg bg-base-200 p-4">
               <div className="relative aspect-square overflow-hidden rounded-md">
                 <div className="flex h-full w-full items-center justify-center bg-gray-300">
-                  <p className="text-gray-500">Guitar Image Placeholder</p>
+                  <p>Guitar Image Placeholder</p>
                 </div>
               </div>
             </div>
@@ -113,9 +111,7 @@ export default function RosaTerzaPage() {
 
         {/* Specifications Section */}
         <div className="mx-auto mb-16 max-w-4xl rounded-lg bg-base-200 p-6">
-          <h2 className="mb-6 text-3xl font-bold text-primary">
-            Specifications
-          </h2>
+          <h2 className="mb-6 text-3xl font-bold">Specifications</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {Object.entries(guitarData.specifications).map(([key, value]) => (
               <div key={key} className="flex border-b border-base-300 py-2">
@@ -128,9 +124,7 @@ export default function RosaTerzaPage() {
 
         {/* Testimonials */}
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold text-primary">
-            What Players Say
-          </h2>
+          <h2 className="mb-6 text-3xl font-bold">What Players Say</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {guitarData.testimonials.map((testimonial, index) => (
               <div key={index} className="card bg-base-200 shadow-md">
@@ -147,7 +141,7 @@ export default function RosaTerzaPage() {
 
         {/* Call to Action */}
         <div className="card mx-auto mt-16 max-w-2xl bg-base-200 p-8 text-center shadow-lg">
-          <h3 className="mb-4 text-2xl font-bold text-primary">
+          <h3 className="mb-4 text-2xl font-bold">
             Ready to Experience the Rosa Terza?
           </h3>
           <p className="mb-6">
