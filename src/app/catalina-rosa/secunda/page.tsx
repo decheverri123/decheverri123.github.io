@@ -56,46 +56,46 @@ export default function RosaSecundaPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="relative flex min-h-[400px] items-center justify-center bg-gradient-to-r from-pink-800 to-pink-600">
-        <div
-          className="absolute inset-0 bg-black/50"
-          style={{
-            backgroundImage: "url('/assets/apps/catalina-rosa/prima.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundBlendMode: "overlay",
-          }}
-        ></div>
-        <div className="relative z-10 px-4 text-center">
-          <h1 className="mb-2 text-4xl font-bold sm:text-5xl">
-            {guitarData.name}
-          </h1>
-          <p className="text-lg italic">{guitarData.tagline}</p>
-          <div className="badge badge-primary badge-lg mt-4">
-            {guitarData.price}
+      <div
+        className="hero min-h-[500px]"
+        style={{
+          backgroundImage: "url(/assets/apps/catalina-rosa/secunda.png)",
+        }}
+      >
+        <div className="hero-overlay"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold text-secondary">
+              {guitarData.name}
+            </h1>
           </div>
         </div>
       </div>
-
       <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
         {/* Overview Section */}
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">Overview</h2>
+          <h2 className="mb-6 font-display text-3xl font-bold text-primary">
+            Overview
+          </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <p className="mb-6 text-lg">{guitarData.description}</p>
-              <p className="mb-6">
+              <p className="mb-6 font-serif text-lg">
+                {guitarData.description}
+              </p>
+              <p className="mb-6 font-serif">
                 The Rosa Secunda delivers professional-grade performance at a
                 mid-tier price point. With carefully selected components and
                 meticulous setup, it's the perfect instrument for the working
                 musician who demands reliability and versatility.
               </p>
               <div className="mt-6 space-y-2">
-                <h3 className="text-xl font-semibold">Key Features</h3>
-                <ul className="space-y-2">
+                <h3 className="font-display text-xl font-semibold text-secondary">
+                  Key Features
+                </h3>
+                <ul className="space-y-2 font-serif">
                   {guitarData.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
-                      <span className="mr-2">•</span>
+                      <span className="mr-2 text-secondary">•</span>
                       {feature}
                     </li>
                   ))}

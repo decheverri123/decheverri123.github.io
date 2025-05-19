@@ -194,7 +194,7 @@ export default function RosaPrimaPage() {
           />
           {/* Premium Hardware Features */}
           <div className="mb-10 mt-20">
-            <h2 className="mb-8 text-center text-3xl font-bold">
+            <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary">
               Premium Components
             </h2>
             <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">

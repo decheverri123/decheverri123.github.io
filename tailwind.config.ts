@@ -10,8 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["GeistSans", "Arial", "sans-serif"],
+        sans: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
         mono: ["GeistMono", "Courier", "monospace"],
+        display: ["Playfair Display", "Georgia", "serif"],
       },
       screens: {
         xs: "320px", // Extra small devices

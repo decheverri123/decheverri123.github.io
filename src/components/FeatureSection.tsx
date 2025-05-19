@@ -40,8 +40,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 
       {/* Text Column (always 2/3 width) */}
       <div className={`md:col-span-8 ${textColumnOrder}`}>
-        <h3 className="mb-4 text-2xl font-bold text-primary">{title}</h3>
-        <p className="mb-4 text-base-content/80 text-md">{description}</p>
+        <h3 className="mb-4 text-2xl font-bold text-primary font-display">
+          {title}
+        </h3>
+        <p className="mb-4 text-base-content/80 text-md font-serif">
+          {description}
+        </p>
       </div>
     </div>
   );

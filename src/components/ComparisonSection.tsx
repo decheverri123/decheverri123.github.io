@@ -25,7 +25,7 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
 }) => {
   return (
     <div className={className}>
-      <h2 className="mb-8 text-center text-4xl font-bold text-primary">
+      <h2 className="mb-8 text-center text-4xl font-bold text-primary font-display">
         Compare Models
       </h2>
       <div className="mb-4 flex justify-center">

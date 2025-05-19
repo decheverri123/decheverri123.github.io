@@ -16,7 +16,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
   return (
     <div className={`mx-auto ${maxWidth} text-center`}>
       <h1
-        className={`mb-6 text-4xl font-bold tracking-tight ${titleColor} sm:text-5xl`}
+        className={`mb-6 text-4xl font-bold tracking-tight ${titleColor} sm:text-5xl font-display`}
       >
         {title}
       </h1>

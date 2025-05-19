@@ -18,7 +18,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
     <div className="overflow-x-auto rounded-box border border-base-content/5 mb-8 shadow-xl">
       <table className="w-full border-collapse xs:text-sm">
         <thead>
-          <tr className="xs:text-xs sm:text-sm md:text-md">
+          <tr className="xs:text-xs sm:text-sm md:text-md font-display">
             <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
               Feature
             </th>
@@ -37,9 +37,9 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
           {specifications.map((row, rowIndex) => (
             <tr
               key={rowIndex}
-              className="border-b border-base-200 xs:text-xs sm:text-base"
+              className="border-b border-base-200 xs:text-xs sm:text-base font-serif"
             >
-              <td className="py-3 px-4 xs:pr-1 font-semibold text-base-content bg-base-200">
+              <td className="py-3 px-4 xs:pr-1 font-semibold text-base-content bg-base-200 font-display">
                 {row.feature}
               </td>
               <td className="py-3 px-4 bg-base-100">{row.prima}</td>
