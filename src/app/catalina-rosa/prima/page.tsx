@@ -5,6 +5,7 @@ import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
 import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
+import ImageGallery from "../components/ImageGallery";
 
 export default function RosaPrimaPage() {
   // Dummy data for the Prima model
@@ -203,8 +204,6 @@ export default function RosaPrimaPage() {
                 description="Rosewood fingerboards are valued for their warm tone and smooth attack, whereas maple fingerboards provide a brighter tone and snappier attack."
                 imageSrc="/assets/apps/catalina-rosa/prima.png"
                 imageAlt="Rosewood or Maple Fingerboard"
-                badge="CHOICE"
-                tags={["Tonewoods", "Playability"]}
               />
 
               <FeatureCard
@@ -212,8 +211,6 @@ export default function RosaPrimaPage() {
                 description="Stainless-steel frets are exceptionally durable, while also lessening resistance when bending strings."
                 imageSrc="/assets/apps/catalina-rosa/secunda.png"
                 imageAlt="Medium Stainless-Steel Frets"
-                badge="PREMIUM"
-                tags={["Hardware", "Durability"]}
               />
 
               <FeatureCard
@@ -221,15 +218,36 @@ export default function RosaPrimaPage() {
                 description="Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability."
                 imageSrc="/assets/apps/catalina-rosa/pickups.png"
                 imageAlt="Premium Gotoh Hardware"
-                badge="QUALITY"
-                tags={["Hardware", "Tuning Stability"]}
               />
             </div>
           </div>
         </div>
+
+        {/* Image Gallery Section */}
+        <div className="divider mb-10"></div>
+        <div className="mx-auto mb-16 max-w-5xl">
+          <h2 className="mb-8 text-center font-serif text-4xl font-bold text-primary">
+            Gallery
+          </h2>
+          <ImageGallery
+            mainImage="/assets/apps/catalina-rosa/prima.png"
+            thumbnails={[
+              "/assets/apps/catalina-rosa/prima.png",
+              "/assets/apps/catalina-rosa/terza-back.png",
+              "/assets/apps/catalina-rosa/tuners.webp",
+              "/assets/apps/catalina-rosa/neck.png",
+              "/assets/apps/catalina-rosa/pickups.png",
+              "/assets/apps/catalina-rosa/terza-headstock.png",
+            ]}
+            altText="Rosa Prima Guitar"
+            className="mb-12"
+          />
+        </div>
+
         {/* Specifications Section */}
+        <div className="divider mb-10"></div>
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-center text-3xl font-bold">
+          <h2 className="mb-6 text-center font-display text-3xl font-bold text-primary">
             Specifications
           </h2>
           <SpecificationsTable specifications={guitarData.specifications} />

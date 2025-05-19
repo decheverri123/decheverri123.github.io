@@ -5,6 +5,7 @@ import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
 import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
+import ImageGallery from "../components/ImageGallery";
 
 export default function RosaTerzaPage() {
   const guitarData = {
@@ -160,7 +161,7 @@ export default function RosaTerzaPage() {
                 for anything.
               </p>
             }
-            imageSrc="/assets/apps/catalina-rosa/terza-03.png"
+            imageSrc="/assets/apps/catalina-rosa/terza-02.png"
             imageAlt="Rosa Terza Hardware"
             textPosition="left"
           />
@@ -191,6 +192,27 @@ export default function RosaTerzaPage() {
                 imageAlt="Wilkinson Trem"
               />
             </div>
+          </div>
+
+          <div className="divider mb-10"></div>
+
+          <div className="mx-auto mb-16 max-w-5xl">
+            <h2 className="mb-8 text-center font-serif text-4xl font-bold text-primary">
+              Gallery
+            </h2>
+            <ImageGallery
+              mainImage="/assets/apps/catalina-rosa/terza.png"
+              thumbnails={[
+                "/assets/apps/catalina-rosa/terza.png",
+                "/assets/apps/catalina-rosa/terza-back.png",
+                "/assets/apps/catalina-rosa/tuners.webp",
+                "/assets/apps/catalina-rosa/neck.png",
+                "/assets/apps/catalina-rosa/pickups.png",
+                "/assets/apps/catalina-rosa/terza-headstock.png",
+              ]}
+              altText="Rosa Prima Guitar"
+              className="mb-12"
+            />
           </div>
 
           <div className="mx-auto mb-16 max-w-4xl">

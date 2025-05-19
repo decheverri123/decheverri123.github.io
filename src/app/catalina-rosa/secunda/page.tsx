@@ -5,6 +5,7 @@ import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
 import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
+import ImageGallery from "../components/ImageGallery";
 
 export default function RosaSecundaPage() {
   const guitarData = {
@@ -169,6 +170,7 @@ export default function RosaSecundaPage() {
             imageAlt="Rosa Secunda Hardware"
             textPosition="left"
           />
+          <div className="divider mb-10"></div>
 
           <div className="mb-10 mt-20">
             <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary">
@@ -180,8 +182,6 @@ export default function RosaSecundaPage() {
                 description="Smooth to the touch and resistant to warping, our satin-finished roasted maple necks are built for speed and comfort—exclusively available on the Secunda and Prima models."
                 imageSrc="/assets/apps/catalina-rosa/neck.png"
                 imageAlt="Roasted Neck"
-                badge="FEEL"
-                tags={["Playability", "Stability"]}
               />
 
               <FeatureCard
@@ -189,8 +189,6 @@ export default function RosaSecundaPage() {
                 description="High-performance fretwork for effortless bends, long life, and low maintenance—standard on the Secunda and Prima, but upgraded on the Terza."
                 imageSrc="/assets/apps/catalina-rosa/secunda.png"
                 imageAlt="Frets"
-                badge="FRETWORK"
-                tags={["Durability", "Ease of Play"]}
               />
 
               <FeatureCard
@@ -198,10 +196,28 @@ export default function RosaSecundaPage() {
                 description="Reliable tuning and smooth tremolo operation with premium Gotoh hardware—available on Secunda and Prima only."
                 imageSrc="/assets/apps/catalina-rosa/hardware.png"
                 imageAlt="Hardware"
-                badge="RELIABILITY"
-                tags={["Hardware", "Tuning Stability"]}
               />
             </div>
+          </div>
+          <div className="divider mb-10"></div>
+
+          <div className="mx-auto mb-16 max-w-5xl">
+            <h2 className="mb-8 text-center font-serif text-4xl font-bold text-primary">
+              Gallery
+            </h2>
+            <ImageGallery
+              mainImage="/assets/apps/catalina-rosa/secunda.png"
+              thumbnails={[
+                "/assets/apps/catalina-rosa/prima.png",
+                "/assets/apps/catalina-rosa/terza-back.png",
+                "/assets/apps/catalina-rosa/tuners.webp",
+                "/assets/apps/catalina-rosa/neck.png",
+                "/assets/apps/catalina-rosa/pickups.png",
+                "/assets/apps/catalina-rosa/terza-headstock.png",
+              ]}
+              altText="Rosa Secunda Guitar"
+              className="mb-12"
+            />
           </div>
 
           <div className="mx-auto mb-16 max-w-2xl">

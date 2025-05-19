@@ -3,42 +3,19 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useEffect } from "react";
 
 export default function Header() {
   // The ref to the dropdown element. We use a ref so that we can access the element
   // in the DOM and add an event listener to it. We also use the `useRef` hook to
   // create a ref that is persisted across rerenders.
-  const dropdownRef = useRef<HTMLDetailsElement>(null);
-
-  useEffect(() => {
-    /**
-     * Handles the event when the user clicks outside of the dropdown.
-     * We use a ref to keep track of it, which is like a special variable that we can
-     * use to access the element in the DOM. We also use the MouseEvent, which is
-     * an object that contains information about the event that triggered the
-     * function. We use this to check if the user clicked outside of the dropdown.
-     * @param {MouseEvent} event - The event that triggered the function.
-     */
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        dropdownRef.current.removeAttribute("open");
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-300 px-4 py-2 shadow-md">
       <div className="navbar-start">
-        {/* Hamburger menu for small screens */}
-        <div className="dropdown inline-block text-white md:hidden">
-          <button tabIndex={0} className="btn btn-ghost">
+        <div className="dropdown md:hidden">
+          {" "}
+          {/* Hide the entire dropdown on large screens */}
+          <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -50,13 +27,13 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
+                d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
-          </button>
+          </div>
           <ul
             tabIndex={0}
-            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-white shadow"
+            className="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
               <Link href="/" className="text-base font-medium">
@@ -68,20 +45,24 @@ export default function Header() {
                 Projects
               </Link>
             </li>
-            {/* <li>
-              <Link href="/apps/rnc" className="text-base font-medium">
-                RNC
-              </Link>
-            </li> */}
             <li>
               <Link href="/contact" className="text-base font-medium">
                 Contact
               </Link>
             </li>
             <li>
-              <Link href="/catalina-rosa" className="text-base font-semibold">
-                Catalina Rosa Line
-              </Link>
+              <Link href="/catalina-rosa">Catalina Rosa Line</Link>
+              <ul className="p-2">
+                <li>
+                  <Link href="/catalina-rosa/prima">Prima Model</Link>
+                </li>
+                <li>
+                  <Link href="/catalina-rosa/secunda">Secunda Model</Link>
+                </li>
+                <li>
+                  <Link href="/catalina-rosa/terza">Terza Model</Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -104,25 +85,46 @@ export default function Header() {
               Projects
             </Link>
           </li>
-          {/* <li>
-            <Link href="/apps/rnc" className="text-base font-semibold">
-              RNC
-            </Link>
-          </li> */}
           <li>
             <Link href="/contact" className="text-base font-semibold">
               Contact
             </Link>
           </li>
           <li>
-            <Link href="/catalina-rosa" className="text-base font-semibold">
-              Catalina Rosa Line
-            </Link>
+            <details>
+              <summary className="text-base font-semibold">
+                Catalina Rosa Line
+              </summary>
+              <ul className="z-10 rounded-box bg-base-100 p-2 shadow">
+                <li>
+                  <Link
+                    href="/catalina-rosa/prima"
+                    className="hover:text-primary"
+                  >
+                    Prima
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/catalina-rosa/secunda"
+                    className="hover:text-primary"
+                  >
+                    Secunda
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/catalina-rosa/terza"
+                    className="hover:text-primary"
+                  >
+                    Terza
+                  </Link>
+                </li>
+              </ul>
+            </details>
           </li>
         </ul>
       </div>
-
-      <div className="navbar-end">{/* Remove theme dropdown */}</div>
     </div>
   );
 }
