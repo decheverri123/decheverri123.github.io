@@ -81,7 +81,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               src={imageSrc}
               alt={imageAlt}
               fill
-              className="rounded-lg object-contain"
+              className="rounded-lg object-cover"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           ) : (

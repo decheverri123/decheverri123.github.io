@@ -266,7 +266,7 @@ export default function CatalinaRosaPage() {
               ),
               imageComponent: (
                 <Image
-                  src="/assets/apps/catalina-rosa/pickups-detailed.png"
+                  src="/assets/apps/catalina-rosa/pickups-alone.png"
                   alt="Custom-Voiced Pickups"
                   fill
                   className="object-cover"
@@ -274,7 +274,7 @@ export default function CatalinaRosaPage() {
               ),
               imageAlt: "Custom-Voiced Pickups",
               textPosition: "right",
-              imageColumnWidth: 4,
+              imageColumnWidth: 6,
             },
             {
               title: "Exceptional Playability",

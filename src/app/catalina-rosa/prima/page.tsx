@@ -237,7 +237,7 @@ export default function RosaPrimaPage() {
               "/assets/apps/catalina-rosa/tuners.webp",
               "/assets/apps/catalina-rosa/neck.png",
               "/assets/apps/catalina-rosa/pickups.png",
-              "/assets/apps/catalina-rosa/terza-headstock.png",
+              "/assets/apps/catalina-rosa/prima-headstock.png",
             ]}
             altText="Rosa Prima Guitar"
             className="mb-12"
