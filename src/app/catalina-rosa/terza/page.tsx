@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../../LayoutHeader";
 import ImageCarousel from "../../../components/ImageCarousel";
+import SpecificationsTable from "../../../components/SpecificationsTable";
 
 export default function RosaTerzaPage() {
   // Dummy data for the Terza model
@@ -110,16 +111,9 @@ export default function RosaTerzaPage() {
         </div>
 
         {/* Specifications Section */}
-        <div className="mx-auto mb-16 max-w-4xl rounded-lg bg-base-200 p-6">
+        <div className="mx-auto mb-16 max-w-4xl">
           <h2 className="mb-6 text-3xl font-bold">Specifications</h2>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {Object.entries(guitarData.specifications).map(([key, value]) => (
-              <div key={key} className="flex border-b border-base-300 py-2">
-                <span className="w-1/3 font-semibold capitalize">{key}:</span>
-                <span className="w-2/3">{value}</span>
-              </div>
-            ))}
-          </div>
+          <SpecificationsTable specifications={guitarData.specifications} />
         </div>
 
         {/* Testimonials */}

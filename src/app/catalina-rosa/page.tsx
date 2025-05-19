@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../LayoutHeader";
+import ComparisonTable from "../../components/ComparisonTable";
 
 export default function CatalinaRosaPage() {
   const [selectedTab, setSelectedTab] = useState("all");
@@ -354,48 +355,11 @@ export default function CatalinaRosaPage() {
               </div>
             </div>
 
-            <div className="rounded-lg border border-base-300 bg-base-100 p-6">
-              <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
-                  <thead>
-                    <tr>
-                      <th className="bg-base-300">Feature</th>
-                      <th className="bg-base-300">Prima</th>
-                      <th className="bg-base-300">Secunda</th>
-                      <th className="bg-base-300">Terza</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {specifications[specTab as keyof typeof specifications].map(
-                      (row, rowIndex) => (
-                        <tr key={rowIndex}>
-                          <td className="font-medium">{row.feature}</td>
-                          <td>{row.prima}</td>
-                          <td>{row.secunda}</td>
-                          <td>{row.terza}</td>
-                        </tr>
-                      ),
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="card mx-auto mt-16 max-w-2xl bg-base-200 p-8 text-center shadow-lg">
-          <h3 className="mb-4 text-2xl font-bold">
-            Ready to Experience Echeverri Craftsmanship?
-          </h3>
-          <p className="mb-6">
-            Contact us to discuss custom options or to place an order for your
-            Catalina Rosa guitar.
-          </p>
-          <div className="justify-center">
-            <Link href="/contact" className="btn btn-primary">
-              Contact Us
-            </Link>
+            <ComparisonTable
+              specifications={
+                specifications[specTab as keyof typeof specifications]
+              }
+            />
           </div>
         </div>
       </div>
