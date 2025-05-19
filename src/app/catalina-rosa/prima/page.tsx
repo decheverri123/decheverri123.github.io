@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Layout from "../../LayoutHeader";
-import ImageCarousel from "../../../components/ImageCarousel";
 import SpecificationsTable from "../../../components/SpecificationsTable";
+import FeatureSection from "../../../components/FeatureSection";
 
 export default function RosaPrimaPage() {
   // Dummy data for the Prima model
@@ -55,102 +54,141 @@ export default function RosaPrimaPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <div className="relative flex min-h-[400px] items-center justify-center bg-gradient-to-r from-pink-900 to-pink-700">
-        <div
-          className="absolute inset-0 bg-black/50"
-          style={{
-            backgroundImage: "url('/assets/apps/catalina-rosa/hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundBlendMode: "overlay",
-          }}
-        ></div>
-        <div className="relative z-10 px-4 text-center">
-          <h1 className="mb-2 text-4xl font-bold sm:text-5xl">
-            {guitarData.name}
-          </h1>
-          <p className="text-lg italic">{guitarData.tagline}</p>
-          <div className="badge badge-primary badge-lg mt-4">
-            {guitarData.price}
+      {/* Hero Section using DaisyUI Hero component */}
+      <div
+        className="hero min-h-[500px]"
+        style={{
+          backgroundImage: "url(/assets/apps/catalina-rosa/prima.png)",
+        }}
+      >
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold text-secondary">
+              {guitarData.name}
+            </h1>
           </div>
         </div>
       </div>
-
       <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
-        {/* Overview Section */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">Overview</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div>
-              <p className="mb-6 text-lg">{guitarData.description}</p>
-              <p className="mb-6">
-                The Rosa Prima represents the pinnacle of Echeverri
-                craftsmanship. Each instrument is meticulously handcrafted to
-                deliver an unparalleled playing experience that combines vintage
-                aesthetics with modern reliability.
+        {/* Feature Sections with Reusable Component */}
+        <div className="mx-auto max-w-5xl">
+          <div>
+            <h2 className="mb-4 text-2xl font-semibold text-primary">
+              Emotion, Refined
+            </h2>
+
+            <div className="mb-16">
+              <p className="mb-4 text-base-content/80">
+                The Catalina Rosa Prima is a bold reimagining of the modern
+                player’s guitar—blending boutique-level craftsmanship with
+                unmistakable visual flair. Finished in shell pink and shaped for
+                comfort and control, it offers a deeply expressive experience
+                that favors feel as much as form.
               </p>
-              <div className="mt-6 space-y-2">
-                <h3 className="text-xl font-semibold">Key Features</h3>
-                <ul className="space-y-2">
-                  {guitarData.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="mr-2">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="rounded-lg bg-base-200 p-4">
-              <ImageCarousel
-                images={guitarData.detailImages}
-                altPrefix={guitarData.name}
-              />
+              <p className="mb-4 text-base-content/80">
+                At its core is the Flor single coil—featured in the neck and
+                middle positions—voiced for chime, clarity, and subtle scoop,
+                ideal for ambient textures, clean funk, and soulful lead work.
+                Anchoring the bridge is the Corazón humbucker, powered by Alnico
+                V magnets for a vocal midrange, smooth highs, and a tight,
+                focused low end. Together, they create a dynamic HSS
+                configuration that shifts effortlessly from whispering cleans to
+                harmonically rich overdrive.
+              </p>
+              <p className="mb-4 text-base-content/80">
+                The roasted maple neck features a satin finish, compound radius
+                fretboard, and 22 jumbo stainless steel frets for effortless
+                playability and long-term durability. Locking tuners, a Gotoh
+                510 tremolo, and a Graph Tech nut ensure modern tuning
+                stability, while push-pull coil splitting expands the tonal
+                range without sacrificing simplicity.
+              </p>
+              <p className="mb-4 text-base-content/80">
+                From studio nuance to stage power, the Catalina Rosa Prima is a
+                modern classic—built to feel personal, sound alive, and leave a
+                lasting impression.
+              </p>
             </div>
           </div>
-        </div>
+          <div className="divider"></div>
 
+          {/* Section 1: Image Left, Text Right */}
+          <FeatureSection
+            title="Handcrafted Excellence"
+            description={
+              <>
+                <p className="mb-4 text-base-content/80">
+                  Each Rosa Prima is meticulously crafted with premium
+                  tonewoods, selected for both their resonant qualities and
+                  aesthetic beauty. The body features a carefully chambered
+                  design that enhances resonance while maintaining perfect
+                  balance.
+                </p>
+                <p className="text-base-content/80">
+                  The neck is hand-shaped to our exclusive profile, offering
+                  effortless playability from the first fret to the last. Every
+                  curve and contour is designed to disappear in your hands,
+                  letting you focus entirely on your music.
+                </p>
+              </>
+            }
+            imageSrc="/assets/apps/catalina-rosa/prima.png"
+            imageAlt="Rosa Prima Body"
+            textPosition="left"
+          />
+
+          {/* Section 2: Image Right, Text Left */}
+          <FeatureSection
+            title="Prima Pickups"
+            description={
+              <>
+                <p className="mb-4 text-base-content/80">
+                  The Catalina Rosa Prima set combines two custom single
+                  coils—Flor—and a commanding bridge humbucker—Corazón—to
+                  deliver a spectrum of tones that bloom with clarity, depth,
+                  and emotion. Flor offers glassy highs, scooped mids, and
+                  articulate lows—perfect for clean rhythms and expressive
+                  leads. Corazón brings the fire, with a vocal midrange, smooth
+                  attack, and tight low-end punch that cuts through without
+                  overpowering.
+                </p>
+                <p className="text-base-content/80">
+                  Together, they create a dynamic, modern sound that feels
+                  timeless—one part velvet, one part voltage.
+                </p>
+              </>
+            }
+            imageSrc="/assets/apps/catalina-rosa/pickups.png"
+            imageAlt="Rosa Prima Pickups"
+            textPosition="right"
+          />
+
+          {/* Section 3: Image Left, Text Right */}
+          <FeatureSection
+            title="Vintage-Inspired Finishing"
+            description={
+              <p className="mb-4 text-base-content/80">
+                The Rosa Prima features our signature nitrocellulose finish,
+                applied in thin, carefully built-up layers and then artfully
+                aged to simulate decades of play. This process not only creates
+                a stunning visual aesthetic but also allows the wood to breathe
+                and resonate more freely.
+              </p>
+            }
+            additionalText="Wrapped in a signature rose-pink housing with subtle aging
+              details, the Catalina Rosa Prima isn't just heard. It's felt and
+              admired as a true work of functional art."
+            imageSrc="/assets/apps/catalina-rosa/secunda.png"
+            imageAlt="Rosa Prima Hardware"
+            textPosition="left"
+          />
+        </div>
         {/* Specifications Section */}
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">Specifications</h2>
+          <h2 className="mb-6 text-center text-3xl font-bold">
+            Specifications
+          </h2>
           <SpecificationsTable specifications={guitarData.specifications} />
-        </div>
-
-        {/* Testimonials */}
-        <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold">What Players Say</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {guitarData.testimonials.map((testimonial, index) => (
-              <div key={index} className="card bg-base-200 shadow-md">
-                <div className="card-body">
-                  <p className="italic">"{testimonial.quote}"</p>
-                  <p className="mt-4 text-right font-semibold">
-                    — {testimonial.author}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="card mx-auto mt-16 max-w-2xl bg-base-200 p-8 text-center shadow-lg">
-          <h3 className="mb-4 text-2xl font-bold">
-            Ready to Experience the Rosa Prima?
-          </h3>
-          <p className="mb-6">
-            Contact us to discuss custom options or to place an order for your
-            Rosa Prima guitar.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn btn-primary">
-              Contact Us
-            </Link>
-            <Link href="/catalina-rosa" className="btn btn-outline">
-              Back to Models
-            </Link>
-          </div>
         </div>
       </div>
     </Layout>

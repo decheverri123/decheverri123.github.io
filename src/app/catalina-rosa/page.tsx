@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Layout from "../LayoutHeader";
 import ComparisonTable from "../../components/ComparisonTable";
+import FeatureSection from "../../components/FeatureSection";
 
 export default function CatalinaRosaPage() {
   const [selectedTab, setSelectedTab] = useState("all");
@@ -360,6 +361,118 @@ export default function CatalinaRosaPage() {
                 specifications[specTab as keyof typeof specifications]
               }
             />
+          </div>
+        </div>
+
+        {/* Feature Sections with Reusable Component */}
+        <div className="py-16">
+          <h2 className="mb-12 text-center text-3xl font-bold">
+            Guitar Features
+          </h2>
+
+          {/* Section 1: Acoustic Design Technology */}
+          <FeatureSection
+            title="Acoustic Design Technology Produces Balanced Tone"
+            description="Catalina Rosa Design technology utilizes scientific processes such as 3D modeling to devise wood-routing techniques that increase body resonance and improve the transfer of vibrations between neck and body."
+            imageSrc="/assets/apps/catalina-rosa/prima.png"
+            imageAlt="Acoustic Design Technology"
+            textPosition="right"
+          />
+
+          {/* Section 2: Exceptional Playability */}
+          <FeatureSection
+            title="Exceptional Playability"
+            description={
+              'With its slim C-shape neck, carved neck joint heel, beveled body, and 13.8"/350 mm fingerboard radius, the Catalina Rosa models are exceptionally easy and comfortable to play.'
+            }
+            imageSrc="/assets/apps/catalina-rosa/secunda.png"
+            imageAlt="Exceptional Playability"
+            textPosition="left"
+          />
+
+          {/* Section 3: Three Feature Cards */}
+          <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+            {/* Feature 1 */}
+            <div className="card bg-base-100 p-6 shadow-lg">
+              <h4 className="mb-4 text-center text-xl font-bold">
+                Slim C-Shape Maple Neck
+              </h4>
+              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-16 w-16 text-base-content/30"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <p className="text-center text-base-content/80">
+                A modern neck shape that facilitates both comfort and speed,
+                combined with a satin finish for smooth, friction-free
+                playability.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="card bg-base-100 p-6 shadow-lg">
+              <h4 className="mb-4 text-center text-xl font-bold">
+                Carved Neck Joint Heel
+              </h4>
+              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-16 w-16 text-base-content/30"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <p className="text-center text-base-content/80">
+                The smoothly contoured neck heel makes accessing even the
+                uppermost frets both comfortable and easy.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="card bg-base-100 p-6 shadow-lg">
+              <h4 className="mb-4 text-center text-xl font-bold">
+                Comfortable Contoured Body
+              </h4>
+              <div className="mb-4 flex aspect-video items-center justify-center rounded-lg bg-base-200">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-16 w-16 text-base-content/30"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <p className="text-center text-base-content/80">
+                The alder body is beveled along the lower bout to increase
+                playing comfort.
+              </p>
+            </div>
           </div>
         </div>
       </div>
