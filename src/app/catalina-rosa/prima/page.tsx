@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
-import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
 import ImageGallery from "../components/ImageGallery";
+import DetailedFeatureSection from "../components/DetailedFeatureSection";
 
 export default function RosaPrimaPage() {
   // Dummy data for the Prima model
@@ -115,83 +116,111 @@ export default function RosaPrimaPage() {
           </div>
           <div className="divider mb-10"></div>
 
-          {/* Section 1: Image Left, Text Right */}
-          <FeatureSection
-            title="Handcrafted Excellence"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  Each Rosa Prima is meticulously crafted with premium
-                  tonewoods, selected for both their resonant qualities and
-                  aesthetic beauty. The body features a carefully chambered
-                  design that enhances resonance while maintaining perfect
-                  balance.
-                </p>
-                <p className="text-base-content/80">
-                  The neck is hand-shaped to our exclusive profile, offering
-                  effortless playability from the first fret to the last. Every
-                  curve and contour is designed to disappear in your hands,
-                  letting you focus entirely on your music.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/prima.png"
-            imageAlt="Rosa Prima Body"
-            textPosition="left"
-          />
-
-          {/* Section 2: Image Right, Text Left */}
-          <FeatureSection
-            title="Prima Pickups"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  At the heart of every Catalina Rosa model lies a pair of
-                  custom-voiced pickups—built not to chase trends, but to
-                  capture feeling.
-                </p>
-                <p className="mb-4 text-base-content/80">
-                  The Serena single coils are designed for chime, nuance, and
-                  that elusive bell-like clarity—the kind you hear in tracks
-                  like "Dancing in a Burning Room." Articulate and expressive,
-                  Serena pickups reward subtlety and dynamics, delivering lush
-                  cleans and glassy breakup with effortless grace.
-                </p>
-                <p className="mb-4 text-base-content/80">
-                  In the bridge, the Corazón humbucker provides the warmth and
-                  punch of a vintage PAF, tuned for soulful mids, singing highs,
-                  and tight lows. It's the emotional anchor of the Catalina Rosa
-                  line—ideal for expressive solos, saturated leads, or
-                  vintage-inspired rhythm work.
-                </p>
-                <p className="text-base-content/80">
-                  Together, Serena and Corazón form a versatile, musical pairing
-                  that makes each Catalina Rosa feel more like an instrument of
-                  expression than just a guitar. Clean or driven, soft or
-                  aggressive—they speak your language.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/pickups.png"
-            imageAlt="Rosa Prima Pickups"
-            textPosition="right"
-          />
-
-          {/* Section 3: Image Left, Text Right */}
-          <FeatureSection
-            title="Vintage-Inspired Finishing"
-            description={
-              <p className="mb-4 text-base-content/80">
-                The Rosa Prima features our signature nitrocellulose finish,
-                applied in thin, carefully built-up layers and then artfully
-                aged to simulate decades of play. This process not only creates
-                a stunning visual aesthetic but also allows the wood to breathe
-                and resonate more freely.
-              </p>
-            }
-            imageSrc="/assets/apps/catalina-rosa/secunda.png"
-            imageAlt="Rosa Prima Hardware"
-            textPosition="left"
+          <DetailedFeatureSection
+            title="Prima Features"
+            features={[
+              {
+                title: "Handcrafted Excellence",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      Each Rosa Prima is meticulously crafted with premium
+                      tonewoods, selected for both their resonant qualities and
+                      aesthetic beauty. The body features a carefully chambered
+                      design that enhances resonance while maintaining perfect
+                      balance.
+                    </p>
+                    <p className="text-base-content/80">
+                      The neck is hand-shaped to our exclusive profile, offering
+                      effortless playability from the first fret to the last.
+                      Every curve and contour is designed to disappear in your
+                      hands, letting you focus entirely on your music.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/prima.png",
+                imageAlt: "Rosa Prima Body",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/prima.png"
+                    alt="Prima Body"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 6,
+                textPosition: "left",
+              },
+              {
+                title: "Prima Pickups",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      At the heart of every Catalina Rosa model lies a pair of
+                      custom-voiced pickups—built not to chase trends, but to
+                      capture feeling.
+                    </p>
+                    <p className="mb-4 text-base-content/80">
+                      The Serena single coils are designed for chime, nuance,
+                      and that elusive bell-like clarity—the kind you hear in
+                      tracks like "Dancing in a Burning Room." Articulate and
+                      expressive, Serena pickups reward subtlety and dynamics,
+                      delivering lush cleans and glassy breakup with effortless
+                      grace.
+                    </p>
+                    <p className="mb-4 text-base-content/80">
+                      In the bridge, the Corazón humbucker provides the warmth
+                      and punch of a vintage PAF, tuned for soulful mids,
+                      singing highs, and tight lows. It's the emotional anchor
+                      of the Catalina Rosa line—ideal for expressive solos,
+                      saturated leads, or vintage-inspired rhythm work.
+                    </p>
+                    <p className="text-base-content/80">
+                      Together, Serena and Corazón form a versatile, musical
+                      pairing that makes each Catalina Rosa feel more like an
+                      instrument of expression than just a guitar. Clean or
+                      driven, soft or aggressive—they speak your language.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/pickups.png",
+                imageAlt: "Rosa Prima Pickups",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/pickups.png"
+                    alt="Prima Pickups"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 6,
+                textPosition: "right",
+              },
+              {
+                title: "Vintage-Inspired Finishing",
+                description: (
+                  <p className="mb-4 text-base-content/80">
+                    The Rosa Prima features our signature nitrocellulose finish,
+                    applied in thin, carefully built-up layers and then artfully
+                    aged to simulate decades of play. This process not only
+                    creates a stunning visual aesthetic but also allows the wood
+                    to breathe and resonate more freely.
+                  </p>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/secunda.png",
+                imageAlt: "Rosa Prima Hardware",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/prima-full-01.png"
+                    alt="Prima Full Body"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 8,
+                textPosition: "left",
+              },
+            ]}
           />
           {/* Premium Hardware Features */}
           <div className="mb-10 mt-20">
@@ -233,11 +262,12 @@ export default function RosaPrimaPage() {
             mainImage="/assets/apps/catalina-rosa/prima.png"
             thumbnails={[
               "/assets/apps/catalina-rosa/prima.png",
-              "/assets/apps/catalina-rosa/terza-back.png",
               "/assets/apps/catalina-rosa/tuners.webp",
               "/assets/apps/catalina-rosa/neck.png",
-              "/assets/apps/catalina-rosa/pickups.png",
               "/assets/apps/catalina-rosa/prima-headstock.png",
+              "/assets/apps/catalina-rosa/prima-body-04.png",
+              "/assets/apps/catalina-rosa/prima-full-01.png",
+              "/assets/apps/catalina-rosa/prima-back-01.png",
             ]}
             altText="Rosa Prima Guitar"
             className="mb-12"

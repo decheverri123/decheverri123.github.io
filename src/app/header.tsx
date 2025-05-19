@@ -33,26 +33,26 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+            className="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-base-content shadow"
           >
             <li>
-              <Link href="/" className="text-base font-medium">
+              <Link href="/" className="font-medium">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="text-base font-medium">
+              <Link href="/projects" className="font-medium">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-base font-medium">
+              <Link href="/contact" className="font-medium">
                 Contact
               </Link>
             </li>
             <li>
               <Link href="/catalina-rosa">Catalina Rosa Line</Link>
-              <ul className="p-2">
+              <ul className="p-2 text-base-content">
                 <li>
                   <Link href="/catalina-rosa/prima">Prima Model</Link>
                 </li>
@@ -76,17 +76,17 @@ export default function Header() {
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/" className="text-base font-semibold">
+            <Link href="/" className="font-semibold">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/projects" className="text-base font-semibold">
+            <Link href="/projects" className="font-semibold">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-base font-semibold">
+            <Link href="/contact" className="font-semibold">
               Contact
             </Link>
           </li>
@@ -94,7 +94,7 @@ export default function Header() {
             <div tabIndex={0} role="button" className="flex items-center gap-1">
               <Link
                 href="/catalina-rosa"
-                className="text-base font-semibold hover:text-primary"
+                className="font-semibold hover:text-primary"
               >
                 Catalina Rosa Line
               </Link>

@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
-import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
 import ImageGallery from "../components/ImageGallery";
+import DetailedFeatureSection from "../components/DetailedFeatureSection";
 
 export default function RosaSecundaPage() {
   const guitarData = {
@@ -107,68 +108,99 @@ export default function RosaSecundaPage() {
 
           <div className="divider mb-10"></div>
 
-          <FeatureSection
-            title="Stripped-Back Elegance"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  The Secunda's satin relic finish highlights the grain of its
-                  swamp ash body while reducing weight and enhancing resonance.
-                  Its minimalist aesthetic is counterbalanced by luxurious feel
-                  and tonal complexity.
-                </p>
-                <p className="text-base-content/80">
-                  Paired with hand-shaped comfort carves and a custom neck
-                  profile, it’s designed to disappear in your hands so you can
-                  focus on what matters—your playing.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/secunda.png"
-            imageAlt="Rosa Secunda Body"
-            textPosition="left"
-          />
-
-          <FeatureSection
-            title="Signature Rosa Pickups"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  The Serena and Corazon pickups come standard in all Catalina
-                  Rosa models. They’re expressive, warm, and built for clarity.
-                </p>
-                <p className="mb-4 text-base-content/80">
-                  Serena single coils deliver that bell-like shimmer heard in
-                  tracks like "Dancing in a Burning Room," while the Corazon
-                  humbucker in the bridge sings with creamy mids and
-                  harmonically rich presence.
-                </p>
-                <p className="text-base-content/80">
-                  Balanced, responsive, and musical in every setting, these
-                  pickups make the Secunda a natural voice for expressive
-                  players.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/pickups.png"
-            imageAlt="Rosa Secunda Pickups"
-            textPosition="right"
-          />
-
-          <FeatureSection
-            title="Boutique Feel Without the Fuss"
-            description={
-              <p className="mb-4 text-base-content/80">
-                Every Secunda is designed with the player in mind—from roasted
-                satin necks and ergonomic contours to pro-grade hardware and
-                electronics. It's the kind of guitar that works as hard as you
-                do, whether you're in the studio, on tour, or just chasing
-                inspiration at home.
-              </p>
-            }
-            imageSrc="/assets/apps/catalina-rosa/secunda.png"
-            imageAlt="Rosa Secunda Hardware"
-            textPosition="left"
+          <DetailedFeatureSection
+            title="Secunda Features"
+            features={[
+              {
+                title: "Stripped-Back Elegance",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      The Secunda's satin relic finish highlights the grain of
+                      its swamp ash body while reducing weight and enhancing
+                      resonance. Its minimalist aesthetic is counterbalanced by
+                      luxurious feel and tonal complexity.
+                    </p>
+                    <p className="text-base-content/80">
+                      Paired with hand-shaped comfort carves and a custom neck
+                      profile, it's designed to disappear in your hands so you
+                      can focus on what matters—your playing.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/secunda.png",
+                imageAlt: "Rosa Secunda Body",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/secunda.png"
+                    alt="Secunda Body"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 6,
+                textPosition: "left",
+              },
+              {
+                title: "Signature Rosa Pickups",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      The Serena and Corazon pickups come standard in all
+                      Catalina Rosa models. They're expressive, warm, and built
+                      for clarity.
+                    </p>
+                    <p className="mb-4 text-base-content/80">
+                      Serena single coils deliver that bell-like shimmer heard
+                      in tracks like "Dancing in a Burning Room," while the
+                      Corazon humbucker in the bridge sings with creamy mids and
+                      harmonically rich presence.
+                    </p>
+                    <p className="text-base-content/80">
+                      Balanced, responsive, and musical in every setting, these
+                      pickups make the Secunda a natural voice for expressive
+                      players.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/pickups.png",
+                imageAlt: "Rosa Secunda Pickups",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/pickups.png"
+                    alt="Secunda Pickups"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 7,
+                textPosition: "right",
+              },
+              {
+                title: "Boutique Feel Without the Fuss",
+                description: (
+                  <p className="mb-4 text-base-content/80">
+                    Every Secunda is designed with the player in mind—from
+                    roasted satin necks and ergonomic contours to pro-grade
+                    hardware and electronics. It's the kind of guitar that works
+                    as hard as you do, whether you're in the studio, on tour, or
+                    just chasing inspiration at home.
+                  </p>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/secunda-body-03.png",
+                imageAlt: "Rosa Secunda Hardware",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/secunda-body-03.png"
+                    alt="Secunda Body"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 8,
+                textPosition: "left",
+              },
+            ]}
           />
           <div className="divider mb-10"></div>
 
@@ -208,12 +240,14 @@ export default function RosaSecundaPage() {
             <ImageGallery
               mainImage="/assets/apps/catalina-rosa/secunda.png"
               thumbnails={[
-                "/assets/apps/catalina-rosa/prima.png",
+                "/assets/apps/catalina-rosa/secunda.png",
                 "/assets/apps/catalina-rosa/terza-back.png",
                 "/assets/apps/catalina-rosa/tuners.webp",
                 "/assets/apps/catalina-rosa/neck.png",
                 "/assets/apps/catalina-rosa/pickups.png",
                 "/assets/apps/catalina-rosa/terza-headstock.png",
+                "/assets/apps/catalina-rosa/secunda-body-03.png",
+                "/assets/apps/catalina-rosa/secunda-body-02.png",
               ]}
               altText="Rosa Secunda Guitar"
               className="mb-12"

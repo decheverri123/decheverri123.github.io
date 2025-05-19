@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../components/SpecificationsTable";
-import FeatureSection from "../components/FeatureSection";
 import FeatureCard from "../components/FeatureCard";
 import ImageGallery from "../components/ImageGallery";
+import DetailedFeatureSection from "../components/DetailedFeatureSection";
 
 export default function RosaTerzaPage() {
   const guitarData = {
@@ -104,66 +105,89 @@ export default function RosaTerzaPage() {
 
           <div className="divider mb-10"></div>
 
-          <FeatureSection
-            title="Refined Essentials"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  The Terza’s open-pore satin finish and simplified hardware
-                  setup create an instrument that feels direct and dynamic. Its
-                  resonance is immediate, its tone responsive, and its look
-                  timeless.
-                </p>
-                <p className="text-base-content/80">
-                  Everything you need, nothing you don’t. This is
-                  Rosa—distilled.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/terza-03.png"
-            imageAlt="Rosa Terza Body"
-            textPosition="left"
-          />
-
-          <FeatureSection
-            title="Signature Rosa Pickups"
-            description={
-              <>
-                <p className="mb-4 text-base-content/80">
-                  The Serena and Corazon pickups come standard in all Catalina
-                  Rosa models. They’re expressive, warm, and built for clarity.
-                </p>
-                <p className="mb-4 text-base-content/80">
-                  Serena single coils deliver that bell-like shimmer heard in
-                  tracks like "Dancing in a Burning Room," while the Corazon
-                  humbucker in the bridge sings with creamy mids and
-                  harmonically rich presence.
-                </p>
-                <p className="text-base-content/80">
-                  Balanced, responsive, and musical in every setting, these
-                  pickups make the Terza a natural voice for expressive players.
-                </p>
-              </>
-            }
-            imageSrc="/assets/apps/catalina-rosa/pickups.png"
-            imageAlt="Rosa Terza Pickups"
-            textPosition="right"
-          />
-
-          <FeatureSection
-            title="Honest Construction, Timeless Tone"
-            description={
-              <p className="mb-4 text-base-content/80">
-                Built with modern reliability and vintage flavor, the Terza’s
-                no-nonsense design includes a comfortable roasted maple neck,
-                vintage-style tuners, and a Wilkinson tremolo for classic pitch
-                modulation and smooth bends. It’s simple, expressive, and ready
-                for anything.
-              </p>
-            }
-            imageSrc="/assets/apps/catalina-rosa/terza-02.png"
-            imageAlt="Rosa Terza Hardware"
-            textPosition="left"
+          <DetailedFeatureSection
+            title="Terza Features"
+            features={[
+              {
+                title: "Refined Essentials",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      The Terza's open-pore satin finish and simplified hardware
+                      setup create an instrument that feels direct and dynamic.
+                      Its resonance is immediate, its tone responsive, and its
+                      look timeless.
+                    </p>
+                    <p className="text-base-content/80">
+                      Everything you need, nothing you don't. This is
+                      Rosa—distilled.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/terza-03.png",
+                imageAlt: "Rosa Terza Body",
+                textPosition: "left",
+              },
+              {
+                title: "Signature Rosa Pickups",
+                description: (
+                  <>
+                    <p className="mb-4 text-base-content/80">
+                      The Serena and Corazon pickups come standard in all
+                      Catalina Rosa models. They're expressive, warm, and built
+                      for clarity.
+                    </p>
+                    <p className="mb-4 text-base-content/80">
+                      Serena single coils deliver that bell-like shimmer heard
+                      in tracks like "Dancing in a Burning Room," while the
+                      Corazon humbucker in the bridge sings with creamy mids and
+                      harmonically rich presence.
+                    </p>
+                    <p className="text-base-content/80">
+                      Balanced, responsive, and musical in every setting, these
+                      pickups make the Terza a natural voice for expressive
+                      players.
+                    </p>
+                  </>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/pickups.png",
+                imageAlt: "Rosa Terza Pickups",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/pickups.png"
+                    alt="Advanced Weight Relief"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 7,
+                textPosition: "right",
+              },
+              {
+                title: "Honest Construction, Timeless Tone",
+                description: (
+                  <p className="mb-4 text-base-content/80">
+                    Built with modern reliability and vintage flavor, the
+                    Terza's no-nonsense design includes a comfortable roasted
+                    maple neck, vintage-style tuners, and a Wilkinson tremolo
+                    for classic pitch modulation and smooth bends. It's simple,
+                    expressive, and ready for anything.
+                  </p>
+                ),
+                imageSrc: "/assets/apps/catalina-rosa/terza-02.png",
+                imageAlt: "Rosa Terza Hardware",
+                textPosition: "left",
+                imageComponent: (
+                  <Image
+                    src="/assets/apps/catalina-rosa/terza-full-body.png"
+                    alt="Advanced Weight Relief"
+                    className="object-cover"
+                    fill
+                  />
+                ),
+                imageColumnWidth: 8,
+              },
+            ]}
           />
 
           <div className="mb-10 mt-20">
@@ -209,6 +233,7 @@ export default function RosaTerzaPage() {
                 "/assets/apps/catalina-rosa/neck.png",
                 "/assets/apps/catalina-rosa/pickups.png",
                 "/assets/apps/catalina-rosa/terza-headstock.png",
+                "/assets/apps/catalina-rosa/terza-full-body.png",
               ]}
               altText="Rosa Prima Guitar"
               className="mb-12"
