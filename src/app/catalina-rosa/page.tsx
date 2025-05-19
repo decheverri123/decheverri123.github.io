@@ -234,25 +234,25 @@ export default function CatalinaRosaPage() {
             {
               title: "Custom-Voiced Pickups",
               description: (
-                <div className="text-md">
-                  <p className="mb-4 text-base-content/80">
+                <div className="text-lg text-base-content">
+                  <p className="mb-4">
                     At the heart of every Catalina Rosa model lies a pair of
                     custom-voiced pickups—built not to chase trends, but to
-                    capture feeling.
+                    capture feeling. Each pickup is wound to deliver clarity
+                    without sacrificing warmth, and presence without harshness.
                   </p>
-                  <p className="mb-4 text-base-content/80">
-                    The Serena single coils are designed for chime, nuance, and
-                    that elusive bell-like clarity—the kind you hear in tracks
-                    like "Dancing in a Burning Room." Articulate and expressive,
-                    Serena pickups reward subtlety and dynamics, delivering lush
-                    cleans and glassy breakup with effortless grace.
+                  <p className="mb-4">
+                    The Serena (neck) and Corazón (bridge) pickups are voiced to
+                    complement each other—from crystalline cleans to saturated
+                    leads—while maintaining exceptional note separation and
+                    dynamic response. They're sensitive enough to capture the
+                    subtleties in your playing but robust enough to drive an amp
+                    into harmonic-rich breakup.
                   </p>
-                  <p className="mb-4 text-base-content/80">
-                    In the bridge, the Corazón humbucker provides the warmth and
-                    punch of a vintage PAF, tuned for soulful mids, singing
-                    highs, and tight lows. It's the emotional anchor of the
-                    Catalina Rosa line—ideal for expressive solos, saturated
-                    leads, or vintage-inspired rhythm work.
+                  <p>
+                    Every pickup is tested and adjusted before installation,
+                    ensuring that what you hear is exactly what we intended—a
+                    voice that's distinctly Catalina Rosa.
                   </p>
                 </div>
               ),
@@ -272,8 +272,8 @@ export default function CatalinaRosaPage() {
             {
               title: "Exceptional Playability",
               description: (
-                <div className="text-lg">
-                  <p className="mb-4 text-base-content/80">
+                <div className="text-lg text-base-content">
+                  <p className="mb-4">
                     With its slim C-shape neck, carved neck joint heel, and
                     10"–14" compound radius fingerboard, every Catalina Rosa
                     model is built for players who value effortless movement
@@ -281,13 +281,13 @@ export default function CatalinaRosaPage() {
                     nut or bending high up the neck, transitions feel smooth and
                     natural.
                   </p>
-                  <p className="mb-4 text-base-content/80">
+                  <p className="mb-4">
                     The roasted maple neck is finished in satin, giving it a
                     dry, fast feel that won't get sticky under stage lights or
                     sweaty palms. It's stable, comfortable, and tuned for long
                     sessions without fatigue.
                   </p>
-                  <p className="text-base-content/80">
+                  <p>
                     A contoured belly cut and forearm bevel round out the
                     ergonomic profile—making the guitar feel like it was carved
                     specifically for you. From seated practice to full-length

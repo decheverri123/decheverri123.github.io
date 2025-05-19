@@ -54,28 +54,21 @@ export default function RosaTerzaPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <div className="relative flex min-h-[400px] items-center justify-center bg-gradient-to-r from-pink-600 to-pink-400">
-        <div
-          className="absolute inset-0 bg-black/50"
-          style={{
-            backgroundImage: "url('/assets/apps/catalina-rosa/hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundBlendMode: "overlay",
-          }}
-        ></div>
-        <div className="relative z-10 px-4 text-center">
-          <h1 className="mb-2 text-4xl font-bold sm:text-5xl">
-            {guitarData.name}
-          </h1>
-          <p className="text-lg italic">{guitarData.tagline}</p>
-          <div className="badge badge-primary badge-lg mt-4">
-            {guitarData.price}
+      <div
+        className="hero min-h-[500px]"
+        style={{
+          backgroundImage: "url(/assets/apps/catalina-rosa/terza.png)",
+        }}
+      >
+        <div className="hero-overlay"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold text-secondary">
+              {guitarData.name}
+            </h1>
           </div>
         </div>
       </div>
-
       <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
         {/* Overview Section */}
         <div className="mx-auto mb-16 max-w-4xl">
