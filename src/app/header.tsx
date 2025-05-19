@@ -10,7 +10,7 @@ export default function Header() {
   // create a ref that is persisted across rerenders.
 
   return (
-    <div className="navbar bg-base-300 px-4 py-2 shadow-md">
+    <div className="navbar bg-base-300 px-4 py-2 text-base-content shadow-md">
       <div className="navbar-start">
         <div className="dropdown md:hidden">
           {" "}
