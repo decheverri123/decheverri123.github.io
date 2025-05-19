@@ -11,7 +11,6 @@ interface SpecificationItem {
 }
 
 interface ComparisonSectionProps {
-  title?: string;
   specifications: Record<string, SpecificationItem[]>;
   activeTab: string;
   setActiveTab: (tab: string) => void;
@@ -19,7 +18,6 @@ interface ComparisonSectionProps {
 }
 
 const ComparisonSection: React.FC<ComparisonSectionProps> = ({
-  title = "Compare Models",
   specifications,
   activeTab,
   setActiveTab,
@@ -27,14 +25,12 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
 }) => {
   return (
     <div className={className}>
-      {title && (
-        <h2 className="mb-8 text-center text-4xl font-bold text-primary">
-          {title}
-        </h2>
-      )}
+      <h2 className="mb-8 text-center text-4xl font-bold text-primary">
+        Compare Models
+      </h2>
       <div className="mb-4 flex justify-center">
         <div
-          className="relative rounded-full bg-base-300"
+          className="relative rounded-full bg-base-300 min-w-full min-h-12"
           style={{ display: "inline-flex", padding: "2px" }}
         >
           {/* Active tab indicator (animated pill) */}
@@ -57,7 +53,7 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${
+              className={`relative z-10 px-3 py-0.5 font-bold transition-colors duration-300 xs:text-sm sm:text-base md:text-sm  ${
                 activeTab === tab ? "text-primary-content" : ""
               }`}
               style={{ flex: 1 }}

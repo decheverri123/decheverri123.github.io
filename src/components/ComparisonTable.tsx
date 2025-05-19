@@ -9,41 +9,37 @@ interface SpecRow {
 
 interface ComparisonTableProps {
   specifications: SpecRow[];
-  title?: string;
 }
 
 const ComparisonTable: React.FC<ComparisonTableProps> = ({
   specifications,
-  title,
 }) => {
   return (
-    <div className="overflow-x-auto rounded-box border border-base-content/5 mb-8">
-      {title && (
-        <h3 className="text-xl font-bold mb-3 uppercase text-center">
-          {title}
-        </h3>
-      )}
-      <table className="w-full border-collapse">
+    <div className="overflow-x-auto rounded-box border border-base-content/5 mb-8 shadow-xl">
+      <table className="w-full border-collapse xs:text-sm">
         <thead>
-          <tr>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase text-sm">
+          <tr className="xs:text-xs sm:text-sm md:text-md">
+            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
               Feature
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase text-sm">
+            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
               Prima
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase text-sm">
+            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
               Secunda
             </th>
-            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase text-sm">
+            <th className="text-left py-3 px-4 bg-base-200 font-bold uppercase ">
               Terza
             </th>
           </tr>
         </thead>
         <tbody>
           {specifications.map((row, rowIndex) => (
-            <tr key={rowIndex} className="border-b border-base-200">
-              <td className="py-3 px-4 font-bold text-base-content bg-base-200">
+            <tr
+              key={rowIndex}
+              className="border-b border-base-200 xs:text-xs sm:text-base"
+            >
+              <td className="py-3 px-4 xs:pr-1 font-semibold text-base-content bg-base-200">
                 {row.feature}
               </td>
               <td className="py-3 px-4 bg-base-100">{row.prima}</td>
