@@ -7,7 +7,6 @@ interface FeatureSectionProps {
   imageSrc: string;
   imageAlt: string;
   textPosition: "left" | "right";
-  additionalText?: string;
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
@@ -16,7 +15,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   imageSrc,
   imageAlt,
   textPosition,
-  additionalText,
 }) => {
   // For text on the left, image should be on the right (order-last)
   // For text on the right, image should be on the left (order-first)
@@ -43,16 +41,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
       {/* Text Column (always 2/3 width) */}
       <div className={`md:col-span-8 ${textColumnOrder}`}>
         <h3 className="mb-4 text-2xl font-bold text-primary">{title}</h3>
-
-        {typeof description === "string" ? (
-          <p className="mb-4 text-base-content/80">{description}</p>
-        ) : (
-          description
-        )}
-
-        {additionalText && (
-          <p className="text-base-content/80">{additionalText}</p>
-        )}
+        <p className="mb-4 text-base-content/80 text-md">{description}</p>
       </div>
     </div>
   );

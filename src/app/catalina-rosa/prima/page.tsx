@@ -188,9 +188,6 @@ export default function RosaPrimaPage() {
                 and resonate more freely.
               </p>
             }
-            additionalText="Wrapped in a signature rose-pink housing with subtle aging
-              details, the Catalina Rosa Prima isn't just heard. It's felt and
-              admired as a true work of functional art."
             imageSrc="/assets/apps/catalina-rosa/secunda.png"
             imageAlt="Rosa Prima Hardware"
             textPosition="left"

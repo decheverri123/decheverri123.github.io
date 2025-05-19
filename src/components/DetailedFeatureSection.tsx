@@ -3,7 +3,6 @@ import FeatureSection from "./FeatureSection";
 
 interface DetailedFeatureSectionProps {
   title: string;
-  sectionTitle: string;
   features: {
     title: string;
     description: ReactNode;
@@ -16,20 +15,14 @@ interface DetailedFeatureSectionProps {
 
 const DetailedFeatureSection: React.FC<DetailedFeatureSectionProps> = ({
   title,
-  sectionTitle,
   features,
-  titleColor = "text-secondary",
 }) => {
   return (
     <div>
       {/* Main section title */}
-      <h1 className={`mb-4 text-center text-5xl font-bold text-primary`}>
+      <h1 className={`mb-4 text-center text-4xl font-bold text-secondary`}>
         {title}
       </h1>
-      {/* Secondary section title */}
-      <h2 className={`mb-8 text-center text-4xl font-bold ${titleColor}`}>
-        {sectionTitle}
-      </h2>
 
       {features.map((feature, index) => (
         <FeatureSection

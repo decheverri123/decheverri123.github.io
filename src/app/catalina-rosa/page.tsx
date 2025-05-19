@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import Layout from "../LayoutHeader";
-import FeatureCard from "../../components/FeatureCard";
 import ModelSection from "../../components/ModelSection";
 import IntroSection from "../../components/IntroSection";
 import DetailedFeatureSection from "../../components/DetailedFeatureSection";
 import ComparisonSection from "../../components/ComparisonSection";
+import FeatureCardSection from "../../components/FeatureCardSection";
 
 export default function CatalinaRosaPage() {
   const [specTab, setSpecTab] = useState("Body & Neck");
@@ -192,6 +192,8 @@ export default function CatalinaRosaPage() {
           </div>
         </div>
       </div>
+
+      {/* Everything Else */}
       <div className="mx-auto xs:px-12 md:px-6 lg:max-w-7xl xl:px-2">
         <IntroSection title="The Catalina Rosa Line">
           <p className="mb-8 text-lg leading-relaxed">
@@ -218,7 +220,6 @@ export default function CatalinaRosaPage() {
         {/* Feature Sections with Reusable Component */}
         <DetailedFeatureSection
           title="Features"
-          sectionTitle="Guitar Features"
           features={[
             {
               title: "Advanced Weight Relief for Comfort and Resonance",
@@ -231,7 +232,7 @@ export default function CatalinaRosaPage() {
             {
               title: "Custom-Voiced Pickups",
               description: (
-                <>
+                <div className="text-md">
                   <p className="mb-4 text-base-content/80">
                     At the heart of every Catalina Rosa model lies a pair of
                     custom-voiced pickups—built not to chase trends, but to
@@ -251,7 +252,7 @@ export default function CatalinaRosaPage() {
                     Catalina Rosa line—ideal for expressive solos, saturated
                     leads, or vintage-inspired rhythm work.
                   </p>
-                </>
+                </div>
               ),
               imageSrc: "/assets/apps/catalina-rosa/pickups-detailed.png",
               imageAlt: "Custom-Voiced Pickups",
@@ -260,7 +261,7 @@ export default function CatalinaRosaPage() {
             {
               title: "Exceptional Playability",
               description: (
-                <>
+                <div className="text-md">
                   <p className="mb-4 text-base-content/80">
                     With its slim C-shape neck, carved neck joint heel, and
                     10"–14" compound radius fingerboard, every Catalina Rosa
@@ -282,7 +283,7 @@ export default function CatalinaRosaPage() {
                     gigs, Catalina Rosa guitars are built to disappear in your
                     hands and let the music lead.
                   </p>
-                </>
+                </div>
               ),
               imageSrc: "/assets/apps/catalina-rosa/secunda.png",
               imageAlt: "Exceptional Playability",
@@ -290,43 +291,47 @@ export default function CatalinaRosaPage() {
             },
           ]}
         />
-        {/* Section 3: Three Feature Cards */}
-        <div className="grid grid-cols-1 gap-3 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          <FeatureCard
-            title="Satin Roasted Maple Neck"
-            description="The neck is roasted for increased stability and finished in satin for a smooth, fast feel with no sticky lacquer drag—even during long sessions."
-            imageSrc="/assets/apps/catalina-rosa/neck.jpg"
-            imageAlt="Satin Roasted Maple Neck"
-          />
-          <FeatureCard
-            title="Jumbo Stainless-Steel Frets"
-            description="Stainless-steel frets are exceptionally durable, while also lessening resistance when bending strings."
-            imageSrc="/assets/apps/catalina-rosa/secunda.png"
-            imageAlt="Jumbo Stainless-Steel Frets"
-          />
-          <FeatureCard
-            title="Premium Gotoh Hardware"
-            description="Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability."
-            imageSrc="/assets/apps/catalina-rosa/hardware.png"
-            imageAlt="Premium Gotoh Hardware"
-          />
-          <FeatureCard
-            title="Compound Radius Fingerboard"
-            description={
-              'A 10"–14" compound radius allows effortless chording near the nut and fluid bends up high, giving players the best of both worlds.'
-            }
-            imageSrc="/assets/apps/catalina-rosa/fingerboard.jpg"
-            imageAlt="Compound Radius Fingerboard"
-          />
-          <FeatureCard
-            title="Contour Body"
-            description={
-              "A contoured belly cut and forearm bevel round out the ergonomic profile—making the guitar feel like it was carved specifically for you."
-            }
-            imageSrc="/assets/apps/catalina-rosa/contour.jpg"
-            imageAlt="Contour Body"
-          />
-        </div>
+        {/* Feature Cards Section */}
+        <FeatureCardSection
+          title=""
+          features={[
+            {
+              title: "Satin Roasted Maple Neck",
+              description:
+                "The neck is roasted for increased stability and finished in satin for a smooth, fast feel with no sticky lacquer drag—even during long sessions.",
+              imageSrc: "/assets/apps/catalina-rosa/neck.jpg",
+              imageAlt: "Satin Roasted Maple Neck",
+            },
+            {
+              title: "Jumbo Stainless-Steel Frets",
+              description:
+                "Stainless-steel frets are exceptionally durable, while also lessening resistance when bending strings.",
+              imageSrc: "/assets/apps/catalina-rosa/secunda.png",
+              imageAlt: "Jumbo Stainless-Steel Frets",
+            },
+            {
+              title: "Premium Gotoh Hardware",
+              description:
+                "Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability.",
+              imageSrc: "/assets/apps/catalina-rosa/hardware.png",
+              imageAlt: "Premium Gotoh Hardware",
+            },
+            {
+              title: "Compound Radius Fingerboard",
+              description:
+                'A 10"–14" compound radius allows effortless chording near the nut and fluid bends up high, giving players the best of both worlds.',
+              imageSrc: "/assets/apps/catalina-rosa/fingerboard.jpg",
+              imageAlt: "Compound Radius Fingerboard",
+            },
+            {
+              title: "Contour Body",
+              description:
+                "A contoured belly cut and forearm bevel round out the ergonomic profile—making the guitar feel like it was carved specifically for you.",
+              imageSrc: "/assets/apps/catalina-rosa/contour.jpg",
+              imageAlt: "Contour Body",
+            },
+          ]}
+        />
         <div className="divider"></div>
         {/* Comparison Section */}
         <ComparisonSection
