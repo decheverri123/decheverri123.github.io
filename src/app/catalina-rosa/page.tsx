@@ -193,6 +193,9 @@ export default function CatalinaRosaPage() {
 
       <div className="min-h-screen bg-base-100 px-4 lg:px-48">
         {/* Model Cards - Using DaisyUI's image-full card */}
+        <h1 className="mb-8 text-center text-4xl font-bold text-primary">
+          Models
+        </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {models.map((model) => (
             <div
@@ -295,6 +298,7 @@ export default function CatalinaRosaPage() {
               }
             />
           </div>
+          <div className="divider"></div>
         </div>
 
         {/* Feature Sections with Reusable Component */}
@@ -302,7 +306,6 @@ export default function CatalinaRosaPage() {
           <h2 className="mb-12 text-3xl font-bold text-secondary">
             Guitar Features
           </h2>
-
           {/* Section 1: Acoustic Design Technology */}
           <FeatureSection
             title="Acoustic Design Technology Produces Balanced Tone"
@@ -311,7 +314,6 @@ export default function CatalinaRosaPage() {
             imageAlt="Acoustic Design Technology"
             textPosition="right"
           />
-
           {/* Section 2: Exceptional Playability */}
           <FeatureSection
             title="Exceptional Playability"
@@ -322,17 +324,16 @@ export default function CatalinaRosaPage() {
             imageAlt="Exceptional Playability"
             textPosition="left"
           />
-
           {/* Section 3: Three Feature Cards */}
           <div className="mb-16 grid grid-cols-1 gap-8 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {/* Feature 1 */}
-            <div className="card max-w-lg bg-base-100 shadow-sm">
+            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
               <figure className="relative h-48">
                 <Image
                   src="/assets/apps/catalina-rosa/neck.png"
                   alt="Rosewood or Maple Fingerboard"
                   fill
-                  className="object-contain"
+                  className="object-fit"
                 />
               </figure>
               <div className="card-body">
@@ -345,7 +346,7 @@ export default function CatalinaRosaPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="card max-w-lg bg-base-100 shadow-sm">
+            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
               <figure className="relative h-48">
                 <Image
                   src="/assets/apps/catalina-rosa/secunda.png"
@@ -366,7 +367,7 @@ export default function CatalinaRosaPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="card max-w-lg bg-base-100 shadow-sm">
+            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
               <figure className="relative h-48">
                 <Image
                   src="/assets/apps/catalina-rosa/pickups.png"

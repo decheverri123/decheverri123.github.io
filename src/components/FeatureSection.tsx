@@ -29,7 +29,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     <div className="mb-16 grid grid-cols-1 items-center gap-8 md:grid-cols-12">
       {/* Image Column (always 1/3 width) */}
       <div className={`md:col-span-4 ${imageColumnOrder}`}>
-        <div className="overflow-hidden rounded-lg bg-base-100 shadow-lg relative h-64">
+        <div className="overflow-hidden rounded-lg border border-base-200 bg-base-100 shadow-xl relative h-64 ">
           <Image
             src={imageSrc}
             alt={imageAlt}
