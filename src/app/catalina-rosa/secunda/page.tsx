@@ -255,7 +255,7 @@ export default function RosaSecundaPage() {
           </div>
 
           <div className="mx-auto mb-16 max-w-2xl">
-            <h2 className="mb-6 text-center text-3xl font-bold">
+            <h2 className="mb-6 text-center text-3xl font-bold text-primary">
               Specifications
             </h2>
             <SpecificationsTable specifications={guitarData.specifications} />

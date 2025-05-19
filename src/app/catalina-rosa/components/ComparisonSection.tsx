@@ -23,12 +23,12 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
 }) => {
   return (
     <div className={className}>
-      <h2 className="mb-8 text-center font-display text-4xl font-bold text-primary">
+      <h1 className="mb-8 text-center font-display text-3xl font-bold text-primary">
         Compare Models
-      </h2>
+      </h1>
       <div className="mb-4 flex justify-center">
         <div
-          className="relative min-h-12 min-w-full rounded-full bg-base-300"
+          className="b rounded-ful relative min-h-12 min-w-full"
           style={{ display: "inline-flex", padding: "2px" }}
         >
           {/* Active tab indicator (animated pill) */}

@@ -8,7 +8,7 @@ const SpecificationsTable: React.FC<SpecificationsTableProps> = ({
   specifications,
 }) => {
   return (
-    <div className="overflow-x-auto rounded-box border border-base-content/5 text-base-content">
+    <div className="overflow-x-auto rounded-box border border-primary text-base-content">
       <table className="table table-zebra w-full">
         <tbody>
           {Object.entries(specifications).map(([key, value], index) => (
