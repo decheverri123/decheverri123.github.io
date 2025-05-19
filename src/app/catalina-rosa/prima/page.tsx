@@ -71,11 +71,11 @@ export default function RosaPrimaPage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8 md:px-12 lg:px-16">
+      <div className="min-h-screen bg-base-100 px-4 py-10 text-base-content sm:px-8 md:px-12 lg:px-16">
         {/* Feature Sections with Reusable Component */}
         <div className="mx-auto max-w-5xl">
           <div>
-            <h2 className="mb-4 text-2xl font-semibold text-primary">
+            <h2 className="mb-4 font-display text-2xl font-semibold text-primary">
               Emotion, Refined
             </h2>
 
