@@ -201,30 +201,54 @@ export default function CatalinaRosaPage() {
           character while maintaining our signature aesthetic.
         </p>
 
-        {/* Model Filter Tabs */}
+        {/* Model Filter Tabs - Custom animated version */}
         <div className="mb-8 flex justify-center">
-          <div className="tabs-boxed tabs">
+          <div
+            className="relative rounded-full bg-base-300"
+            style={{ display: "inline-flex", padding: "2px" }}
+          >
+            {/* Active tab indicator (animated pill) */}
+            <div
+              className="absolute rounded-full bg-primary transition-all duration-300 ease-in-out"
+              style={{
+                height: "calc(100% - 4px)",
+                top: "2px",
+                left: (() => {
+                  const tabOptions = ["all", "prima", "secunda", "terza"];
+                  const tabIndex = tabOptions.indexOf(selectedTab);
+                  const tabWidth = 100 / tabOptions.length;
+                  return `${tabIndex * tabWidth}%`;
+                })(),
+                width: `${100 / 4}%`,
+              }}
+            />
+
+            {/* Tab buttons */}
             <button
               onClick={() => setSelectedTab("all")}
-              className={`tab ${selectedTab === "all" ? "tab-active bg-primary text-primary-content" : ""}`}
+              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "all" ? "text-primary-content" : ""}`}
+              style={{ flex: 1 }}
             >
               All Models
             </button>
             <button
               onClick={() => setSelectedTab("prima")}
-              className={`tab ${selectedTab === "prima" ? "tab-active bg-primary text-primary-content" : ""}`}
+              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "prima" ? "text-primary-content" : ""}`}
+              style={{ flex: 1 }}
             >
               Prima
             </button>
             <button
               onClick={() => setSelectedTab("secunda")}
-              className={`tab ${selectedTab === "secunda" ? "tab-active bg-primary text-primary-content" : ""}`}
+              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "secunda" ? "text-primary-content" : ""}`}
+              style={{ flex: 1 }}
             >
               Secunda
             </button>
             <button
               onClick={() => setSelectedTab("terza")}
-              className={`tab ${selectedTab === "terza" ? "tab-active bg-primary text-primary-content" : ""}`}
+              className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${selectedTab === "terza" ? "text-primary-content" : ""}`}
+              style={{ flex: 1 }}
             >
               Terza
             </button>
@@ -247,9 +271,11 @@ export default function CatalinaRosaPage() {
               />
 
               {/* Title always visible */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 pb-5">
                 <div className="flex items-center justify-between">
-                  <h2 className="card-title text-error">{model.name}</h2>
+                  <h2 className="card-title font-bold text-error">
+                    {model.name}
+                  </h2>
                 </div>
               </div>
 
@@ -291,15 +317,36 @@ export default function CatalinaRosaPage() {
             Compare Models
           </h2>
 
-          {/* Spec Tabs using DaisyUI's tabs-boxed component */}
+          {/* Custom animated tabs component */}
           <div className="mx-auto max-w-4xl">
             <div className="mb-4 flex justify-center">
-              <div className="tabs-boxed tabs">
+              <div
+                className="relative rounded-full bg-base-300"
+                style={{ display: "inline-flex", padding: "2px" }}
+              >
+                {/* Active tab indicator (animated pill) */}
+                <div
+                  className="absolute rounded-full bg-primary transition-all duration-300 ease-in-out"
+                  style={{
+                    height: "calc(100% - 4px)",
+                    top: "2px",
+                    left: (() => {
+                      const tabIndex =
+                        Object.keys(specifications).indexOf(specTab);
+                      const tabWidth = 100 / Object.keys(specifications).length;
+                      return `${tabIndex * tabWidth}%`;
+                    })(),
+                    width: `${100 / Object.keys(specifications).length}%`,
+                  }}
+                />
+
+                {/* Tab buttons */}
                 {Object.keys(specifications).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setSpecTab(tab)}
-                    className={`tab ${specTab === tab ? "tab-active bg-primary text-primary-content" : ""}`}
+                    className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${specTab === tab ? "text-primary-content" : ""}`}
+                    style={{ flex: 1 }}
                   >
                     {tab}
                   </button>
