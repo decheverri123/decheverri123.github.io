@@ -69,7 +69,7 @@ export default function RosaTerzaPage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-base-100 px-4 py-10 sm:px-8">
+      <div className="min-h-screen bg-base-100 px-4 py-10 text-base-content sm:px-8">
         {/* Overview Section */}
         <div className="mx-auto mb-16 max-w-4xl">
           <h2 className="mb-6 text-3xl font-bold">Overview</h2>
