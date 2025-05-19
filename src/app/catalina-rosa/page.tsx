@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Layout from "../LayoutHeader";
 import ComparisonTable from "../../components/ComparisonTable";
 import FeatureSection from "../../components/FeatureSection";
-import Image from "next/image";
+import FeatureCard from "../../components/FeatureCard";
 
 export default function CatalinaRosaPage() {
   const [specTab, setSpecTab] = useState("Body & Neck");
@@ -191,7 +191,30 @@ export default function CatalinaRosaPage() {
         </div>
       </div>
 
-      <div className="min-h-screen bg-base-100 px-4 lg:px-48">
+      <div className="mx-auto max-w-5xl text-center lg:px-48">
+        <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary sm:text-5xl">
+          The Catalina Rosa Line
+        </h1>
+        <p className="text-md mb-8 leading-relaxed sm:text-xl">
+          The <span className="font-semibold text-primary">Catalina Rosa</span>{" "}
+          line is a modern love letter to expressive players—bold instruments
+          built for those who want to be heard and seen. From guitars that
+          shimmer with boutique elegance to hand-voiced pickups that breathe
+          with emotion, every piece in the Rosa collection is crafted to feel
+          personal, sound alive, and look unforgettable.
+        </p>
+        <p className="text-md leading-relaxed sm:text-xl">
+          Whether you're chasing pristine cleans, gritty edge-of-breakup tones,
+          or soaring leads that cut through the noise, the Catalina Rosa line
+          delivers with clarity, confidence, and character. Finished in
+          signature shell pink with gold appointments, these tools of expression
+          are as unapologetic as the artists who wield them.
+        </p>
+      </div>
+
+      <div className="divider lg:px-48"></div>
+
+      <div className="min-h-screen bg-base-100 px-4 lg:px-64">
         {/* Model Cards - Using DaisyUI's image-full card */}
         <h1 className="mb-8 text-center text-4xl font-bold text-primary">
           Models
@@ -251,53 +274,6 @@ export default function CatalinaRosaPage() {
 
         {/* Specifications Section */}
         <div className="mb-10 mt-20">
-          <h2 className="mb-8 text-center text-3xl font-bold">
-            Compare Models
-          </h2>
-
-          {/* Custom animated tabs component */}
-          <div className="mx-auto max-w-4xl">
-            <div className="mb-4 flex justify-center">
-              <div
-                className="relative rounded-full bg-base-300"
-                style={{ display: "inline-flex", padding: "2px" }}
-              >
-                {/* Active tab indicator (animated pill) */}
-                <div
-                  className="absolute rounded-full bg-primary transition-all duration-300 ease-in-out"
-                  style={{
-                    height: "calc(100% - 4px)",
-                    top: "2px",
-                    left: (() => {
-                      const tabIndex =
-                        Object.keys(specifications).indexOf(specTab);
-                      const tabWidth = 100 / Object.keys(specifications).length;
-                      return `${tabIndex * tabWidth}%`;
-                    })(),
-                    width: `${100 / Object.keys(specifications).length}%`,
-                  }}
-                />
-
-                {/* Tab buttons */}
-                {Object.keys(specifications).map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setSpecTab(tab)}
-                    className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${specTab === tab ? "text-primary-content" : ""}`}
-                    style={{ flex: 1 }}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <ComparisonTable
-              specifications={
-                specifications[specTab as keyof typeof specifications]
-              }
-            />
-          </div>
           <div className="divider"></div>
         </div>
 
@@ -310,9 +286,9 @@ export default function CatalinaRosaPage() {
           <FeatureSection
             title="Acoustic Design Technology Produces Balanced Tone"
             description="Catalina Rosa Design technology utilizes scientific processes such as 3D modeling to devise wood-routing techniques that increase body resonance and improve the transfer of vibrations between neck and body."
-            imageSrc="/assets/apps/catalina-rosa/prima.png"
+            imageSrc="/assets/apps/catalina-rosa/body-relief.jpg"
             imageAlt="Acoustic Design Technology"
-            textPosition="right"
+            textPosition="left"
           />
           {/* Section 2: Exceptional Playability */}
           <FeatureSection
@@ -325,69 +301,85 @@ export default function CatalinaRosaPage() {
             textPosition="left"
           />
           {/* Section 3: Three Feature Cards */}
-          <div className="mb-16 grid grid-cols-1 gap-8 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {/* Feature 1 */}
-            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
-              <figure className="relative h-48">
-                <Image
-                  src="/assets/apps/catalina-rosa/neck.png"
-                  alt="Rosewood or Maple Fingerboard"
-                  fill
-                  className="object-fit"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-primary">Flamed Maple Neck</h2>
-                <p>
-                  The neck is made of flamed maple, which is a type of wood that
-                  is prized for its warm tone and smooth attack.
-                </p>
-              </div>
-            </div>
+          <div className="mb-16 grid grid-cols-1 gap-8 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <FeatureCard
+              title="Flamed Maple Neck"
+              description="The neck is made of flamed maple, which is a type of wood that is prized for its warm tone and smooth attack."
+              imageSrc="/assets/apps/catalina-rosa/neck.png"
+              imageAlt="Flamed Maple Neck"
+            />
 
-            {/* Feature 2 */}
-            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
-              <figure className="relative h-48">
-                <Image
-                  src="/assets/apps/catalina-rosa/secunda.png"
-                  alt="Medium Stainless-Steel Frets"
-                  fill
-                  className="object-cover"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-primary">
-                  Medium Stainless-Steel Frets
-                </h2>
-                <p>
-                  Stainless-steel frets are exceptionally durable, while also
-                  lessening resistance when bending strings.
-                </p>
-              </div>
-            </div>
+            <FeatureCard
+              title="Medium Stainless-Steel Frets"
+              description="Stainless-steel frets are exceptionally durable, while also lessening resistance when bending strings."
+              imageSrc="/assets/apps/catalina-rosa/secunda.png"
+              imageAlt="Medium Stainless-Steel Frets"
+            />
 
-            {/* Feature 3 */}
-            <div className="card card-bordered max-w-lg bg-base-100 shadow-lg">
-              <figure className="relative h-48">
-                <Image
-                  src="/assets/apps/catalina-rosa/pickups.png"
-                  alt="Premium Gotoh Hardware"
-                  fill
-                  className="object-cover"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-primary">
-                  Premium Gotoh Hardware
-                </h2>
-                <p>
-                  Gotoh locking tuners, combined with the Gotoh 2-point tremolo
-                  bridge, ensure smooth operation and exceptional pitch
-                  stability.
-                </p>
-              </div>
+            <FeatureCard
+              title="Premium Gotoh Hardware"
+              description="Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability."
+              imageSrc="/assets/apps/catalina-rosa/pickups.png"
+              imageAlt="Premium Gotoh Hardware"
+            />
+            <FeatureCard
+              title="Custom-Voiced Pickups"
+              description="Designed in-house for balance, clarity, and emotional depth, the Flor single coils and Corazón humbucker deliver a versatile, expressive tonal palette. Built for nuance—not hype—these pickups reward dynamics and respond like an extension of your hands."
+              imageSrc="/assets/apps/catalina-rosa/pickups.png"
+              imageAlt="Catalina Rosa Pickups"
+            />
+            <FeatureCard
+              title="Compound Radius Fingerboard"
+              description="A 10–14 compound radius allows effortless chording near the nut and fluid bends up high, giving players the best of both worlds."
+              imageSrc="/assets/apps/catalina-rosa/fingerboard.jpg"
+              imageAlt="Compound Radius Fingerboard"
+            />
+          </div>
+        </div>
+        <h2 className="mb-8 text-center text-3xl font-bold">Compare Models</h2>
+
+        {/* Custom animated tabs component */}
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-4 flex justify-center">
+            <div
+              className="relative rounded-full bg-base-300"
+              style={{ display: "inline-flex", padding: "2px" }}
+            >
+              {/* Active tab indicator (animated pill) */}
+              <div
+                className="absolute rounded-full bg-primary transition-all duration-300 ease-in-out"
+                style={{
+                  height: "calc(100% - 4px)",
+                  top: "2px",
+                  left: (() => {
+                    const tabIndex =
+                      Object.keys(specifications).indexOf(specTab);
+                    const tabWidth = 100 / Object.keys(specifications).length;
+                    return `${tabIndex * tabWidth}%`;
+                  })(),
+                  width: `${100 / Object.keys(specifications).length}%`,
+                }}
+              />
+
+              {/* Tab buttons */}
+              {Object.keys(specifications).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setSpecTab(tab)}
+                  className={`relative z-10 px-3 py-0.5 text-sm font-medium transition-colors duration-300 ${specTab === tab ? "text-primary-content" : ""}`}
+                  style={{ flex: 1 }}
+                >
+                  {tab}
+                </button>
+              ))}
             </div>
           </div>
+
+          <ComparisonTable
+            specifications={
+              specifications[specTab as keyof typeof specifications]
+            }
+          />
         </div>
       </div>
     </Layout>

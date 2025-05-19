@@ -1,12 +1,10 @@
 "use client";
 
-"use client";
-
 import React from "react";
-import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import SpecificationsTable from "../../../components/SpecificationsTable";
 import FeatureSection from "../../../components/FeatureSection";
+import FeatureCard from "../../../components/FeatureCard";
 
 export default function RosaPrimaPage() {
   // Dummy data for the Prima model
@@ -192,85 +190,32 @@ export default function RosaPrimaPage() {
               Premium Components
             </h2>
             <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-              {/* Feature 1 */}
-              <div className="card bg-base-100 shadow-sm">
-                <figure className="relative h-48">
-                  <Image
-                    src="/assets/apps/catalina-rosa/prima.png"
-                    alt="Rosewood or Maple Fingerboard"
-                    fill
-                    className="object-cover"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Rosewood or Maple Fingerboard
-                    <div className="badge badge-secondary">CHOICE</div>
-                  </h2>
-                  <p>
-                    Rosewood fingerboards are valued for their warm tone and
-                    smooth attack, whereas maple fingerboards provide a brighter
-                    tone and snappier attack.
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Tonewoods</div>
-                    <div className="badge badge-outline">Playability</div>
-                  </div>
-                </div>
-              </div>
+              <FeatureCard
+                title="Rosewood or Maple Fingerboard"
+                description="Rosewood fingerboards are valued for their warm tone and smooth attack, whereas maple fingerboards provide a brighter tone and snappier attack."
+                imageSrc="/assets/apps/catalina-rosa/prima.png"
+                imageAlt="Rosewood or Maple Fingerboard"
+                badge="CHOICE"
+                tags={["Tonewoods", "Playability"]}
+              />
 
-              {/* Feature 2 */}
-              <div className="card bg-base-100 shadow-sm">
-                <figure className="relative h-48">
-                  <Image
-                    src="/assets/apps/catalina-rosa/secunda.png"
-                    alt="Medium Stainless-Steel Frets"
-                    fill
-                    className="object-cover"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Medium Stainless-Steel Frets
-                    <div className="badge badge-secondary">PREMIUM</div>
-                  </h2>
-                  <p>
-                    Stainless-steel frets are exceptionally durable, while also
-                    lessening resistance when bending strings.
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Hardware</div>
-                    <div className="badge badge-outline">Durability</div>
-                  </div>
-                </div>
-              </div>
+              <FeatureCard
+                title="Medium Stainless-Steel Frets"
+                description="Stainless-steel frets are exceptionally durable, while also lessening resistance when bending strings."
+                imageSrc="/assets/apps/catalina-rosa/secunda.png"
+                imageAlt="Medium Stainless-Steel Frets"
+                badge="PREMIUM"
+                tags={["Hardware", "Durability"]}
+              />
 
-              {/* Feature 3 */}
-              <div className="card bg-base-100 shadow-sm">
-                <figure className="relative h-48">
-                  <Image
-                    src="/assets/apps/catalina-rosa/pickups.png"
-                    alt="Premium Gotoh Hardware"
-                    fill
-                    className="object-cover"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Premium Gotoh Hardware
-                    <div className="badge badge-secondary">QUALITY</div>
-                  </h2>
-                  <p>
-                    Gotoh locking tuners, combined with the Gotoh 2-point
-                    tremolo bridge, ensure smooth operation and exceptional
-                    pitch stability.
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Hardware</div>
-                    <div className="badge badge-outline">Tuning Stability</div>
-                  </div>
-                </div>
-              </div>
+              <FeatureCard
+                title="Premium Gotoh Hardware"
+                description="Gotoh locking tuners, combined with the Gotoh 2-point tremolo bridge, ensure smooth operation and exceptional pitch stability."
+                imageSrc="/assets/apps/catalina-rosa/pickups.png"
+                imageAlt="Premium Gotoh Hardware"
+                badge="QUALITY"
+                tags={["Hardware", "Tuning Stability"]}
+              />
             </div>
           </div>
         </div>
