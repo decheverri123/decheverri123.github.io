@@ -7,6 +7,7 @@ import IntroSection from "../../components/IntroSection";
 import DetailedFeatureSection from "../../components/DetailedFeatureSection";
 import ComparisonSection from "../../components/ComparisonSection";
 import FeatureCardSection from "../../components/FeatureCardSection";
+import Image from "next/image";
 
 export default function CatalinaRosaPage() {
   const [specTab, setSpecTab] = useState("Body & Neck");
@@ -228,6 +229,7 @@ export default function CatalinaRosaPage() {
               imageSrc: "/assets/apps/catalina-rosa/body-relief.jpg",
               imageAlt: "Advanced Weight Relief",
               textPosition: "left",
+              imageColumnWidth: 5,
             },
             {
               title: "Custom-Voiced Pickups",
@@ -254,14 +256,23 @@ export default function CatalinaRosaPage() {
                   </p>
                 </div>
               ),
-              imageSrc: "/assets/apps/catalina-rosa/pickups-detailed.png",
+              imageComponent: (
+                <Image
+                  src="/assets/apps/catalina-rosa/pickups-detailed.png"
+                  alt="Custom-Voiced Pickups"
+                  className="object-fill"
+                  height={500}
+                  width={450}
+                />
+              ),
               imageAlt: "Custom-Voiced Pickups",
               textPosition: "right",
+              imageColumnWidth: 5,
             },
             {
               title: "Exceptional Playability",
               description: (
-                <div className="text-md">
+                <div className="text-lg">
                   <p className="mb-4 text-base-content/80">
                     With its slim C-shape neck, carved neck joint heel, and
                     10"–14" compound radius fingerboard, every Catalina Rosa
@@ -285,9 +296,17 @@ export default function CatalinaRosaPage() {
                   </p>
                 </div>
               ),
-              imageSrc: "/assets/apps/catalina-rosa/secunda.png",
+              imageComponent: (
+                <Image
+                  src="/assets/apps/catalina-rosa/full-body.png"
+                  alt="Exceptional Playability"
+                  className="object-cover"
+                  fill
+                />
+              ),
               imageAlt: "Exceptional Playability",
               textPosition: "left",
+              imageColumnWidth: 6,
             },
           ]}
         />

@@ -6,9 +6,13 @@ interface DetailedFeatureSectionProps {
   features: {
     title: string;
     description: ReactNode;
-    imageSrc: string;
-    imageAlt: string;
     textPosition: "left" | "right";
+    // Allow either an image source string OR a custom image component
+    imageSrc?: string;
+    imageAlt?: string;
+    imageComponent?: ReactNode;
+    // Column width control
+    imageColumnWidth?: 3 | 4 | 5 | 6 | 7 | 8; // Out of 12 columns (default: 4)
   }[];
   titleColor?: string;
 }
@@ -33,7 +37,9 @@ const DetailedFeatureSection: React.FC<DetailedFeatureSectionProps> = ({
           description={feature.description}
           imageSrc={feature.imageSrc}
           imageAlt={feature.imageAlt}
+          imageComponent={feature.imageComponent}
           textPosition={feature.textPosition}
+          imageColumnWidth={feature.imageColumnWidth}
         />
       ))}
     </div>
