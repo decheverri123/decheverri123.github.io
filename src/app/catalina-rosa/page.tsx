@@ -197,7 +197,7 @@ export default function CatalinaRosaPage() {
       {/* Everything Else */}
       <div className="mx-auto xs:px-12 md:px-6 lg:max-w-7xl xl:px-2">
         <IntroSection title="The Catalina Rosa Line">
-          <p className="mb-8 text-lg leading-relaxed">
+          <p className="mb-8 font-display text-lg leading-relaxed text-base-content">
             The{" "}
             <span className="font-semibold text-primary">Catalina Rosa</span>{" "}
             line is a modern love letter to expressive players—bold instruments
@@ -206,7 +206,7 @@ export default function CatalinaRosaPage() {
             with emotion, every piece in the Rosa collection is crafted to feel
             personal, sound alive, and look unforgettable.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="font-serif text-lg leading-relaxed text-base-content">
             Whether you're chasing pristine cleans, gritty edge-of-breakup
             tones, or soaring leads that cut through the noise, the Catalina
             Rosa line delivers with clarity, confidence, and character. Finished

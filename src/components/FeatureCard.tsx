@@ -35,7 +35,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           {title}
           {badge && <div className="badge badge-secondary">{badge}</div>}
         </h2>
-        <p className="font-serif">{description}</p>
+        <p className="font-serif text-base-content">{description}</p>
         {tags.length > 0 && (
           <div className="card-actions justify-end">
             {tags.map((tag, index) => (
