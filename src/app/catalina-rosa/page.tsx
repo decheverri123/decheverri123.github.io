@@ -359,6 +359,132 @@ export default function CatalinaRosaPage() {
           ]}
         />
         <div className="divider"></div>
+
+        {/* Pickups Section */}
+        <div className="mx-auto max-w-5xl py-12">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary">
+            Signature Pickups
+          </h2>
+
+          <div className="mb-16 grid grid-cols-1 gap-16 md:grid-cols-2">
+            {/* Serena Single Coil */}
+            <div className="space-y-4">
+              <div className="relative h-64 overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/assets/apps/catalina-rosa/serena-pickup.png"
+                  alt="Serena Single Coil Pickup"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-display text-2xl font-semibold text-primary">
+                THE SERENA SINGLE COIL
+              </h3>
+              <div className="prose max-w-none text-base-content/80">
+                <p>
+                  The Serena has a crystalline voice that balances vintage
+                  warmth with modern articulation. Its distinctive bell-like
+                  chime and exceptional note definition create a sound that's
+                  immediately recognizable yet infinitely versatile.
+                </p>
+                <p>
+                  Handwound with precision and voiced for expressive players,
+                  each Serena pickup features carefully calibrated Alnico V
+                  magnets and vintage-correct 42 AWG plain enamel wire. The
+                  result is a single coil that delivers exceptional clarity and
+                  dynamic range while avoiding the harsh ice-pick highs that
+                  plague many bright-sounding pickups.
+                </p>
+                <p>
+                  Clean tones shimmer with three-dimensional presence—each note
+                  blooms with a rounded initial attack followed by crystalline
+                  sustain. The midrange offers remarkable depth that allows
+                  complex chord voicings to retain their character, while the
+                  treble frequencies produce that elusive bell-like quality
+                  heard in recordings like "Dancing in a Burning Room"—clear
+                  without being clinical, sweet without being dark.
+                </p>
+                <p>
+                  Available in neck and RWRP middle positions, with
+                  period-correct formvar bobbins and cloth-covered lead wire.
+                </p>
+              </div>
+            </div>
+
+            {/* Corazón Mini Humbucker */}
+            <div className="space-y-4">
+              <div className="relative h-64 overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/assets/apps/catalina-rosa/corazon-pickup.png"
+                  alt="Corazón Mini Humbucker Pickup"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-display text-2xl font-semibold text-primary">
+                THE CORAZÓN MINI HUMBUCKER
+              </h3>
+              <div className="prose max-w-none text-base-content/80">
+                <p>
+                  The Corazón delivers the legendary warmth and authority of
+                  classic PAFs in a focused mini-humbucker format. This pickup
+                  speaks with a voice that's both vintage in character and
+                  thoroughly modern in capability.
+                </p>
+                <p>
+                  Each Corazón is handwound to exacting specifications using
+                  sand-cast Alnico IV magnets—a deliberate choice that provides
+                  faster bass response, richer midrange, and smoother treble
+                  than the more common Alnico V. The traditional nickel-silver
+                  baseplate and precision-machined pole pieces complete a
+                  package that honors classic design while pursuing exceptional
+                  tone.
+                </p>
+                <p>
+                  The Corazón's voice is immediately recognizable—clean tones
+                  exhibit remarkable depth and dimension, with a percussive
+                  attack that never overpowers the fundamental note. When driven
+                  into overdrive territory, smooth harmonic feedback emerges
+                  naturally, saturated with overtones even at modest gain
+                  settings.
+                </p>
+                <p>
+                  Meticulously built with vintage-correct materials including
+                  butyrate bobbins, maple spacers, and nickel-plated slugs
+                  secured with traditional Fillister no.5 pole screws.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Handcrafted Excellence */}
+          <h3 className="mb-4 font-display text-xl font-semibold text-primary">
+            HANDCRAFTED EXCELLENCE
+          </h3>
+          <div className="prose max-w-none text-base-content/80">
+            <p>
+              Every Serena and Corazón pickup is individually hand-built in our
+              workshop with the same attention to detail found in our Catalina
+              Rosa guitars. We use only period-correct materials and winding
+              techniques to ensure each pickup delivers the distinctive voice
+              that defines our instruments.
+            </p>
+            <p>
+              The Serena-Corazón combination creates the signature voice of the
+              Catalina Rosa line—clear, expressive, and versatile without ever
+              sounding sterile or generic. From crystalline cleans to singing
+              overdrive, these pickups provide the sonic foundation for
+              instruments designed to inspire rather than merely perform.
+            </p>
+            <p className="mb-0">
+              Both models are available exclusively in our Catalina Rosa
+              guitars, where they form an integral part of our "no compromises
+              on what matters" philosophy.
+            </p>
+          </div>
+        </div>
+        <div className="divider"></div>
+
         {/* Comparison Section */}
         <ComparisonSection
           specifications={specifications}
