@@ -229,6 +229,7 @@ export default function RosaTerzaPage() {
               thumbnails={[
                 "/assets/apps/catalina-rosa/terza.png",
                 "/assets/apps/catalina-rosa/terza-back.png",
+                "/assets/apps/catalina-rosa/terza-back.png",
                 "/assets/apps/catalina-rosa/tuners.webp",
                 "/assets/apps/catalina-rosa/neck.png",
                 "/assets/apps/catalina-rosa/pickups.png",

@@ -241,11 +241,10 @@ export default function RosaSecundaPage() {
               mainImage="/assets/apps/catalina-rosa/secunda.png"
               thumbnails={[
                 "/assets/apps/catalina-rosa/secunda.png",
-                "/assets/apps/catalina-rosa/terza-back.png",
                 "/assets/apps/catalina-rosa/tuners.webp",
                 "/assets/apps/catalina-rosa/neck.png",
-                "/assets/apps/catalina-rosa/pickups.png",
-                "/assets/apps/catalina-rosa/terza-headstock.png",
+                "/assets/apps/catalina-rosa/secunda-headstock.png",
+                "/assets/apps/catalina-rosa/secunda-body-01.png",
                 "/assets/apps/catalina-rosa/secunda-body-03.png",
                 "/assets/apps/catalina-rosa/secunda-body-02.png",
               ]}
