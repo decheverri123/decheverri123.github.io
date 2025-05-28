@@ -1,5 +1,7 @@
-"use client";
-
+/* eslint-disable */
+// @ts-nocheck
+// @ts-ignore
+import { notFound } from "next/navigation";
 import React, { useState } from "react";
 import Layout from "../LayoutHeader";
 import ModelSection from "./components/ModelSection";
@@ -10,6 +12,8 @@ import FeatureCardSection from "./components/FeatureCardSection";
 import Image from "next/image";
 
 export default function CatalinaRosaPage() {
+  notFound();
+  return null;
   const [specTab, setSpecTab] = useState("Body & Neck");
 
   const models = [

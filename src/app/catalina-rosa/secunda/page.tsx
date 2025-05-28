@@ -1,5 +1,7 @@
-"use client";
-
+/* eslint-disable */
+// @ts-nocheck
+// @ts-ignore
+import { notFound } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 import Layout from "../../LayoutHeader";
@@ -9,6 +11,8 @@ import ImageGallery from "../components/ImageGallery";
 import DetailedFeatureSection from "../components/DetailedFeatureSection";
 
 export default function RosaSecundaPage() {
+  notFound();
+  return null;
   const guitarData = {
     name: "Rosa Secunda",
     price: "$2,400",

@@ -50,7 +50,7 @@ export default function Header() {
                 Contact
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/catalina-rosa">Catalina Rosa Line</Link>
               <ul className="p-2 text-base-content">
                 <li>
@@ -63,7 +63,7 @@ export default function Header() {
                   <Link href="/catalina-rosa/terza">Terza Model</Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -90,7 +90,7 @@ export default function Header() {
               Contact
             </Link>
           </li>
-          <li className="dropdown dropdown-hover">
+          {/* <li className="dropdown dropdown-hover">
             <div tabIndex={0} role="button" className="flex items-center gap-1">
               <Link
                 href="/catalina-rosa"
@@ -150,7 +150,7 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
