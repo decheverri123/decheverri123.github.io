@@ -1,6 +1,5 @@
-/* eslint-disable */
-// @ts-nocheck
-// @ts-ignore
+"use client";
+
 import { notFound } from "next/navigation";
 import React from "react";
 import Image from "next/image";
