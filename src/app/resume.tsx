@@ -46,22 +46,62 @@ export default function Resume() {
       <section className="w-full rounded-lg bg-gray-800 p-6 shadow-md">
         <h2 className="mb-4 text-2xl font-semibold">Work History</h2>
         <div className="mb-6">
-          <h3 className="text-xl font-semibold">Software Engineer II</h3>
+          <h3 className="text-xl font-semibold">
+            Senior Systems Engineer (Consulting)
+          </h3>
           <p className="text-gray-400">
-            2022 - Current | Data Innovations, Charleston, SC
+            2025 - Current | Thread (YC W23 Enterprise SaaS)
           </p>
           <ul className="mt-2 list-inside list-disc space-y-2">
             <li>
-              Revitalized Data Innovation’s flagship product, transitioning the
-              UI to Angular and the backend to a cloud-native architecture.
+              Architected Enterprise SaaS platform for meal prep delivery with
+              high-volume order processing and inventory synchronization across
+              external e-commerce platforms (Shopify), managing complete
+              engagement from proposal through delivery.
             </li>
             <li>
-              Implemented CI/CD pipelines with Jenkins, AWS, Docker, and
-              Kubernetes, improving deployment efficiency and reliability.
+              Implemented Gen AI solution using Retrieval Augmented Generation
+              (RAG) and Vector Databases for incident management, with native
+              integrations to Jira, Slack, GitHub, and Datadog.
             </li>
             <li>
-              Developer on a greenfield Flutter project, creating a
-              cross-platform mobile app with thorough testing.
+              Designed dynamic pricing engine using TypeScript and Redis
+              caching, reducing menu change friction while optimizing
+              performance for high-concurrency operations.
+            </li>
+          </ul>
+        </div>
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold">Software Engineer</h3>
+          <p className="text-gray-400">
+            2022 - 2024 | Data Innovations, Charleston, SC
+          </p>
+          <ul className="mt-2 list-inside list-disc space-y-2">
+            <li>
+              Spearheaded Angular modernization of Data Innovation's flagship
+              Instrument Manager, leading complete migration from legacy
+              AngularJS to Angular 14 across 250,000+ line codebase serving
+              5,000+ daily users with zero downtime.
+            </li>
+            <li>
+              Architected high-performance Angular UI with lazy loading, code
+              splitting, and D3.js integration, reducing load times from 8
+              seconds to 1.2 seconds while building responsive dashboards for
+              500+ connected laboratory instruments.
+            </li>
+            <li>
+              Drove full-stack cloud transformation supporting Angular frontend
+              by transitioning backend infrastructure to cloud-native
+              architecture using AWS, Docker, and Kubernetes.
+            </li>
+            <li>
+              Designed robust Jenkins-powered CI/CD pipelines for Angular
+              deployments, drastically improving release efficiency and reducing
+              time-to-market.
+            </li>
+            <li>
+              Developed greenfield Flutter mobile application with comprehensive
+              testing suite for cross-platform deployment.
             </li>
           </ul>
         </div>
@@ -70,16 +110,26 @@ export default function Resume() {
           <p className="text-gray-400">2020 – 2022 | Microsoft, Seattle, WA</p>
           <ul className="mt-2 list-inside list-disc space-y-2">
             <li>
-              Developed high-performance solutions in C# and .NET based on
-              project requirements.
+              Architected enterprise-scale .NET Core microservices serving 2.5M+
+              daily users with 99.9% uptime, implementing Redis caching
+              strategies that reduced API response times by 75% across Azure
+              DevOps platform.
             </li>
             <li>
-              Worked with cross-functional teams to deliver scalable solutions
-              in Azure DevOps and ReactJS.
+              Developed high-performance C# solutions and custom middleware
+              components adopted across 15+ Microsoft teams, achieving 95% code
+              coverage through comprehensive unit testing with xUnit framework.
             </li>
             <li>
-              Built CI/CD pipelines in Azure DevOps, ensuring quality and
-              stability of changes for Microsoft engineers.
+              Built robust .NET-powered CI/CD pipelines in Azure DevOps ensuring
+              quality and availability for changes impacting every engineer at
+              Microsoft, while collaborating with cross-functional teams on
+              scalable backend solutions.
+            </li>
+            <li>
+              Enhanced Azure DevOps frontend using ReactJS to deliver features
+              for thousands of users and companies worldwide, supporting the
+              platform's core functionality.
             </li>
           </ul>
         </div>
