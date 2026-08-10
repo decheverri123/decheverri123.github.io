@@ -5,6 +5,7 @@ import WorkHistory from "@/components/WorkHistory";
 import SkillsSection from "@/components/SkillsSection";
 import LanguagesSection from "@/components/LanguagesSection";
 import PoweredBySection from "@/components/PoweredBySection";
+import FeaturedAppsSection from "@/components/FeaturedAppsSection";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 export default function HomePage() {
   return (
@@ -46,6 +47,10 @@ export default function HomePage() {
             <FaLinkedin />
           </a>
         </div>
+
+        {/* Featured Applications Section (ai-email) */}
+        <FeaturedAppsSection />
+
         {/* Work History Section */}
         <WorkHistory />
 
