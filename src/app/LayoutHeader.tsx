@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "./header";
+import Footer from "@/components/Footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isClient, setIsClient] = useState(false);
@@ -18,9 +19,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-base-100">
+    <div className="flex min-h-screen flex-col bg-base-100">
       <Header />
-      <main>{children}</main>
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 }
+
