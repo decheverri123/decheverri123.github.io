@@ -9,8 +9,7 @@
     "lint": "next lint",
     "deploy": "gh-pages -d out",
     "prepare": "husky",
-    "test": "echo 'No tests specified'",
-    "preinstall": "node preinstall.js"
+    "test": "echo 'No tests specified'"
   },
   "dependencies": {
     "@heroui/react": "^2.7.8",
