@@ -10,7 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        sans: [
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "'Helvetica Neue'",
+          "Arial",
+          "sans-serif",
+        ],
         serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
         mono: ["GeistMono", "Courier", "monospace"],
         display: ["Playfair Display", "Georgia", "serif"],

@@ -3,7 +3,12 @@
 import Layout from "../LayoutHeader";
 import Link from "next/link";
 import Image from "next/image";
-import { FaYoutube, FaTiktok } from "react-icons/fa";
+import {
+  FaYoutube,
+  FaTiktok,
+  FaApple,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
 export default function ProjectsPage() {
   const videos = [
@@ -24,85 +29,131 @@ export default function ProjectsPage() {
     },
   ];
 
+  const appProjects = [
+    {
+      title: "Sparking Teams",
+      subtitle: "Dragon Ball Sparking Zero Companion",
+      description:
+        "Complete character database, movesets, advanced roster search, and custom team builder built for passionate fighting game players.",
+      tags: ["SwiftUI", "SwiftData", "MVVM", "Concurrency", "iOS"],
+      image: "/assets/apps/sparking/logo.png",
+      detailUrl: "/apps/sparking-teams",
+      appStoreUrl: "https://apps.apple.com/us/app/sparking-teams/id6737282855",
+    },
+    {
+      title: "Meditatio",
+      subtitle: "Stoic Mindfulness & Daily Journal",
+      description:
+        "Transform daily reactions into emotional resilience through structured 3-step Stoic reflection, daily philosopher wisdom, and home screen widgets.",
+      tags: [
+        "SwiftUI",
+        "WidgetKit",
+        "Sign in with Apple",
+        "Google Sign-In",
+        "SwiftData",
+      ],
+      image: "/assets/apps/meditatio/logo.png",
+      detailUrl: "/apps/meditatio",
+      appStoreUrl: "https://apps.apple.com/us/app/meditat-io/id6737626840",
+    },
+  ];
+
   return (
     <Layout>
-      <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-8">
+      <div className="min-h-screen w-full overflow-x-hidden bg-base-100 p-4 sm:p-8 md:px-12">
         <div className="relative mx-auto max-w-7xl">
           {/* Subtle decorative elements */}
           <div className="absolute -left-4 -top-4 h-24 w-24 border-l-4 border-t-4 border-primary/20 opacity-30"></div>
           <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-4 border-r-4 border-secondary/20 opacity-30"></div>
 
-          <h1 className="mb-8 text-center text-4xl font-semibold text-white">
-            Projects
+          <h1 className="mb-2 text-center text-3xl font-bold text-white sm:text-4xl">
+            Projects & Work
           </h1>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-base-content/80 sm:text-base">
+            A showcase of production native mobile applications, tools, and
+            creative compositions.
+          </p>
 
-          {/* Decorative Divider between iOS Apps and Music */}
-          <div className="relative my-16 flex items-center justify-center">
+          {/* Section: iOS Apps */}
+          <div className="relative my-10 flex items-center justify-center">
             <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
             <div className="relative z-10 bg-base-100 px-6 text-center">
-              <h2 className="text-3xl font-semibold text-secondary">
-                iOS Apps
+              <h2 className="text-2xl font-bold text-secondary sm:text-3xl">
+                iOS Applications
               </h2>
             </div>
           </div>
 
-          <div className="mx-auto grid max-w-3xl items-center justify-items-center gap-8 px-4 md:grid-cols-1 lg:max-w-5xl lg:grid-cols-2">
-            {/* Sparking Teams Card */}
-            <div className="group card image-full w-3/4 max-w-md bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
-              <figure className="absolute inset-0 opacity-70 transition-opacity group-hover:opacity-100">
-                <Image
-                  src="/assets/apps/sparking/logo.png"
-                  alt="Sparking Teams App"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </figure>
-              <div className="card-body items-center justify-center text-center">
-                <h2 className="card-title text-white">Sparking Teams</h2>
-                <p className="text-white/75">Team-building companion app</p>
-                <div className="card-actions justify-center">
-                  <Link
-                    href="/apps/sparking-teams"
-                    className="btn btn-secondary btn-sm"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+            {appProjects.map((app) => (
+              <div
+                key={app.title}
+                className="card flex flex-col justify-between border border-secondary/20 bg-base-200 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-secondary/60"
+              >
+                <div className="card-body p-6 sm:p-8">
+                  <div className="flex items-center gap-4">
+                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-secondary/30 shadow-md">
+                      <Image
+                        src={app.image}
+                        alt={`${app.title} icon`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white sm:text-2xl">
+                        {app.title}
+                      </h3>
+                      <p className="text-xs font-medium text-secondary sm:text-sm">
+                        {app.subtitle}
+                      </p>
+                    </div>
+                  </div>
 
-            {/* Meditatio Card */}
-            <div className="group card image-full w-3/4 max-w-md bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl">
-              <figure className="absolute inset-0">
-                <Image
-                  src="/assets/apps/meditatio/logo.png"
-                  alt="Meditatio App"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </figure>
-              <div className="card-body items-center justify-center text-center">
-                <h2 className="card-title text-white">Meditatio</h2>
-                <p className="text-white/75">Mindfulness companion app</p>
-                <div className="card-actions justify-center">
+                  <p className="mt-4 text-sm leading-relaxed text-base-content/90">
+                    {app.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {app.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="badge badge-outline badge-sm border-secondary/30 text-[11px] text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between gap-3 rounded-b-2xl border-t border-base-300 bg-base-300/30 p-4 px-6 sm:px-8">
                   <Link
-                    href="/apps/meditatio"
-                    className="btn btn-secondary btn-sm"
+                    href={app.detailUrl}
+                    className="btn btn-ghost btn-sm text-xs text-secondary hover:text-white"
                   >
-                    Learn More
+                    Learn More & Architecture
                   </Link>
+                  <a
+                    href={app.appStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm gap-1.5 text-xs shadow-sm"
+                  >
+                    <FaApple /> App Store{" "}
+                    <FaExternalLinkAlt className="text-[10px]" />
+                  </a>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Decorative Divider between iOS Apps and Music */}
+          {/* Section: Music */}
           <div className="relative my-16 flex items-center justify-center">
             <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
             <div className="relative z-10 bg-base-100 px-6 text-center">
-              <h2 className="text-3xl font-semibold text-secondary">Music</h2>
+              <h2 className="text-2xl font-bold text-secondary sm:text-3xl">
+                Music & Creative Works
+              </h2>
             </div>
           </div>
 
@@ -110,10 +161,10 @@ export default function ProjectsPage() {
             {videos.map((video) => (
               <div
                 key={video.id}
-                className="group card bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl"
+                className="group card border border-secondary/10 bg-base-200 shadow-xl transition-all duration-300 hover:scale-105 hover:border-secondary/40 hover:shadow-2xl"
               >
-                <div className="card-body items-center text-center">
-                  <div className="aspect-video w-full overflow-hidden rounded-lg">
+                <div className="card-body items-center p-4 text-center sm:p-5">
+                  <div className="aspect-video w-full overflow-hidden rounded-lg shadow-inner">
                     <iframe
                       src={`https://www.youtube.com/embed/${video.id}`}
                       title={video.title}
@@ -122,10 +173,10 @@ export default function ProjectsPage() {
                       allowFullScreen
                     />
                   </div>
-                  <h2 className="group-hover:text-secondary-focus card-title mt-4 text-secondary transition-colors">
+                  <h3 className="group-hover:text-secondary-focus card-title mt-3 text-base text-secondary transition-colors sm:text-lg">
                     {video.title}
-                  </h2>
-                  <p className="text-base-content/75 transition-colors group-hover:text-base-content">
+                  </h3>
+                  <p className="text-xs text-base-content/75 transition-colors group-hover:text-base-content sm:text-sm">
                     {video.subtitle}
                   </p>
                 </div>
@@ -133,31 +184,34 @@ export default function ProjectsPage() {
             ))}
           </div>
 
+          {/* Channels Banner */}
           <div className="mx-auto mt-16 flex flex-col items-center justify-center space-y-8 px-4">
-            {/* Visit My Channels Banner */}
-            <div className="w-full max-w-4xl rounded-xl bg-gradient-to-r from-secondary/10 to-primary/10 p-6 text-center shadow-lg transition-all hover:scale-[1.01] hover:shadow-xl">
-              <h2 className="text-3xl font-bold text-secondary">
+            <div className="w-full max-w-4xl rounded-2xl border border-secondary/20 bg-gradient-to-r from-secondary/10 via-primary/10 to-secondary/10 p-6 text-center shadow-lg">
+              <h3 className="text-2xl font-bold text-secondary sm:text-3xl">
                 Visit My Channels
-              </h2>
-              <p className="mt-2 text-base-content/75">
-                Explore more music, covers, and original compositions
+              </h3>
+              <p className="mt-2 text-xs text-base-content/80 sm:text-sm">
+                Explore more guitar performances, covers, and original music
               </p>
             </div>
 
             {/* Social Media Channel Cards */}
-            <div className="grid max-w-3xl items-center justify-items-center gap-8 px-4 md:grid-cols-1 lg:max-w-5xl lg:grid-cols-2">
+            <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
               {/* YouTube Channel Card */}
               <a
                 href="https://www.youtube.com/channel/UCbnaem81HGPMeyh3eOMSBfA?app=desktop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group card w-96 bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl"
+                className="group card border border-secondary/20 bg-base-200 p-6 shadow-xl transition-all hover:scale-105 hover:border-secondary/60 hover:shadow-2xl"
               >
-                <div className="card-body items-center justify-center text-center">
-                  <FaYoutube className="text-8xl text-red-600 opacity-70 transition-all group-hover:scale-110 group-hover:opacity-100" />
-                  <h3 className="card-title mt-4 text-secondary">
+                <div className="card-body items-center justify-center p-0 text-center">
+                  <FaYoutube className="text-6xl text-red-600 opacity-80 transition-all group-hover:scale-110 group-hover:opacity-100 sm:text-7xl" />
+                  <h4 className="card-title mt-4 text-lg text-secondary">
                     YouTube Channel
-                  </h3>
+                  </h4>
+                  <p className="text-xs text-base-content/70">
+                    Watch guitar covers & original tracks
+                  </p>
                 </div>
               </a>
 
@@ -166,13 +220,16 @@ export default function ProjectsPage() {
                 href="https://www.tiktok.com/@danny.echeverri?_t=8rc7QG4J3tO&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group card w-96 bg-base-200 shadow-xl transition hover:scale-105 hover:shadow-2xl"
+                className="group card border border-secondary/20 bg-base-200 p-6 shadow-xl transition-all hover:scale-105 hover:border-secondary/60 hover:shadow-2xl"
               >
-                <div className="card-body items-center justify-center text-center">
-                  <FaTiktok className="text-8xl text-black opacity-70 transition-all group-hover:scale-110 group-hover:opacity-100 dark:text-white" />
-                  <h3 className="card-title mt-4 text-secondary">
+                <div className="card-body items-center justify-center p-0 text-center">
+                  <FaTiktok className="text-6xl text-white opacity-80 transition-all group-hover:scale-110 group-hover:opacity-100 sm:text-7xl" />
+                  <h4 className="card-title mt-4 text-lg text-secondary">
                     TikTok Channel
-                  </h3>
+                  </h4>
+                  <p className="text-xs text-base-content/70">
+                    Quick clips, riffs & short-form video
+                  </p>
                 </div>
               </a>
             </div>
