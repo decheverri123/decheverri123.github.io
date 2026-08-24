@@ -13,7 +13,7 @@ export default function FeaturedAppsSection() {
       subtitle: "Gaming Companion & Team Builder",
       tagline: "Built for Dragon Ball: Sparking! ZERO",
       description:
-        "A full-featured iOS companion app providing a complete character database, movesets, advanced filtering, and a custom team planner.",
+        "A full-featured iOS companion app providing a complete character database, movesets, advanced filtering, and a custom team planner. (Please note: app is currently offline since I haven't paid the $100 yearly dev fee for Apple).",
       tags: ["SwiftUI", "SwiftData", "MVVM", "iOS App Store"],
       icon: <FaGamepad className="text-secondary" />,
       image: "/assets/apps/sparking/logo.png",
@@ -25,7 +25,7 @@ export default function FeaturedAppsSection() {
       subtitle: "Stoic Mindfulness & Journaling",
       tagline: "Daily Reflection & Emotional Resilience",
       description:
-        "A mindful journaling application rooted in Stoic philosophy. Features structured 3-step reflection, WidgetKit widgets, Apple/Google auth, and local privacy.",
+        "A mindful journaling application rooted in Stoic philosophy. Features structured 3-step reflection, WidgetKit widgets, Apple/Google auth, and local privacy. (Please note: app is currently offline since I haven't paid the $100 yearly dev fee for Apple).",
       tags: ["SwiftUI", "WidgetKit", "AuthenticationServices", "SwiftData"],
       icon: <FaHeart className="text-secondary" />,
       image: "/assets/apps/meditatio/logo.png",

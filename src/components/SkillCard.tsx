@@ -22,7 +22,7 @@ export default function SkillCard({
   const sizeStyles = customSize || { width: "38px", height: "38px" };
 
   return (
-    <div className="group flex flex-col items-center justify-center gap-2.5 rounded-xl border border-secondary/10 bg-base-300/80 p-4 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-secondary/50 hover:bg-base-100 hover:scale-105 hover:shadow-md">
+    <div className="group flex w-40 flex-col items-center justify-center gap-2.5 rounded-xl border border-secondary/10 bg-base-300/80 p-4 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-secondary/50 hover:bg-base-100 hover:scale-105 hover:shadow-md">
       {Icon && SecondaryIcon ? (
         <div className="flex items-center gap-2 transition-transform duration-300 group-hover:scale-110">
           <Icon

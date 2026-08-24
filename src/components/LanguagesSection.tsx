@@ -7,7 +7,7 @@ export default function LanguagesSection() {
       <h2 className="mb-4 text-center text-2xl font-semibold text-secondary">
         Languages
       </h2>
-      <div className="grid grid-cols-1 justify-center gap-8 md:grid-cols-2">
+      <div className="flex flex-wrap items-center justify-center gap-8">
         <SkillCard
           icon={GB}
           label="English - Native"

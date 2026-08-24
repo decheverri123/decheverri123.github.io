@@ -13,7 +13,7 @@ export default function SkillsSection() {
             <h3 className="mb-4 text-xl font-medium text-primary">
               {category.name}
             </h3>
-            <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            <div className="flex flex-wrap justify-center gap-5">
               {category.skills.map((skill) => (
                 <SkillCard
                   key={skill.label}

@@ -98,7 +98,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: "AI & Integrations",
+    name: "AI",
     skills: [
       {
         icon: TbBrandOpenai,
@@ -114,7 +114,13 @@ export const skillCategories: SkillCategory[] = [
         iconColor: "#FFFFFF",
         secondaryIconColor: "#38BDF8",
       },
-      { icon: FaUniversity, label: "Plaid", iconColor: "#111111" },
+      { icon: FaRobot, label: "OpenRouter", iconColor: "#FFFFFF" },
+    ],
+  },
+  {
+    name: "Integrations",
+    skills: [
+      { icon: FaUniversity, label: "Plaid", iconColor: "#FFFFFF" },
       { icon: SiStripe, label: "Stripe", iconColor: "#635BFF" },
       { icon: TbBrandTwilio, label: "Twilio", iconColor: "#F22F46" },
     ],
@@ -126,7 +132,7 @@ export const skillCategories: SkillCategory[] = [
       { icon: SiDocker, label: "Docker", iconColor: "#2496ED" },
       { icon: SiKubernetes, label: "Kubernetes", iconColor: "#326CE5" },
       { icon: SiPostgresql, label: "PostgreSQL", iconColor: "#4169E1" },
-      { icon: SiPrisma, label: "Prisma", iconColor: "#2D3748" },
+      { icon: SiPrisma, label: "Prisma", iconColor: "#FFFFFF" },
     ],
   },
   {
