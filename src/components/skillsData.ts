@@ -1,24 +1,33 @@
 import {
   SiPython,
   SiTypescript,
+  SiJavascript,
   SiDart,
-  SiHtml5,
-  SiCss3,
   SiAngular,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
+  SiNodedotjs,
+  SiExpo,
+  SiApple,
+  SiSwift,
   SiFlutter,
+  SiAnthropic,
+  SiOllama,
+  SiStripe,
   SiDocker,
   SiKubernetes,
+  SiPostgresql,
+  SiPrisma,
   SiDotnet,
-  SiJenkins,
-  SiApple,
   SiGithubactions,
+  SiVitest,
   SiXcode,
-  SiSwift,
+  SiJenkins,
 } from "react-icons/si";
-import { FaCode, FaJava } from "react-icons/fa";
+import { FaJava, FaAws, FaUniversity, FaRobot } from "react-icons/fa";
+import { TbBrandOpenai, TbBrandTwilio, TbBrandCSharp } from "react-icons/tb";
+import { VscAzureDevops } from "react-icons/vsc";
 
 import { IconType } from "react-icons";
 
@@ -39,30 +48,23 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Programming Languages",
     skills: [
-      { icon: FaCode, label: "C#", iconColor: "#512BD4" },
-      { icon: SiPython, label: "Python", iconColor: "#4B8BBE" },
-      { icon: FaJava, label: "Java", iconColor: "#007396" },
       {
-        icon: FaCode,
+        icon: SiJavascript,
         secondaryIcon: SiTypescript,
-        label: "JavaScript/TypeScript",
+        label: "TypeScript/JavaScript",
         iconColor: "#F7DF1E",
         secondaryIconColor: "#3178C6",
       },
-      { icon: SiDotnet, label: "Visual Basic", iconColor: "#512BD4" },
+      { icon: TbBrandCSharp, label: "C#", iconColor: "#239120" },
+      { icon: SiPython, label: "Python", iconColor: "#3776AB" },
+      { icon: SiSwift, label: "Swift", iconColor: "#F05138" },
+      { icon: SiDart, label: "Dart", iconColor: "#0175C2" },
+      { icon: FaJava, label: "Java", iconColor: "#007396" },
     ],
   },
   {
     name: "Web Technologies",
     skills: [
-      {
-        icon: SiHtml5,
-        secondaryIcon: SiCss3,
-        label: "HTML/CSS",
-        iconColor: "#E34F26",
-        secondaryIconColor: "#1572B6",
-      },
-      { icon: SiAngular, label: "Angular", iconColor: "#DD0031" },
       {
         icon: SiReact,
         secondaryIcon: SiNextdotjs,
@@ -70,35 +72,79 @@ export const skillCategories: SkillCategory[] = [
         iconColor: "#61DAFB",
         secondaryIconColor: "#FFFFFF",
       },
-      { icon: SiTailwindcss, label: "Tailwind", iconColor: "#06B6D4" },
+      { icon: SiAngular, label: "Angular", iconColor: "#DD0031" },
+      { icon: SiNodedotjs, label: "Node.js", iconColor: "#339933" },
+      { icon: SiTailwindcss, label: "TailwindCSS", iconColor: "#06B6D4" },
     ],
   },
   {
-    name: "Mobile Development",
+    name: "Mobile App Development",
     skills: [
-      { icon: SiSwift, label: "Swift/SwiftUI", iconColor: "#F05138" },
-      { icon: SiApple, label: "iOS Development", iconColor: "#666666" },
-      { icon: SiReact, label: "React Native", iconColor: "#61DAFB" },
-      { icon: SiDart, label: "Dart", iconColor: "#0175C2" },
+      {
+        icon: SiReact,
+        secondaryIcon: SiExpo,
+        label: "React Native/Expo",
+        iconColor: "#61DAFB",
+        secondaryIconColor: "#FFFFFF",
+      },
+      {
+        icon: SiApple,
+        secondaryIcon: SiSwift,
+        label: "iOS/SwiftUI",
+        iconColor: "#FFFFFF",
+        secondaryIconColor: "#F05138",
+      },
       { icon: SiFlutter, label: "Flutter", iconColor: "#02569B" },
     ],
   },
   {
-    name: "DevOps & Cloud",
+    name: "AI & Integrations",
     skills: [
-      { icon: SiDocker, label: "Docker", iconColor: "#2496ED" },
-      { icon: SiKubernetes, label: "Kubernetes", iconColor: "#326CE5" },
-      { icon: SiDotnet, label: ".NET", iconColor: "#B794F4" },
-      { icon: FaCode, label: "AWS", iconColor: "#FF9900" },
+      {
+        icon: TbBrandOpenai,
+        secondaryIcon: SiAnthropic,
+        label: "OpenAI & Anthropic Claude",
+        iconColor: "#10A37F",
+        secondaryIconColor: "#D97706",
+      },
+      {
+        icon: SiOllama,
+        secondaryIcon: FaRobot,
+        label: "Ollama/Local LLMs",
+        iconColor: "#FFFFFF",
+        secondaryIconColor: "#38BDF8",
+      },
+      { icon: FaUniversity, label: "Plaid", iconColor: "#111111" },
+      { icon: SiStripe, label: "Stripe", iconColor: "#635BFF" },
+      { icon: TbBrandTwilio, label: "Twilio", iconColor: "#F22F46" },
     ],
   },
   {
-    name: "CI/CD & Tools",
+    name: "Cloud & Data",
     skills: [
-      { icon: SiJenkins, label: "Jenkins", iconColor: "#D24939" },
-      { icon: FaCode, label: "Azure DevOps", iconColor: "#B794F4" },
+      { icon: FaAws, label: "AWS", iconColor: "#FF9900" },
+      { icon: SiDocker, label: "Docker", iconColor: "#2496ED" },
+      { icon: SiKubernetes, label: "Kubernetes", iconColor: "#326CE5" },
+      { icon: SiPostgresql, label: "PostgreSQL", iconColor: "#4169E1" },
+      { icon: SiPrisma, label: "Prisma", iconColor: "#2D3748" },
+    ],
+  },
+  {
+    name: "Frameworks",
+    skills: [
+      { icon: SiDotnet, label: ".NET Core", iconColor: "#512BD4" },
+      { icon: SiNodedotjs, label: "Node.js", iconColor: "#339933" },
+      { icon: SiExpo, label: "Expo", iconColor: "#FFFFFF" },
+    ],
+  },
+  {
+    name: "CI/CD",
+    skills: [
       { icon: SiGithubactions, label: "GitHub Actions", iconColor: "#2088FF" },
+      { icon: SiVitest, label: "Vitest", iconColor: "#FCC72B" },
       { icon: SiXcode, label: "Xcode Cloud", iconColor: "#147EFB" },
+      { icon: SiJenkins, label: "Jenkins", iconColor: "#D24939" },
+      { icon: VscAzureDevops, label: "Azure DevOps", iconColor: "#0078D7" },
     ],
   },
 ];
