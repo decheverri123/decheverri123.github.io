@@ -1,8 +1,21 @@
 // src/app/apps/meditatio/page.tsx
 
+import type { Metadata } from "next";
 import Layout from "../../LayoutHeader";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Meditatio",
+  description:
+    "Meditatio is a Stoic-philosophy journaling app for structured self-reflection and emotional resilience. Available on the App Store.",
+  openGraph: {
+    title: "Meditatio | Danny Echeverri",
+    description:
+      "A Stoic-philosophy journaling app for structured self-reflection and emotional resilience.",
+    images: ["/assets/apps/meditatio/logo.png"],
+  },
+};
 
 export default function Meditatio() {
   return (

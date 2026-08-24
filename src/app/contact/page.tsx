@@ -1,7 +1,20 @@
 // src/app/contact/page.tsx
 
+import type { Metadata } from "next";
 import Layout from "../LayoutHeader";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+
+const description =
+  "Get in touch with Danny Echeverri via LinkedIn, GitHub, or email.";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description,
+  openGraph: {
+    title: "Contact | Danny Echeverri",
+    description,
+  },
+};
 
 export default function ContactPage() {
   return (

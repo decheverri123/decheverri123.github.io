@@ -1,5 +1,6 @@
 "use client";
 
+import { notFound } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 import Layout from "../../LayoutHeader";
@@ -9,6 +10,8 @@ import ImageGallery from "../components/ImageGallery";
 import DetailedFeatureSection from "../components/DetailedFeatureSection";
 
 export default function RosaPrimaPage() {
+  notFound();
+  return null;
   // Dummy data for the Prima model
   const guitarData = {
     name: "Rosa Prima",

@@ -1,5 +1,6 @@
 // src/app/projects/page.tsx
 
+import type { Metadata } from "next";
 import Layout from "../LayoutHeader";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,18 @@ import {
   FaApple,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+
+const description =
+  "Side projects by Danny Echeverri — iOS apps, guitar performance videos, and independent builds.";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description,
+  openGraph: {
+    title: "Projects | Danny Echeverri",
+    description,
+  },
+};
 
 export default function ProjectsPage() {
   const videos = [

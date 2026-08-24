@@ -1,11 +1,21 @@
 // src/app/resume/page.tsx
 
-"use client";
-
+import type { Metadata } from "next";
 import Layout from "../LayoutHeader";
 import Resume from "../resume";
 import { FaDownload, FaExternalLinkAlt, FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description:
+    "Resume of Danny Echeverri — Senior Full Stack & Mobile Engineer with experience across Microsoft, health-tech, and YC-backed startups.",
+  openGraph: {
+    title: "Resume | Danny Echeverri",
+    description:
+      "Senior Full Stack & Mobile Engineer with experience across Microsoft, health-tech, and YC-backed startups.",
+  },
+};
 
 export default function ResumePage() {
   return (

@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import Layout from "../LayoutHeader";
+
+const description =
+  "Guitar performances and original compositions by Danny Echeverri.";
+
+export const metadata: Metadata = {
+  title: "Music",
+  description,
+  openGraph: {
+    title: "Music | Danny Echeverri",
+    description,
+  },
+};
 
 export default function MusicPage() {
   const videos = [

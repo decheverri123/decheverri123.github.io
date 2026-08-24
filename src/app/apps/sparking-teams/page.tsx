@@ -1,7 +1,20 @@
 // src/app/apps/sparking-teams/page.tsx
+import type { Metadata } from "next";
 import Image from "next/image";
 import Layout from "../../LayoutHeader";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Sparking Teams",
+  description:
+    "Sparking Teams is a companion iOS app for Dragon Ball Sparking Zero — full character database, search and filtering, and a team builder.",
+  openGraph: {
+    title: "Sparking Teams | Danny Echeverri",
+    description:
+      "Companion iOS app for Dragon Ball Sparking Zero — character database, search, and team builder.",
+    images: ["/assets/apps/sparking/logo.png"],
+  },
+};
 
 export default function SparkingTeams() {
   return (

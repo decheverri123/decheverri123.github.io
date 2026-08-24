@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://decheverri123.github.io"),
   title: {
     default: "Danny Echeverri | Software Engineer",
     template: "%s | Danny Echeverri",
