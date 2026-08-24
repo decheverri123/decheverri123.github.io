@@ -32,6 +32,7 @@
     "daisyui": "^4.12.14",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.2",
+    "eslint-plugin-unused-imports": "^4.4.1",
     "gh-pages": "^6.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
