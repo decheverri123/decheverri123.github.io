@@ -9,10 +9,13 @@ import {
   FaTiktok,
   FaApple,
   FaExternalLinkAlt,
+  FaGithub,
+  FaTerminal,
 } from "react-icons/fa";
+import { SiRust } from "react-icons/si";
 
 const description =
-  "Side projects by Danny Echeverri — iOS apps, guitar performance videos, and independent builds.";
+  "Side projects by Danny Echeverri — open source Rust CLI tools, iOS apps, guitar performance videos, and independent builds.";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -39,6 +42,27 @@ export default function ProjectsPage() {
       id: "GP7YnSJktv4",
       title: "Don't Cry",
       subtitle: "YouTube Short",
+    },
+  ];
+
+  const openSourceProjects = [
+    {
+      title: "claude-shift (cshift)",
+      subtitle: "Model & Provider Switcher for Claude Code",
+      description:
+        "A zero-overhead Rust CLI tool and interactive TUI wizard to instantly switch models and providers for Claude Code across 4 distinct agent tiers (Haiku, Medium, Large, Epic) with sub-second presets and custom provider support.",
+      tags: ["Rust", "CLI & TUI", "Claude Code", "LLM Routing", "Open Source"],
+      icon: <SiRust className="text-3xl text-[#DEA584]" />,
+      githubUrl: "https://github.com/decheverri123/claude-shift",
+    },
+    {
+      title: "rust-llms-site-crawl (wcl)",
+      subtitle: "High-Speed Website to LLM Markdown Engine",
+      description:
+        "A zero-config, high-performance Rust CLI that turns any website or documentation suite into clean, LLM-ready markdown for RAG pipelines and language models with sitemap discovery, llms.txt fast paths, and live TUI preview.",
+      tags: ["Rust", "Ratatui TUI", "Web Scraping", "RAG / LLMs", "Markdown"],
+      icon: <FaTerminal className="text-2xl text-secondary" />,
+      githubUrl: "https://github.com/decheverri123/rust-llms-site-crawl",
     },
   ];
 
@@ -83,9 +107,79 @@ export default function ProjectsPage() {
             Projects & Work
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-base-content/80 sm:text-base">
-            A showcase of production native mobile applications, tools, and
-            creative compositions.
+            A showcase of open source developer tools, production native mobile
+            applications, and creative compositions.
           </p>
+
+          {/* Section: Open Source Tools */}
+          <div className="relative my-10 flex items-center justify-center">
+            <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+            <div className="relative z-10 bg-base-100 px-6 text-center">
+              <h2 className="text-2xl font-bold text-secondary sm:text-3xl">
+                Open Source Tools & CLIs
+              </h2>
+            </div>
+          </div>
+
+          <div className="mx-auto mb-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+            {openSourceProjects.map((tool) => (
+              <div
+                key={tool.title}
+                className="card flex flex-col justify-between border border-secondary/20 bg-base-200 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-secondary/60"
+              >
+                <div className="card-body p-6 sm:p-8">
+                  <div className="flex items-center gap-4">
+                    <div className="relative flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl border border-secondary/30 bg-gradient-to-br from-base-300 via-base-200 to-base-300 shadow-md">
+                      {tool.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white sm:text-2xl">
+                        {tool.title}
+                      </h3>
+                      <p className="text-xs font-medium text-secondary sm:text-sm">
+                        {tool.subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-relaxed text-base-content/90">
+                    {tool.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {tool.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="badge badge-outline badge-sm border-secondary/30 text-[11px] text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between gap-3 rounded-b-2xl border-t border-base-300 bg-base-300/30 p-4 px-6 sm:px-8">
+                  <a
+                    href={tool.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost btn-sm gap-1.5 text-xs text-secondary hover:text-white"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                  <a
+                    href={tool.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm gap-1.5 text-xs shadow-sm"
+                  >
+                    <FaGithub /> View Repository{" "}
+                    <FaExternalLinkAlt className="text-[10px]" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Section: iOS Apps */}
           <div className="relative my-10 flex items-center justify-center">

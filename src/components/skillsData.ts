@@ -24,6 +24,7 @@ import {
   SiVitest,
   SiXcode,
   SiJenkins,
+  SiRust,
 } from "react-icons/si";
 import { FaJava, FaAws, FaUniversity, FaRobot } from "react-icons/fa";
 import { TbBrandOpenai, TbBrandTwilio, TbBrandCSharp } from "react-icons/tb";
@@ -56,6 +57,7 @@ export const skillCategories: SkillCategory[] = [
         secondaryIconColor: "#3178C6",
       },
       { icon: TbBrandCSharp, label: "C#", iconColor: "#239120" },
+      { icon: SiRust, label: "Rust", iconColor: "#DEA584" },
       { icon: SiPython, label: "Python", iconColor: "#3776AB" },
       { icon: SiSwift, label: "Swift", iconColor: "#F05138" },
       { icon: SiDart, label: "Dart", iconColor: "#0175C2" },
