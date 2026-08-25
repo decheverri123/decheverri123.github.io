@@ -225,7 +225,7 @@ export default function Resume() {
               Programming Languages:{" "}
             </span>
             <span className="text-base-content">
-              TypeScript/JavaScript, C#, Python, Swift, Dart, Java
+              TypeScript/JavaScript, C#, Rust, Python, Swift, Dart, Java
             </span>
           </div>
           <div>
@@ -257,7 +257,9 @@ export default function Resume() {
           </div>
           <div>
             <span className="font-bold text-primary">Frameworks: </span>
-            <span className="text-base-content">.NET Core, Node.js, Expo</span>
+            <span className="text-base-content">
+              Tauri, .NET Core, Node.js, Expo
+            </span>
           </div>
           <div className="md:col-span-2">
             <span className="font-bold text-primary">CI/CD: </span>

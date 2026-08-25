@@ -25,6 +25,7 @@ import {
   SiXcode,
   SiJenkins,
   SiRust,
+  SiTauri,
 } from "react-icons/si";
 import { FaJava, FaAws, FaUniversity, FaRobot } from "react-icons/fa";
 import { TbBrandOpenai, TbBrandTwilio, TbBrandCSharp } from "react-icons/tb";
@@ -140,6 +141,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Frameworks",
     skills: [
+      { icon: SiTauri, label: "Tauri", iconColor: "#24C8DB" },
       { icon: SiDotnet, label: ".NET Core", iconColor: "#512BD4" },
       { icon: SiNodedotjs, label: "Node.js", iconColor: "#339933" },
       { icon: SiExpo, label: "Expo", iconColor: "#FFFFFF" },
